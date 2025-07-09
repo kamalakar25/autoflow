@@ -1,0 +1,56 @@
+.billingContainer {
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 1200px;
+  
+  font-family: 'Arial', sans-serif;
+}
+
+.toggleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.toggleButton {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.toggleButton.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.saveBadge {
+  color: #000000;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .billingContainer {
+    padding: 20px 10px;
+  }
+
+  .toggleContainer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .toggleButton {
+    width: 100%;
+  }
+}

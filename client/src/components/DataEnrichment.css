@@ -1,0 +1,524 @@
+/* WorkflowBuilder.css - Modern, responsive, and unique styles for DataEnrichment component */
+
+/* Global container styles */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Card styles with subtle shadow and border radius */
+.card {
+  background: linear-gradient(135deg, #ffffff, #f9fafb);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings */
+h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+/* Input fields */
+.input {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Buttons with gradient and hover effects */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn.bg-blue-500 {
+  background: linear-gradient(90deg, #6a4ece, #6a4ece);
+  color: white;
+}
+
+.btn.bg-blue-500:hover:not(:disabled) {
+  background: linear-gradient(90deg, #7e64db, #6a4ece);
+  transform: translateY(-2px);
+}
+
+.btn.bg-green-500 {
+  background: linear-gradient(90deg, #10b981, #059669);
+  color: white;
+}
+
+.btn.bg-green-500:hover:not(:disabled) {
+  background: linear-gradient(90deg, #059669, #047857);
+  transform: translateY(-2px);
+}
+
+.btn.bg-purple-500 {
+ background-color: white;
+  color: #ee5f5a;;
+  border: 1px solid #ee5f5a;
+}
+
+.btn.bg-purple1-500:hover:not(:disabled) {
+  background: linear-gradient(90deg,  #6a4ece,  #6a4ece);
+  transform: translateY(-2px);
+}
+.btn.bg-purple1-500 {
+  background: linear-gradient(90deg,  #6a4ece,  #6a4ece);
+  color: white;
+}
+
+.btn.bg-purple-500:hover:not(:disabled) {
+  background: linear-gradient(90deg,  #fd4c46,  #fd4c46);
+  transform: translateY(-2px);
+}
+
+.btn.bg-yellow-600 {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.btn.bg-yellow-600:hover:not(:disabled) {
+  background: linear-gradient(90deg, #d97706, #b45309);
+  transform: translateY(-2px);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+}
+
+th {
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 600;
+}
+
+td {
+  color: #4b5563;
+}
+
+/* Checkbox and radio inputs */
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #3b82f6;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+/* Labels */
+label {
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Alerts and messages */
+.alert {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.alert-danger {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.text-red-500 {
+  color: #ef4444;
+}
+
+.text-green-500 {
+  color: #10b981;
+}
+
+.text-yellow-600 {
+  color: #d97706;
+}
+
+.invalid {
+  color: #ef4444;
+  font-style: italic;
+}
+
+/* Chart container */
+.chart-container {
+  max-width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid layout for form fields */
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* Flex utilities */
+.flex {
+  display: flex;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  th, td {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .input {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .chart-container canvas {
+    height: 150px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .flex.gap-2 {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 0.7rem;
+  }
+
+  th, td {
+    padding: 0.4rem;
+  }
+}
+
+/* Animation for loading states */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* .btn:disabled {
+  animation: pulse 2s infinite;
+} */
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+/* WorkflowBuilder.css - Updated for responsive Saved Results table */
+
+/* Table wrapper for horizontal scrolling on small screens */
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  min-width: 600px; /* Ensures table content doesn’t collapse too much */
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+  white-space: nowrap; /* Prevents text wrapping in cells */
+}
+
+th {
+  background: #6a4ece6c;
+  color: #ffffff;
+  text-shadow: #47338f 0.1em 0.1em 0.2em;
+  font-weight: 600;
+}
+
+td {
+  color: #4b5563;
+}
+
+/* Specific styles for Saved Results table columns */
+.saved-results-table th,
+.saved-results-table td {
+  min-width: 100px; /* Minimum width for readability */
+}
+
+.saved-results-table th:nth-child(1),
+.saved-results-table td:nth-child(1) {
+  min-width: 80px; /* Job ID column */
+}
+
+.saved-results-table th:nth-child(2),
+.saved-results-table td:nth-child(2) {
+  min-width: 120px; /* File Name column */
+}
+
+.saved-results-table th:nth-child(3),
+.saved-results-table td:nth-child(3) {
+  min-width: 140px; /* Created At column */
+}
+
+.saved-results-table th:nth-child(4),
+.saved-results-table td:nth-child(4),
+.saved-results-table th:nth-child(5),
+.saved-results-table td:nth-child(5) {
+  min-width: 100px; /* Actions and Export columns */
+}
+
+/* Button styles within tables */
+.saved-results-table .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  width: 100%; /* Full-width buttons in table cells */
+  margin-bottom: 0.25rem; /* Space between stacked buttons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  th, td {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .saved-results-table th,
+  .saved-results-table td {
+    min-width: 80px; /* Slightly smaller minimum widths */
+  }
+
+  .saved-results-table th:nth-child(1),
+  .saved-results-table td:nth-child(1) {
+    min-width: 60px;
+  }
+
+  .saved-results-table th:nth-child(2),
+  .saved-results-table td:nth-child(2) {
+    min-width: 100px;
+  }
+
+  .saved-results-table th:nth-child(3),
+  .saved-results-table td:nth-child(3) {
+    min-width: 120px;
+  }
+
+  .saved-results-table .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  th, td {
+    padding: 0.4rem;
+    font-size: 0.7rem;
+  }
+
+  .saved-results-table th,
+  .saved-results-table td {
+    min-width: 60px; /* Further reduced for smaller screens */
+  }
+
+  .saved-results-table th:nth-child(1),
+  .saved-results-table td:nth-child(1) {
+    min-width: 50px;
+  }
+
+  .saved-results-table th:nth-child(2),
+  .saved-results-table td:nth-child(2) {
+    min-width: 80px;
+  }
+
+  .saved-results-table th:nth-child(3),
+  .saved-results-table td:nth-child(3) {
+    min-width: 100px;
+  }
+
+  .saved-results-table .btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 320px) {
+  th, td {
+    padding: 0.3rem;
+    font-size: 0.65rem;
+  }
+
+  .saved-results-table th,
+  .saved-results-table td {
+    min-width: 50px; /* Minimum width for ultra-small screens */
+  }
+
+  .saved-results-table th:nth-child(1),
+  .saved-results-table td:nth-child(1) {
+    min-width: 40px;
+  }
+
+  .saved-results-table th:nth-child(2),
+  .saved-results-table td:nth-child(2) {
+    min-width: 70px;
+  }
+
+  .saved-results-table th:nth-child(3),
+  .saved-results-table td:nth-child(3) {
+    min-width: 90px;
+  }
+
+  .saved-results-table .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.6rem;
+  }
+
+  .table-wrapper {
+    padding-bottom: 0.5rem; /* Extra space for scrollbar */
+  }
+}
+
+/* Ensure buttons stack in table cells on small screens */
+.saved-results-table td .btn {
+  display: block; /* Stack buttons vertically */
+  margin-bottom: 0.25rem;
+}
+
+/* Custom scrollbar for table wrapper */
+.table-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 4px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Rest of your existing styles remain unchanged */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}

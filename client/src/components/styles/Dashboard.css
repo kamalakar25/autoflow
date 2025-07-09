@@ -1,0 +1,460 @@
+.dash-dashboard-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.dash-dashboard {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.dash-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.dash-header-content {
+  flex: 1;
+}
+
+.dash-dashboard-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.dash-dashboard-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 8px 0 0;
+}
+
+.dash-header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.dash-new-workflow-btn, .dash-settings-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dash-new-workflow-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.dash-new-workflow-btn:hover {
+  background-color: #0056b3;
+}
+
+.dash-settings-btn {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.dash-settings-btn:hover {
+  background-color: #5a6268;
+}
+
+.dash-dashboard-main {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.dash-main-content-area {
+  flex: 3;
+}
+
+.dash-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.dash-metric-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.dash-metric-content {
+  flex: 1;
+}
+
+.dash-metric-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+.dash-metric-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 8px 0 0;
+}
+
+.dash-metric-icon {
+  font-size: 1.5rem;
+}
+
+.dash-workflows-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dash-workflows-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.dash-workflows-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.dash-workflows-count {
+  font-size: 0.9rem;
+  color: #007bff;
+}
+
+.dash-workflows-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dash-workflow-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.dash-workflow-info {
+  flex: 2;
+}
+
+.dash-workflow-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.dash-workflow-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 4px 0 0;
+}
+
+.dash-workflow-progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #eee;
+  border-radius: 3px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.dash-workflow-progress-fill {
+  height: 100%;
+  background-color: #007bff;
+  transition: width 0.3s;
+}
+
+.dash-workflow-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.dash-status-badge {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.dash-running {
+  background-color: #e7f4ff;
+  color: #007bff;
+}
+
+.dash-running1 {
+  background-color: #d4edda;
+  color: #28a745;
+}
+
+.dash-running2 {
+  background-color: #fff3cd;
+  color: #ffc107;
+}
+
+.dash-button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.dash-btn {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dash-btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.dash-btn-outline-secondary:hover {
+  background-color: #f8f9fa;
+}
+
+.dash-btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.dash-btn-outline-primary:hover {
+  background-color: #e7f4ff;
+}
+
+.dash-btn-outline-danger {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.dash-btn-outline-danger:hover {
+  background-color: #f8d7da;
+}
+
+.dash-sidebar-panel {
+  flex: 1;
+}
+
+ .dash-recent-activity-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+      width: 256px;
+}
+.dash-quick-actions-panel {
+  /* background: #ffffff; */
+  padding: 20px;
+  border-radius: 12px;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  margin-bottom: 24px;
+}
+
+.dash-panel-title, .dash-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.dash-action-list, .dash-activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+}
+
+.dash-action-item, .dash-activity-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: #333;
+  border: 2px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  /* width: 100%; */
+}
+
+.dash-action-icon, .dash-action-icon1, .dash-action-icon2, .dash-action-icon3 {
+  font-size: 1.2rem;
+}
+
+.dash-action-icon1 {
+  color: #28a745;
+}
+
+.dash-action-icon2 {
+  color: #dc3545;
+}
+
+.dash-action-icon3 {
+  color: #ffc107;
+}
+
+/* Extra Small Devices (Phones, <576px) */
+@media (max-width: 575.98px) {
+  .dash-dashboard {
+    padding: 0 10px;
+  }
+
+  .dash-dashboard-title {
+    font-size: 1.5rem;
+  }
+
+  .dash-dashboard-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .dash-header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dash-new-workflow-btn, .dash-settings-btn {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  .dash-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-metric-box {
+    padding: 16px;
+  }
+
+  .dash-metric-value {
+    font-size: 1.25rem;
+  }
+
+  .dash-workflow-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dash-workflow-controls {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .dash-sidebar-panel {
+    margin-top: 16px;
+  }
+
+  .dash-panel-title, .dash-card-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small Devices (Phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .dash-dashboard {
+    padding: 0 15px;
+  }
+
+  .dash-dashboard-title {
+    font-size: 1.75rem;
+  }
+
+  .dash-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-workflow-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dash-workflow-controls {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .dash-sidebar-panel {
+    margin-top: 16px;
+  }
+}
+
+/* Medium Devices (Tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .dash-dashboard-main {
+    flex-direction: column;
+  }
+
+  .dash-metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .dash-workflow-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .dash-sidebar-panel {
+    margin-top: 16px;
+  }
+}
+
+/* Large Devices (Desktops, 992px and up) */
+@media (min-width: 992px) {
+  .dash-dashboard-main {
+    flex-direction: row;
+  }
+
+  .dash-metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .dash-workflow-item {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Extra Large Devices (Large Desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .dash-dashboard {
+    max-width: 1400px;
+  }
+
+  .dash-metrics-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

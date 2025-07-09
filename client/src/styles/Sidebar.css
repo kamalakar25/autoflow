@@ -1,0 +1,252 @@
+.sidebar {
+  width: 270px;
+  background: #ffffff;
+  border-right: 1px solid #E0E0E0;
+  display: flex;
+  flex-direction: column;
+  height: 890px;
+  /* Hide scrollbar but keep functionality */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For IE and Edge */
+  position: relative;
+  z-index: 1000;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  color: #ff4444;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 16px;
+}
+
+.logout-button:hover {
+  background: #ffeeee;
+  border-color: #ff4444;
+}
+
+.logout-button:active {
+  background: #ffdddd;
+}
+
+.logout-icon {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.logout-button:hover .logout-icon {
+  transform: translateX(-2px);
+}
+
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.sidebar-content {
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.closed {
+  display: none;
+}
+
+.sidebar-section {
+  margin-bottom: 24px;
+}
+
+.sidebar-section-title {
+  color: #888;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  padding: 0 8px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-item {
+  text-decoration: none;
+  color: #363d49;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  padding: 8px;
+  border-radius: 30px;
+  transition: background 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-item:hover {
+  background: #F5F7FA;
+  color: #8E4AF2;
+}
+
+.sidebar-item.active {
+  background: #f3f4f6;
+  color: #8E4AF2;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.credits {
+  font-size: 14px;
+  color: #333;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.upgrade-item {
+  background-color: #f3f0ff;
+  color: #8E4AF2;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.upgrade-item:hover {
+  background-color: #e9e0ff;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #8E4AF2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.user-email {
+  font-size: 12px;
+  color: #888;
+}
+
+.sign-out-button {
+  background: #ffffff;
+  border: 1px solid #8E4AF2;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #8E4AF2;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-left: 8px;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.sign-out-button:hover {
+  background: #8E4AF2;
+  color: #ffffff;
+  border-color: #7A3DE1;
+}
+
+.sign-out-button::before {
+  content: '⇨';
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #8E4AF2;
+  z-index: 1001;
+  padding: 8px; /* Added for better touch target */
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    padding-top: 60px;
+    overflow-y: auto;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .close-button {
+    display: block;
+  }
+  .logout-button {
+    margin-top: 12px;
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+  
+  .logout-icon {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    display: flex;
+  }
+
+  .close-button {
+    display: none;
+  }
+}

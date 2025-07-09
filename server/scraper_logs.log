@@ -1,0 +1,613 @@
+2025-06-28T07:08:39.551Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:09:39.548Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:09:56.768Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:09:56.773Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:10:12.429Z - INFO - Scrape Endpoint: Scheduled job job_1751094612389_kxgfplv03 for Sat Jun 28 2025 12:41:00 GMT+0530 (India Standard Time)
+2025-06-28T07:10:26.776Z - INFO - Scheduled Jobs Endpoint: Fetched 1 scheduled jobs
+2025-06-28T07:10:56.768Z - INFO - Scheduled Jobs Endpoint: Fetched 1 scheduled jobs
+2025-06-28T07:11:20.907Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:11:20.908Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:11:21.178Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:11:26.771Z - INFO - Scheduled Jobs Endpoint: Fetched 1 scheduled jobs
+2025-06-28T07:11:57.556Z - INFO - Scheduled Jobs Endpoint: Fetched 1 scheduled jobs
+2025-06-28T07:12:18.773Z - INFO - Scheduled Jobs Endpoint: Fetched 1 scheduled jobs
+2025-06-28T07:12:20.140Z - INFO - Scheduled Jobs Endpoint: Fetched 1 scheduled jobs
+2025-06-28T07:12:20.740Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:12:20.741Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:12:21.091Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:12:22.011Z - INFO - Scheduled Jobs Endpoint: Fetched 1 scheduled jobs
+2025-06-28T07:12:22.018Z - INFO - Scheduled Jobs Endpoint: Fetched 1 scheduled jobs
+2025-06-28T07:12:33.443Z - INFO - Scrape Endpoint: Scheduled job job_1751094753441_asj2gh2i7 for Sat Jun 28 2025 12:43:00 GMT+0530 (India Standard Time)
+2025-06-28T07:12:52.024Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:13:00.828Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:13:00.829Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:13:19.995Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:13:20.267Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:13:22.029Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:13:52.045Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:14:00.539Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:14:00.795Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:14:20.649Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:14:20.914Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:14:22.024Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:14:52.029Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:15:00.495Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:15:00.547Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:15:20.948Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:15:20.950Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:15:21.232Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:15:22.011Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:15:52.016Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:16:00.521Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:16:00.521Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:16:20.713Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:16:20.714Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:16:20.986Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:16:22.028Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:16:52.027Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:17:00.487Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:17:00.572Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:17:20.741Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:17:20.742Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:17:21.019Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:17:22.024Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:17:52.023Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:18:00.666Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:18:00.667Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:18:21.064Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:18:21.352Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:18:22.017Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:18:52.017Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:19:00.595Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:19:00.607Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:19:21.086Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:19:21.368Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:19:22.024Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:19:52.024Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:20:00.522Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:20:00.530Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:20:20.570Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:20:20.859Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:20:22.031Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:20:52.025Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:21:00.528Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:21:00.536Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:21:20.631Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:21:20.632Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:21:20.903Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:21:22.026Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:21:52.024Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:22:00.505Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:22:00.536Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:22:20.564Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:22:20.565Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:22:20.848Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:22:22.020Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:22:52.019Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:23:00.523Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:23:00.524Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:23:20.551Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:23:20.552Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:23:20.816Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:23:22.019Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:23:52.022Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:24:00.504Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:24:00.505Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:24:20.617Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:24:20.885Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:24:22.025Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:24:52.031Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:25:00.552Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:25:00.562Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:25:20.663Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:25:20.664Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:25:21.000Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:25:22.027Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:25:52.027Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:26:00.516Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:26:00.654Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:26:00.682Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:26:04.889Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:26:04.896Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:26:20.947Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:26:20.949Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:26:21.248Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:26:35.546Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:27:01.166Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:27:01.200Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:27:05.574Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:27:22.135Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:27:22.402Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:27:35.543Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:28:00.458Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:28:00.795Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:28:05.548Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:28:20.713Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:28:20.978Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:28:35.542Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:29:00.542Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:29:00.542Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:29:05.538Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:29:20.704Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:29:20.705Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:29:20.965Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:29:35.540Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:30:00.501Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:30:00.557Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:30:20.618Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:30:20.890Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:30:27.543Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:31:00.456Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:31:00.465Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:31:20.533Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:31:20.815Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:31:27.537Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:31:35.864Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:32:00.648Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:32:00.839Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:32:05.547Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:32:20.811Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:32:20.813Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:32:21.131Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:32:35.560Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:33:00.558Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:33:00.569Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:33:05.541Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:33:20.636Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:33:20.936Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:34:00.507Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:34:00.508Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:34:06.549Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:34:20.675Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:34:20.676Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:34:20.953Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:35:00.542Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:35:00.543Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:35:07.533Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:35:20.717Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:35:20.718Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:35:20.993Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:36:00.727Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:36:00.772Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:36:08.541Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:36:21.495Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:36:21.949Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:37:00.544Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:37:00.559Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:37:09.535Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:37:20.658Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:37:20.659Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:37:20.926Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:38:00.585Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:38:00.688Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:38:10.549Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:38:20.887Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:38:21.160Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:39:00.825Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:39:00.835Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:39:11.543Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:39:16.119Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:39:16.125Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:39:21.482Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:39:21.484Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:39:21.769Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:39:34.924Z - ERROR - Retry: Retry 1/3 failed: net::ERR_FILE_NOT_FOUND at file:///C:/login
+2025-06-28T07:39:36.939Z - ERROR - Retry: Retry 2/3 failed: net::ERR_FILE_NOT_FOUND at file:///C:/login
+2025-06-28T07:39:40.952Z - ERROR - Dynamic Scraping: net::ERR_FILE_NOT_FOUND at file:///C:/login
+2025-06-28T07:39:41.217Z - INFO - Scrape Endpoint: Immediate scrape completed with 1 results
+2025-06-28T07:39:44.981Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:39:46.125Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:39:46.203Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:39:49.578Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:39:49.584Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:40:00.844Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:40:00.974Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:40:20.557Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:40:20.892Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:40:21.178Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:40:50.544Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:41:00.600Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:41:00.607Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:41:20.541Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:41:21.316Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:41:21.317Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:41:21.926Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:41:50.689Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:42:00.814Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:42:00.973Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:42:20.544Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:42:21.431Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:42:21.432Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:42:21.843Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:42:50.547Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:43:00.754Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:43:01.329Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:43:20.545Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:43:21.741Z - INFO - Dynamic Scraping: Extracted data: {"emails":["john.doe@example.com","jane.smith@example.com","mike.johnson@example.com","emily.brown@example.com","sarah.davis@example.com","james.wilson@example.com","laura.miller@example.com","david.anderson@example.com","lisa.thomas@example.com","robert.taylor@example.com","emma.martinez@example.com","william.clark@example.com","olivia.lewis@example.com","michael.walker@example.com","sophia.hall@example.com","daniel.allen@example.com","ava.young@example.com","henry.king@example.com","mia.scott@example.com","joseph.green@example.com","charlotte.adams@example.com","thomas.baker@example.com","amelia.gonzalez@example.com","christopher.nelson@example.com","harper.carter@example.com","andrew.mitchell@example.com","evelyn.perez@example.com","joshua.roberts@example.com","abigail.turner@example.com","benjamin.phillips@example.com","chloe.campbell@example.com","samuel.parker@example.com","lily.evans@example.com","ethan.edwards@example.com","grace.collins@example.com","alexander.stewart@example.com","victoria.sanchez@example.com","ryan.morris@example.com","natalie.rogers@example.com","gabriel.reed@example.com","hannah.cook@example.com","isaac.morgan@example.com","zoe.bell@example.com","elijah.rivera@example.com","aubrey.cooper@example.com","nathan.bailey@example.com","samantha.cox@example.com","logan.howard@example.com","leah.ward@example.com","owen.peterson@example.com","isabella.gray@example.com","jack.richardson@example.com","ella.james@example.com","luke.brooks@example.com","aria.sanders@example.com","mason.price@example.com","scarlett.bennett@example.com","carter.wood@example.com","layla.barnes@example.com","wyatt.ross@example.com","lillian.henderson@example.com","jayden.coleman@example.com","addison.jenkins@example.com","lincoln.kelly@example.com","luna.ortiz@example.com","hunter.long@example.com","mila.myers@example.com","eli.foster@example.com","aria.russell@example.com","grayson.stone@example.com","nora.ford@example.com","julian.hayes@example.com","hazel.murray@example.com","levi.wallace@example.com","violet.duncan@example.com","asher.wells@example.com","stella.hunt@example.com","easton.gordon@example.com","skylar.fisher@example.com","jasper.burns@example.com","aurora.lane@example.com","silas.hart@example.com","freya.black@example.com","declan.fox@example.com","esme.wells@example.com","finnley.reid@example.com","ivy.stone@example.com","milo.grant@example.com","jade.perry@example.com","theo.burke@example.com","cora.dunn@example.com","felix.riley@example.com","eliza.dean@example.com","arlo.hanson@example.com","lyric.boyd@example.com","rory.hale@example.com","sienna.blake@example.com","knox.porter@example.com","ember.quinn@example.com"],"phones":["123-456-7890","234-567-8901","345-678-9012","456-789-0123","567-890-1234","678-901-2345","789-012-3456","890-123-4567","901-234-5678","012-345-6789","123-456-7891","234-567-8902","345-678-9013","456-789-0124","567-890-1235","678-901-2346","789-012-3457","890-123-4568","901-234-5679","012-345-6790","123-456-7892","234-567-8903","345-678-9014","456-789-0125","567-890-1236","678-901-2347","789-012-3458","890-123-4569","901-234-5680","012-345-6791","123-456-7893","234-567-8904","345-678-9015","456-789-0126","567-890-1237","678-901-2348","789-012-3459","890-123-4570","901-234-5681","012-345-6792","123-456-7894","234-567-8905","345-678-9016","456-789-0127","567-890-1238","678-901-2349","789-012-3460","890-123-4571","901-234-5682","012-345-6793","123-456-7895","234-567-8906","345-678-9017","456-789-0128","567-890-1239","678-901-2350","789-012-3461","890-123-4572","901-234-5683","012-345-6794","123-456-7896","234-567-8907","345-678-9018","456-789-0129","567-890-1240","678-901-2351","789-012-3462","890-123-4573","901-234-5684","012-345-6795","123-456-7897","234-567-8908","345-678-9019","456-789-0130","567-890-1241","678-901-2352","789-012-3463","890-123-4574","901-234-5685","012-345-6796","123-456-7898","234-567-8909","345-678-9020","456-789-0131","567-890-1242","678-901-2353","789-012-3464","890-123-4575","901-234-5686","012-345-6797","123-456-7899","234-567-8910","345-678-9021","456-789-0132","567-890-1243","678-901-2354","789-012-3465","890-123-4576","901-234-5687"],"name":""}
+2025-06-28T07:43:22.277Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 99 results
+2025-06-28T07:44:00.520Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:44:00.520Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:44:20.963Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:44:20.964Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:44:21.240Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:44:21.541Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:45:00.562Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:45:00.567Z - INFO - Scheduled Job: Scheduled job job_1751094753441_asj2gh2i7 completed with 1 results
+2025-06-28T07:45:20.966Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"name":""}
+2025-06-28T07:45:20.967Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:45:21.256Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:45:22.534Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T07:46:00.593Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T07:46:00.766Z - INFO - Scheduled Job: Scheduled job job_1751094612389_kxgfplv03 completed with 1 results
+2025-06-28T07:46:12.428Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:46:19.588Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:46:50.553Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:47:20.545Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:47:50.532Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:48:27.547Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:49:27.548Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:50:27.538Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:51:27.535Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:52:27.550Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:53:27.542Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:54:27.540Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:55:27.540Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:56:27.544Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:57:27.551Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:58:04.557Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:58:35.584Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:58:35.590Z - INFO - Scraped Data Endpoint: Fetched 0 scraped data entries
+2025-06-28T07:59:05.448Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:59:05.458Z - INFO - Scraped Data Endpoint: Fetched 0 scraped data entries
+2025-06-28T07:59:12.962Z - INFO - Dynamic Scraping: Navigating to URL: file:///C:/Users/custq/Downloads/index%20(3).html#sign-in
+2025-06-28T07:59:17.786Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"names":[]}
+2025-06-28T07:59:17.788Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T07:59:18.150Z - INFO - Data Storage: Saved 1 results for job job_1751097551629_3jtzgi3c2
+2025-06-28T07:59:18.151Z - INFO - Scrape Endpoint: Immediate scrape completed with 1 results
+2025-06-28T07:59:18.912Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:59:18.919Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:59:18.921Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T07:59:18.929Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T07:59:48.920Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T07:59:48.923Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:00:18.920Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:00:18.923Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:00:49.546Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:00:49.550Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:01:19.533Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:01:19.536Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:01:49.536Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:01:49.540Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:02:19.534Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:02:19.536Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:02:49.532Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:02:49.535Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:03:27.549Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:03:27.555Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:04:27.536Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:04:27.540Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:05:27.535Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:05:27.539Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:06:27.538Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:06:27.541Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:07:27.540Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:07:27.544Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:08:27.544Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:08:27.555Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:09:27.530Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:09:27.533Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:10:27.541Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:10:27.546Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:11:27.543Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:11:27.546Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:12:27.532Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:12:27.535Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:13:27.541Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:13:27.544Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:14:27.538Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:14:27.542Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:15:27.543Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:15:27.547Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:16:27.539Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:16:27.542Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:17:27.531Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:17:27.534Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:18:27.563Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:18:27.566Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:19:27.537Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:19:27.540Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:20:27.533Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:20:27.536Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:21:27.540Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:21:27.543Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:22:27.536Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:22:27.539Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:23:27.539Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:23:27.543Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:24:27.542Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:24:27.545Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:25:27.538Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:25:27.542Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:26:27.533Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:26:27.537Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:27:27.535Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:27:27.539Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:28:27.543Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:28:27.546Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:29:27.535Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:29:27.538Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:30:27.538Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:30:27.541Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T08:31:27.543Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T08:31:27.547Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:01:26.082Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:01:26.086Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:01:48.906Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:01:48.909Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:02:01.854Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:02:01.862Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:02:01.863Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:02:01.870Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:02:32.540Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:02:32.543Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:03:02.541Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:03:02.545Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:03:32.534Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:03:32.536Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:04:02.546Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:04:02.550Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:04:32.553Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:04:32.556Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:05:02.541Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:05:02.544Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:05:32.542Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:05:32.548Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:06:27.557Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:06:27.561Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:07:27.545Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:07:27.548Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:08:27.531Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:08:27.535Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:09:27.547Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:09:27.550Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:10:27.527Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:10:27.530Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:11:04.539Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:11:04.544Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:11:55.329Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:11:55.344Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:11:55.346Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:11:55.353Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:12:55.325Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:12:55.334Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:13:13.705Z - INFO - Scrape Endpoint: Scheduled job job_1751101993659_6sorfu1o3 for Sat Jun 28 2025 14:44:00 GMT+0530 (India Standard Time)
+2025-06-28T09:13:23.325Z - INFO - Scheduled Jobs Endpoint: Job job_1751101993659_6sorfu1o3 canceled
+2025-06-28T09:13:29.209Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:13:29.216Z - INFO - Scheduled Jobs Endpoint: Fetched 0 scheduled jobs
+2025-06-28T09:13:29.219Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:13:29.226Z - INFO - Scraped Data Endpoint: Fetched 1 scraped data entries
+2025-06-28T09:13:46.672Z - INFO - Scrape Endpoint: Scheduled job job_1751102026672_aemh21u9v for Sat Jun 28 2025 14:44:00 GMT+0530 (India Standard Time)
+2025-06-28T09:14:01.252Z - INFO - Login: Navigating to URL: file:///C:/Users/custq/Downloads/index%20(3).html#sign-in
+2025-06-28T09:14:03.097Z - ERROR - Login: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:14:03.166Z - INFO - Login: Saved screenshot and HTML for debugging
+2025-06-28T09:14:03.167Z - ERROR - Retry: Retry 1/3 failed: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:14:05.173Z - INFO - Login: Navigating to URL: file:///C:/Users/custq/Downloads/index%20(3).html#sign-in
+2025-06-28T09:14:05.206Z - ERROR - Login: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:14:05.322Z - INFO - Login: Saved screenshot and HTML for debugging
+2025-06-28T09:14:05.323Z - ERROR - Retry: Retry 2/3 failed: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:14:09.324Z - INFO - Login: Navigating to URL: file:///C:/Users/custq/Downloads/index%20(3).html#sign-in
+2025-06-28T09:14:09.359Z - ERROR - Login: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:14:09.441Z - INFO - Login: Saved screenshot and HTML for debugging
+2025-06-28T09:14:09.441Z - ERROR - Dynamic Scraping: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:14:09.756Z - INFO - Data Storage: Saved 1 results for job job_1751102026672_aemh21u9v
+2025-06-28T09:14:09.756Z - INFO - Scheduled Job: Scheduled job job_1751102026672_aemh21u9v completed with 1 results
+2025-06-28T09:14:29.216Z - INFO - Scheduled Jobs Endpoint: Fetched 1 scheduled jobs
+2025-06-28T09:14:29.219Z - INFO - Scraped Data Endpoint: Fetched 2 scraped data entries
+2025-06-28T09:14:56.181Z - INFO - Scheduled Jobs Endpoint: Fetched 1 scheduled jobs
+2025-06-28T09:14:56.184Z - INFO - Scraped Data Endpoint: Fetched 2 scraped data entries
+2025-06-28T09:14:56.188Z - INFO - Scheduled Jobs Endpoint: Fetched 1 scheduled jobs
+2025-06-28T09:14:56.192Z - INFO - Scraped Data Endpoint: Fetched 2 scraped data entries
+2025-06-28T09:15:01.219Z - INFO - Login: Navigating to URL: file:///C:/Users/custq/Downloads/index%20(3).html#sign-in
+2025-06-28T09:15:03.067Z - ERROR - Login: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:15:03.134Z - INFO - Login: Saved screenshot and HTML for debugging
+2025-06-28T09:15:03.135Z - ERROR - Retry: Retry 1/3 failed: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:15:05.139Z - INFO - Login: Navigating to URL: file:///C:/Users/custq/Downloads/index%20(3).html#sign-in
+2025-06-28T09:15:05.169Z - ERROR - Login: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:15:05.272Z - INFO - Login: Saved screenshot and HTML for debugging
+2025-06-28T09:15:05.274Z - ERROR - Retry: Retry 2/3 failed: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:15:09.276Z - INFO - Login: Navigating to URL: file:///C:/Users/custq/Downloads/index%20(3).html#sign-in
+2025-06-28T09:15:09.325Z - ERROR - Login: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:15:09.421Z - INFO - Login: Saved screenshot and HTML for debugging
+2025-06-28T09:15:09.421Z - ERROR - Dynamic Scraping: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:15:09.746Z - INFO - Data Storage: Saved 1 results for job job_1751102026672_aemh21u9v
+2025-06-28T09:15:09.746Z - INFO - Scheduled Job: Scheduled job job_1751102026672_aemh21u9v completed with 1 results
+2025-06-28T09:15:10.376Z - INFO - Scrape Endpoint: Scheduled job job_1751102110373_bs34vqm46 for Sat Jun 28 2025 14:46:00 GMT+0530 (India Standard Time)
+2025-06-28T09:15:56.186Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T09:15:56.189Z - INFO - Scraped Data Endpoint: Fetched 3 scraped data entries
+2025-06-28T09:16:00.572Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T09:16:00.883Z - INFO - Data Storage: Saved 1 results for job job_1751102110373_bs34vqm46
+2025-06-28T09:16:00.925Z - INFO - Scheduled Job: Scheduled job job_1751102110373_bs34vqm46 completed with 1 results
+2025-06-28T09:16:01.207Z - INFO - Login: Navigating to URL: file:///C:/Users/custq/Downloads/index%20(3).html#sign-in
+2025-06-28T09:16:03.153Z - ERROR - Login: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:16:03.228Z - INFO - Login: Saved screenshot and HTML for debugging
+2025-06-28T09:16:03.228Z - ERROR - Retry: Retry 1/3 failed: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:16:05.235Z - INFO - Login: Navigating to URL: file:///C:/Users/custq/Downloads/index%20(3).html#sign-in
+2025-06-28T09:16:05.267Z - ERROR - Login: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:16:05.358Z - INFO - Login: Saved screenshot and HTML for debugging
+2025-06-28T09:16:05.359Z - ERROR - Retry: Retry 2/3 failed: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:16:09.365Z - INFO - Login: Navigating to URL: file:///C:/Users/custq/Downloads/index%20(3).html#sign-in
+2025-06-28T09:16:09.394Z - ERROR - Login: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:16:09.487Z - INFO - Login: Saved screenshot and HTML for debugging
+2025-06-28T09:16:09.488Z - ERROR - Dynamic Scraping: Login fields not found: email=true, password=true, submit=false
+2025-06-28T09:16:09.779Z - INFO - Data Storage: Saved 1 results for job job_1751102026672_aemh21u9v
+2025-06-28T09:16:09.780Z - INFO - Scheduled Job: Scheduled job job_1751102026672_aemh21u9v completed with 1 results
+2025-06-28T09:16:56.183Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T09:16:56.186Z - INFO - Scraped Data Endpoint: Fetched 5 scraped data entries
+2025-06-28T09:17:00.518Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T09:17:00.534Z - INFO - Data Storage: Saved 1 results for job job_1751102026672_aemh21u9v
+2025-06-28T09:17:00.535Z - INFO - Scheduled Job: Scheduled job job_1751102026672_aemh21u9v completed with 1 results
+2025-06-28T09:17:00.970Z - INFO - Dynamic Scraping: Navigating to URL: file:///C:/Users/custq/Downloads/index%20(1).html
+2025-06-28T09:17:05.941Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"names":[]}
+2025-06-28T09:17:05.943Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T09:17:06.324Z - INFO - Data Storage: Saved 1 results for job job_1751102110373_bs34vqm46
+2025-06-28T09:17:06.325Z - INFO - Scheduled Job: Scheduled job job_1751102110373_bs34vqm46 completed with 1 results
+2025-06-28T09:17:56.545Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T09:17:56.548Z - INFO - Scraped Data Endpoint: Fetched 7 scraped data entries
+2025-06-28T09:18:00.896Z - ERROR - Dynamic Scraping: Failed to launch the browser process! undefined
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+2025-06-28T09:18:00.903Z - INFO - Data Storage: Saved 1 results for job job_1751102026672_aemh21u9v
+2025-06-28T09:18:00.905Z - INFO - Scheduled Job: Scheduled job job_1751102026672_aemh21u9v completed with 1 results
+2025-06-28T09:18:01.346Z - INFO - Dynamic Scraping: Navigating to URL: file:///C:/Users/custq/Downloads/index%20(1).html
+2025-06-28T09:18:04.563Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs
+2025-06-28T09:18:06.222Z - INFO - Dynamic Scraping: Extracted data: {"emails":[],"phones":[],"names":[]}
+2025-06-28T09:18:06.223Z - INFO - Dynamic Scraping: No data extracted, returning default result
+2025-06-28T09:18:06.655Z - INFO - Data Storage: Saved 1 results for job job_1751102110373_bs34vqm46
+2025-06-28T09:18:06.657Z - INFO - Scheduled Job: Scheduled job job_1751102110373_bs34vqm46 completed with 1 results
+2025-06-28T09:18:15.561Z - INFO - Scheduled Jobs Endpoint: Fetched 2 scheduled jobs

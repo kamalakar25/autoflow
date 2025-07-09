@@ -1,0 +1,253 @@
+.navbar {
+  background-color: #8B5CF6;
+  color: #1a202c;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 60px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.logoo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 0 0 5px #8B5CF6, 0 0 10px #8B5CF6;
+  position: relative;
+  margin-left: 17px;
+}
+
+.logoo::before {
+  content: "⚡";
+  color: #ffffff;
+  margin-right: 0.3rem;
+}
+
+
+
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s;
+}
+
+.nav-link:hover,
+.nav-button:hover {
+  color: #000000;
+}
+
+.nav-button {
+  color: #f1efef;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.get-started-button {
+  background-color: #8B5CF6;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.get-started-button:hover {
+  background-color: #7c4dff;
+}
+
+.mobile-menu-toggle,
+.sidebar-toggle,
+.admin-menu-toggle {
+  background: none;
+  border: none;
+  color: #1a202c;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: none;
+  margin: 0;
+  line-height: 1;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Mobile menu styles */
+.navbar .nav-links.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #8B5CF6;
+  padding: 1rem;
+  gap: 0.5rem;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #93c5fd;
+  z-index: 1000;
+}
+
+.navbar .nav-links.open .nav-link,
+.navbar .nav-links.open .nav-button {
+  padding: 0.75rem 1rem;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.navbar .nav-links.open .get-started-button {
+  margin-top: 0.5rem;
+}
+
+/* Admin-specific styles */
+.navbar .nav-links.open .sign-out-button {
+  background-color: #3b82f6;
+  color: #000000;
+  border-radius: 0.25rem;
+}
+
+.navbar .nav-links.open .sign-out-button:hover {
+  background-color: #2563eb;
+}
+
+.navbar .nav-links.open .nav-link[href="/admindashboard"] {
+  background-color: #dbeafe;
+  color: #3b82f6;
+  margin-bottom: 8px;
+}
+
+.navbar .nav-links.open .nav-link[href="/admindashboard"]:hover {
+  background-color: #bfdbfe;
+}
+
+.admin-menu-toggle {
+  background: none;
+  border: none;
+  color: #1a202c;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0;
+  line-height: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-left {
+    position: static;
+    transform: none;
+    order: 1;
+    margin-right: auto;
+  }
+
+  .logoo {
+    position: static;
+    transform: none;
+    order: 1;
+    margin: 0;
+  }
+
+  .nav-right {
+    position: static;
+    transform: none;
+    order: 3;
+    margin-left: auto;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    color: white;
+  }
+
+  /* Mobile menu toggle - shown for unauthenticated users */
+  .mobile-menu-toggle {
+    display: block;
+    order: 3;
+  }
+
+  /* Sidebar toggle - shown for regular authenticated users */
+  .sidebar-toggle {
+    display: block;
+    order: 1;
+  }
+
+  /* Admin menu toggle - shown for admin users */
+  .admin-menu-toggle {
+    display: block;
+    order: 3;
+  }
+
+  /* Hide mobile menu toggle for authenticated users */
+  .navbar[data-user="authenticated"] .mobile-menu-toggle {
+    display: none;
+  }
+
+  /* Show admin menu toggle only for admin users */
+  .navbar:not([data-user-role="admin"]) .admin-menu-toggle {
+    display: none;
+  }
+
+  /* Hide sidebar toggle for admin and unauthenticated users */
+  .navbar[data-user-role="admin"] .sidebar-toggle,
+  .navbar:not([data-user="authenticated"]) .sidebar-toggle {
+    display: none;
+  }
+  .admin-menu-toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-toggle,
+  .sidebar-toggle,
+  .admin-menu-toggle {
+    display: none;
+  }
+
+  .navbar .nav-links {
+    display: flex;
+  }
+  .admin-menu-toggle {
+    display: none;
+  }
+}

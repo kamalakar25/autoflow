@@ -1,0 +1,105 @@
+.metric{
+    padding: 30px;
+    border-radius: 20px;
+}
+.valuetext{
+    font-weight: bolder;
+}
+.workflow{
+    border-radius: 20px;
+   padding: 5px;
+}
+.custom-box{
+   height: 600px;
+}
+.custom-badge {
+  background-color: #4827ec !important;
+  color: #fff;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 8px;
+
+}
+.bg-badge{
+    background-color: white;
+}
+.progress-bar{
+    background-color: #4827ec;
+}
+@media (max-width: 820px) {
+    .metric{
+    padding: 15px;
+    border-radius: 20px;
+}
+.workflow{
+    border-radius: 20px;
+}
+  .custom-badge {
+    font-size: 14px;         /* Reduce font size */
+    padding: 4px 2px;        /* Adjust padding */
+    border-radius: 8px;      /* Slightly smaller radius */
+    text-align: center;
+  }
+
+  .progress-bar {
+    height: 6px;             /* Slimmer progress bar */
+  }
+
+  .bg-badge {
+    padding: 4px 6px;
+  }
+  .custom-box{
+   height: 800px;
+   font-size: 0.8rem;
+}
+}
+@media (width: 1024px) {
+ .custom-box{
+   height: 800px;
+   font-size: .8rem;
+}
+}
+
+@media( width:820px){
+      .metric{
+    padding: 15px;
+    border-radius: 20px;
+    min-height: 250px;
+}
+.metric-icon{
+  font-size: 100px;
+  margin-top: 10px;
+
+}
+.metric-text{
+  margin-top: 40px;
+}
+}
+@media( width:912px){
+      .metric{
+    padding: 15px;
+    border-radius: 20px;
+    min-height: 220px;
+}
+.metric-icon{
+  font-size: 100px;
+ }
+.metric-text{
+  margin-top: 40px;
+}
+}
+@media( width:853px){
+      .metric{
+    padding: 15px;
+    border-radius: 20px;
+    min-height: 260px;
+}
+.metric-icon{
+  font-size: 100px;
+  margin-top: 10px;
+ }
+.metric-text{
+  margin-top: 60px;
+}
+}

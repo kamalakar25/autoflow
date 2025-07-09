@@ -1,0 +1,964 @@
+.workflowbuilder-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  min-height: 100vh;
+  padding: clamp(10px, 2vw, 20px);
+  background-color: #fcfcfd;
+  max-width: 2560px;
+  margin: 0 auto;
+}
+
+.workflowbuilder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(10px, 2vw, 20px);
+  padding: clamp(10px, 1.5vw, 15px);
+  flex-wrap: wrap;
+  gap: clamp(5px, 1vw, 10px);
+}
+
+.workflowbuilder-header-content h1 {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.workflowbuilder-subtext {
+  color: #6b7280;
+  font-size: clamp(12px, 1.5vw, 14px);
+  margin: clamp(3px, 0.5vw, 5px) 0 0;
+}
+
+.workflowbuilder-header-actions {
+  display: flex;
+  gap: clamp(5px, 1vw, 10px);
+  flex-wrap: wrap;
+}
+
+.workflowbuilder-action-btn {
+  padding: clamp(6px, 1vw, 8px) clamp(12px, 2vw, 16px);
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: clamp(12px, 1.5vw, 14px);
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #1f2937;
+  transition: background 0.2s;
+}
+
+.workflowbuilder-action-btn:hover {
+  background: #f9fafb;
+}
+
+.workflowbuilder-action-btn.primary {
+  background: #ffffff;
+  color: rgb(3, 3, 3);
+}
+
+.workflowbuilder-action-btn.primary:hover {
+  background: #00050a;
+  color: #ffffff;
+}
+
+.workflowbuilder-action-btn i {
+  margin-right: clamp(3px, 0.5vw, 5px);
+}
+
+.workflowbuilder-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: clamp(10px, 2vw, 20px);
+  background: #f3f4f6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.workflowbuilder-tab {
+  padding: clamp(8px, 1.5vw, 10px) clamp(15px, 2vw, 30px);
+  border: none;
+  background: #f3f4f6;
+  cursor: pointer;
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #1f2937;
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #d1d5db;
+  transition: background 0.2s;
+}
+
+.workflowbuilder-tab:last-child {
+  border-right: none;
+}
+
+.workflowbuilder-tab.active {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #9b9c9c;
+  border-radius: 2px;
+}
+
+.workflowbuilder-tab:hover:not(.active) {
+  background: #e5e7eb;
+}
+
+.workflowbuilder-content {
+  display: flex;
+  gap: clamp(10px, 2vw, 20px);
+  height: calc(100vh - clamp(120px, 15vw, 150px));
+  background-color: #fff;
+  border-radius: clamp(15px, 2vw, 30px);
+  padding: clamp(10px, 2vw, 20px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.workflowbuilder-components-section {
+  width: clamp(250px, 25vw, 300px);
+  background: transparent;
+}
+
+.workflowbuilder-subheading {
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: clamp(10px, 1.5vw, 15px);
+}
+
+.workflowbuilder-component-grid {
+  display: grid;
+  gap: clamp(10px, 1.5vw, 15px);
+}
+
+.workflowbuilder-component {
+  display: flex;
+  align-items: center;
+  padding: clamp(8px, 1vw, 10px);
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  cursor: move;
+  transition: background 0.2s;
+}
+
+.workflowbuilder-component:hover {
+  background: #e5e7eb;
+}
+
+.workflowbuilder-component-icon {
+  margin-right: clamp(5px, 1vw, 10px);
+  font-size: clamp(16px, 2vw, 20px);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(24px, 3vw, 30px);
+  height: clamp(24px, 3vw, 30px);
+  border-radius: 4px;
+}
+
+.workflowbuilder-component-icon-globe { background-color: #4CAF50; }
+.workflowbuilder-component-icon-database { background-color: #2196F3; }
+.workflowbuilder-component-icon-filter { background-color: #9C27B0; }
+.workflowbuilder-component-icon-clock { background-color: #FF9800; }
+.workflowbuilder-component-icon-export { background-color: #E91E63; }
+.workflowbuilder-component-icon-webhook { background-color: #673AB7; }
+.workflowbuilder-component-icon-email { background-color: #00BCD4; }
+
+.workflowbuilder-component-text h3 {
+  font-size: clamp(12px, 1.5vw, 14px);
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0;
+}
+
+.workflowbuilder-component-text p {
+  font-size: clamp(10px, 1.2vw, 12px);
+  color: #6b7280;
+  margin: clamp(3px, 0.5vw, 5px) 0 0;
+}
+
+.workflowbuilder-right-column {
+  flex: 1;
+  background: #f3f4f6;
+  border-radius: clamp(15px, 2vw, 30px);
+  padding: clamp(10px, 2vw, 20px);
+  position: relative;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.workflowbuilder-canvas {
+  height: 100%;
+  position: relative;
+  background: #f3f4f6;
+  border-radius: clamp(8px, 1.5vw, 12px);
+  min-width: clamp(300px, 50vw, 600px);
+  display: flex;
+  flex-direction: column;
+}
+
+.workflowbuilder-canvas-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: clamp(3px, 0.5vw, 5px);
+}
+
+.workflowbuilder-canvas-icon {
+  font-size: clamp(20px, 2.5vw, 24px);
+  margin-right: clamp(5px, 1vw, 10px);
+  color: #6b7280;
+}
+
+.workflowbuilder-canvas-header h2 {
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.workflowbuilder-canvas-controls {
+  position: absolute;
+  top: clamp(10px, 1.5vw, 20px);
+  right: clamp(10px, 1.5vw, 20px);
+  display: flex;
+  gap: clamp(5px, 1vw, 10px);
+  flex-wrap: wrap;
+}
+
+.workflowbuilder-canvas-btn {
+  padding: clamp(4px, 0.8vw, 6px) clamp(8px, 1.5vw, 12px);
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: clamp(10px, 1.2vw, 12px);
+  background: #fff;
+  color: #1f2937;
+  transition: background-color 0.2s;
+}
+
+.workflowbuilder-canvas-btn:hover {
+  background-color: #0d68c4;
+  color: #ffffff;
+}
+
+.workflowbuilder-canvas-btn.primary {
+  background-color: #fff;
+  color: #000000;
+}
+
+.workflowbuilder-canvas-btn.primary:hover {
+  background-color: #0d68c4;
+  color: #ffffff;
+}
+
+.workflowbuilder-canvas-placeholder {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - clamp(60px, 8vw, 80px));
+  border-radius: 8px;
+}
+
+.workflowbuilder-canvas-text {
+  margin: 0;
+  color: black;
+  font-size: clamp(12px, 1.5vw, 14px);
+}
+
+.vb-pipeline-steps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: nowrap;
+  padding: clamp(50px, 8vw, 60px) 10px 10px 10px;
+}
+
+.vb-step {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  width: clamp(180px, 20vw, 220px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.vb-step-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.vb-step-icon {
+  width: clamp(30px, 4vw, 40px);
+  height: clamp(30px, 4vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vb-ellipsis {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: clamp(60px, 8vw, 75px);
+  padding-top: 2px;
+}
+
+.vb-ellipsis span {
+  font-size: clamp(16px, 2vw, 20px);
+  color: #0f1011;
+  line-height: 6px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.vb-step-title {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #1a2e4d;
+  margin-bottom: 5px;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.vb-step-description {
+  font-size: clamp(10px, 1.2vw, 12px);
+  color: #6b7280;
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+
+.vb-step-status {
+  font-size: clamp(10px, 1.2vw, 12px);
+  color: #1a2e4d;
+}
+
+.vb-ready {
+  color: #10b981;
+}
+
+.vb-arrow {
+  font-size: clamp(18px, 2vw, 20px);
+  color: #6b7280;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+.vb-step-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.vb-step-form {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: clamp(16px, 2vw, 20px);
+  width: 90vw;
+  max-width: 600px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  text-align: left;
+  position: relative;
+}
+
+.vb-step-form input {
+  width: 95%;
+  padding: clamp(10px, 1.2vw, 12px);
+  font-size: clamp(13px, 1.6vw, 15px);
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #f9fafb;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+.vb-step-form input:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.2);
+  transform: scale(1.01);
+}
+
+.vb-step-form select {
+  width: 100%;
+  padding: clamp(10px, 1.2vw, 12px);
+  font-size: clamp(13px, 1.6vw, 15px);
+  border: 2px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #f9fafb;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%231a2e4d' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+
+.vb-step-form select:focus {
+  outline: none;
+  border-color: #0056b3;
+  box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.2);
+  transform: scale(1.01);
+}
+
+.vb-workflow-selector-form {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: clamp(20px, 2vw, 24px);
+  width: clamp(300px, 35vw, 400px);
+  max-width: 500px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  position: relative;
+  border: 1px solid #e5e7eb;
+}
+
+.vb-form-title {
+  font-size: clamp(16px, 2vw, 18px);
+  color: #1a2e4d;
+  margin-bottom: clamp(16px, 2vw, 20px);
+  font-weight: 600;
+}
+
+.vb-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.5vw, 16px);
+}
+
+.vb-workflow-selector-form .vb-form-fields {
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.vb-workflow-select-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(10px, 1.5vw, 12px);
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.vb-workflow-select-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vb-workflow-select-item span {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #1a2e4d;
+  font-weight: 500;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vb-workflow-select-item .vb-save-button {
+  padding: clamp(6px, 1vw, 8px) clamp(12px, 1.5vw, 16px);
+  font-size: clamp(12px, 1.5vw, 14px);
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.vb-workflow-select-item .vb-save-button:hover {
+  background-color: #0056b3;
+}
+
+.vb-form-fields .workflowbuilder-canvas-text {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #6b7280;
+  text-align: center;
+  padding: clamp(12px, 1.5vw, 16px);
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.vb-form-actions {
+  display: flex;
+  gap: clamp(8px, 1vw, 12px);
+  margin-top: clamp(16px, 2vw, 20px);
+  justify-content: flex-end;
+}
+
+.vb-save-button {
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: clamp(10px, 1.2vw, 14px) clamp(18px, 2.2vw, 26px);
+  cursor: pointer;
+  font-size: clamp(13px, 1.6vw, 15px);
+  transition: background-color 0.2s ease-in-out, transform 0.2s;
+}
+
+.vb-save-button:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+.vb-close-button {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: clamp(10px, 1.2vw, 14px) clamp(18px, 2.2vw, 26px);
+  cursor: pointer;
+  color: #1a2e4d;
+  font-size: clamp(13px, 1.6vw, 15px);
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.vb-close-button:hover {
+  background: #e5e7eb;
+  color: #1a2e4d;
+  transform: translateY(-1px);
+}
+
+.vb-remove-button {
+  margin-top: 5px;
+  padding: clamp(4px, 0.8vw, 6px) clamp(8px, 1.5vw, 12px);
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: clamp(10px, 1.2vw, 12px);
+  background: #fff;
+  color: #dc2626;
+  transition: background-color 0.2s;
+}
+
+.vb-remove-button:hover {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.vb-delete-button {
+  padding: clamp(4px, 0.8vw, 6px) clamp(8px, 1.5vw, 12px);
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: clamp(10px, 1.2vw, 12px);
+  background: #fff;
+  color: #dc2626;
+  transition: background-color 0.2s;
+}
+
+.vb-delete-button:hover {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+@media (max-width: 767px) {
+  .workflowbuilder-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .workflowbuilder-header-actions {
+    margin-top: clamp(5px, 1vw, 10px);
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .workflowbuilder-content {
+    flex-direction: column;
+    height: auto;
+    min-height: clamp(400px, 60vh, 600px);
+  }
+  .workflowbuilder-components-section {
+    width: 100%;
+    margin-bottom: clamp(10px, 2vw, 20px);
+  }
+  .workflowbuilder-right-column {
+    width: 100%;
+    min-height: clamp(400px, 65vh, 600px);
+    padding: clamp(8px, 1.5vw, 15px);
+    border-radius: clamp(10px, 2vw, 20px);
+  }
+  .workflowbuilder-canvas {
+    border-radius: clamp(6px, 1vw, 10px);
+    min-width: clamp(280px, 90vw, 500px);
+  }
+  .workflowbuilder-canvas-header {
+    position: absolute;
+    top: clamp(30px, 10vh, 50px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .workflowbuilder-canvas-placeholder {
+    height: calc(100% - clamp(50px, 8vw, 70px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .workflowbuilder-canvas-text {
+    position: absolute;
+    top: clamp(60px, 15vh, 80px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+  }
+  .workflowbuilder-canvas-controls {
+    top: clamp(8px, 1vw, 12px);
+    right: clamp(8px, 1vw, 12px);
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .workflowbuilder-tab {
+    padding: clamp(6px, 1vw, 8px);
+    font-size: clamp(10px, 1.5vw, 12px);
+    width: 33.33%;
+  }
+  .vb-pipeline-steps {
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: clamp(70px, 12vw, 80px) 5px 5px 5px;
+  }
+  .vb-step {
+    width: clamp(160px, 45vw, 200px);
+    padding: 8px;
+  }
+  .vb-step-icon {
+    width: clamp(25px, 4vw, 30px);
+    height: clamp(25px, 4vw, 30px);
+  }
+  .vb-ellipsis {
+    margin-left: clamp(50px, 8vw, 60px);
+  }
+  .vb-ellipsis span {
+    font-size: clamp(12px, 2vw, 16px);
+  }
+  .vb-step-title {
+    font-size: clamp(11px, 1.5vw, 12px);
+  }
+  .vb-step-description {
+    font-size: clamp(9px, 1.2vw, 10px);
+  }
+  .vb-step-status {
+    font-size: clamp(9px, 1.2vw, 10px);
+  }
+  .vb-arrow {
+    font-size: clamp(16px, 2vw, 18px);
+    margin: 0 3px;
+  }
+  .vb-step-form {
+    width: 90vw;
+    max-width: 500px;
+    padding: clamp(12px, 1.5vw, 16px);
+  }
+  .vb-step-form input {
+    padding: clamp(8px, 1vw, 10px);
+    font-size: clamp(12px, 1.5vw, 14px);
+  }
+  .vb-step-form select {
+    padding: clamp(8px, 1vw, 10px);
+    font-size: clamp(12px, 1.5vw, 14px);
+    background-position: right 8px center;
+  }
+  .vb-workflow-selector-form {
+    width: clamp(260px, 80vw, 320px);
+    padding: clamp(16px, 1.5vw, 20px);
+  }
+  .vb-form-title {
+    font-size: clamp(14px, 1.8vw, 16px);
+  }
+  .vb-workflow-select-item {
+    padding: clamp(8px, 1vw, 10px);
+  }
+  .vb-workflow-select-item span {
+    font-size: clamp(12px, 1.5vw, 14px);
+  }
+  .vb-workflow-select-item .vb-save-button {
+    padding: clamp(5px, 0.8vw, 6px) clamp(10px, 1.2vw, 12px);
+    font-size: clamp(11px, 1.4vw, 13px);
+  }
+  .vb-form-fields .workflowbuilder-canvas-text {
+    font-size: clamp(12px, 1.5vw, 14px);
+    padding: clamp(10px, 1.2vw, 12px);
+  }
+  .vb-form-actions {
+    margin-top: clamp(12px, 1.5vw, 16px);
+  }
+  .vb-save-button, .vb-close-button {
+    padding: clamp(8px, 1vw, 10px) clamp(14px, 1.5vw, 18px);
+    font-size: clamp(12px, 1.5vw, 14px);
+  }
+}
+
+@media (max-width: 479px) {
+  .workflowbuilder-header-content h1 {
+    font-size: clamp(16px, 4vw, 20px);
+  }
+  .workflowbuilder-subtext {
+    font-size: clamp(10px, 3vw, 12px);
+  }
+  .workflowbuilder-tab {
+    padding: clamp(6px, 2vw, 8px);
+    font-size: clamp(10px, 3vw, 12px);
+  }
+  .workflowbuilder-components-section {
+    padding: clamp(10px, 3vw, 15px);
+  }
+  .workflowbuilder-header-actions button {
+    padding: clamp(4px, 1.5vw, 6px) clamp(8px, 2vw, 12px);
+    font-size: clamp(10px, 3vw, 12px);
+  }
+  .workflowbuilder-canvas-controls {
+    flex-direction: column;
+    gap: clamp(5px, 1vw, 10px);
+    top: clamp(6px, 1vw, 10px);
+    right: clamp(6px, 1vw, 10px);
+  }
+  .workflowbuilder-canvas-btn {
+    width: 100%;
+    text-align: center;
+  }
+  .workflowbuilder-right-column {
+    min-height: clamp(350px, 60vh, 550px);
+    padding: clamp(6px, 1.5vw, 12px);
+    border-radius: clamp(8px, 2vw, 15px);
+  }
+  .workflowbuilder-canvas {
+    border-radius: clamp(5px, 1vw, 8px);
+    min-width: clamp(260px, 85vw, 450px);
+  }
+  .workflowbuilder-canvas-header {
+    top: clamp(20px, 10vh, 120px);
+  }
+  .workflowbuilder-canvas-placeholder {
+    height: calc(100% - clamp(40px, 8vw, 60px));
+  }
+  .workflowbuilder-canvas-text {
+    top: clamp(50px, 15vh, 110px);
+  }
+  .vb-pipeline-steps {
+    padding: clamp(60px, 12vw, 70px) 5px 5px 5px;
+  }
+  .vb-step {
+    width: clamp(140px, 40vw, 180px);
+  }
+  .vb-step-form {
+    width: 90vw;
+    max-width: 400px;
+    padding: clamp(10px, 1.2vw, 12px);
+  }
+  .vb-step-form input {
+    padding: clamp(6px, 0.8vw, 8px);
+    font-size: clamp(11px, 1.4vw, 13px);
+  }
+  .vb-step-form select {
+    padding: clamp(6px, 0.8vw, 8px);
+    font-size: clamp(11px, 1.4vw, 13px);
+    background-position: right 6px center;
+  }
+  .vb-workflow-selector-form {
+    width: clamp(220px, 85vw, 280px);
+    padding: clamp(12px, 1.5vw, 16px);
+  }
+  .vb-form-title {
+    font-size: clamp(13px, 1.8vw, 14px);
+  }
+  .vb-workflow-select-item {
+    padding: clamp(6px, 1vw, 8px);
+  }
+  .vb-workflow-select-item span {
+    font-size: clamp(11px, 1.4vw, 13px);
+  }
+  .vb-workflow-select-item .vb-save-button {
+    padding: clamp(4px, 0.8vw, 5px) clamp(8px, 1vw, 10px);
+    font-size: clamp(10px, 1.4vw, 12px);
+  }
+  .vb-form-fields .workflowbuilder-canvas-text {
+    font-size: clamp(11px, 1.4vw, 13px);
+    padding: clamp(8px, 1vw, 10px);
+  }
+  .vb-save-button, .vb-close-button {
+    padding: clamp(6px, 1vw, 8px) clamp(12px, 1.5vw, 16px);
+    font-size: clamp(11px, 1.4vw, 13px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .workflowbuilder-content {
+    height: calc(100vh - clamp(100px, 15vw, 130px));
+  }
+  .workflowbuilder-components-section {
+    width: clamp(200px, 20vw, 250px);
+  }
+  .workflowbuilder-right-column {
+    padding: clamp(12px, 1.5vw, 18px);
+    border-radius: clamp(12px, 2vw, 25px);
+  }
+  .workflowbuilder-canvas {
+    border-radius: clamp(6px, 1vw, 10px);
+    min-width: clamp(400px, 60vw, 700px);
+  }
+  .workflowbuilder-canvas-placeholder {
+    height: calc(100% - clamp(50px, 8vw, 70px));
+  }
+  .vb-pipeline-steps {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: nowrap;
+    padding-top: clamp(60px, 10vw, 80px);
+    min-height: calc(100% - clamp(60px, 8vw, 80px));
+    flex-grow: 1;
+  }
+  .vb-step {
+    width: clamp(160px, 20vw, 200px);
+  }
+  .vb-step-icon {
+    width: clamp(28px, 4vw, 35px);
+    height: clamp(28px, 4vw, 35px);
+  }
+  .vb-ellipsis {
+    margin-left: clamp(55px, 8vw, 65px);
+  }
+  .vb-step-title {
+    font-size: clamp(12px, 1.5vw, 14px);
+  }
+  .vb-step-description {
+    font-size: clamp(10px, 1.2vw, 12px);
+  }
+  .vb-arrow {
+    font-size: clamp(18px, 2vw, 22px);
+    margin: 0 5px;
+  }
+  .vb-step-form {
+    width: 90vw;
+    max-width: 550px;
+    padding: clamp(14px, 1.8vw, 18px);
+  }
+  .vb-workflow-selector-form {
+    width: clamp(280px, 30vw, 360px);
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1920px) {
+  .workflowbuilder-content {
+    height: calc(100vh - clamp(120px, 15vw, 150px));
+  }
+  .workflowbuilder-components-section {
+    width: clamp(250px, 20vw, 300px);
+  }
+  .workflowbuilder-right-column {
+    padding: clamp(15px, 1.5vw, 20px);
+    border-radius: clamp(15px, 2vw, 30px);
+  }
+  .workflowbuilder-canvas {
+    border-radius: clamp(8px, 1vw, 12px);
+    min-width: clamp(500px, 60vw, 800px);
+  }
+  .workflowbuilder-canvas-placeholder {
+    height: calc(100% - clamp(60px, 8vw, 80px));
+  }
+  .vb-pipeline-steps {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: nowrap;
+    padding-top: clamp(60px, 10vw, 80px);
+    min-height: calc(100% - clamp(60px, 8vw, 80px));
+    flex-grow: 1;
+  }
+  .vb-step {
+    width: clamp(180px, 20vw, 220px);
+  }
+}
+
+@media (min-width: 1921px) {
+  .workflowbuilder-container {
+    padding: clamp(20px, 1vw, 30px);
+  }
+  .workflowbuilder-content {
+    gap: clamp(20px, 1vw, 30px);
+    height: calc(100vh - clamp(130px, 15vw, 160px));
+  }
+  .workflowbuilder-components-section {
+    width: clamp(300px, 20vw, 350px);
+  }
+  .workflowbuilder-right-column {
+    padding: clamp(20px, 1vw, 25px);
+    border-radius: clamp(20px, 2vw, 35px);
+  }
+  .workflowbuilder-canvas {
+    border-radius: clamp(10px, 1vw, 15px);
+    min-width: clamp(600px, 60vw, 900px);
+  }
+  .workflowbuilder-canvas-placeholder {
+    height: calc(100% - clamp(70px, 8vw, 90px));
+  }
+  .vb-pipeline-steps {
+    padding: clamp(60px, 8vw, 70px) 10px 10px 10px;
+  }
+  .vb-step {
+    width: clamp(200px, 20vw, 240px);
+  }
+  .vb-step-form {
+    width: 90vw;
+    max-width: 600px;
+  }
+  .vb-workflow-selector-form {
+    width: clamp(320px, 25vw, 400px);
+  }
+}
+
+.workflowbuilder-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+.workflowbuilder-pagination-btn {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+}
+.workflowbuilder-pagination-btn.active {
+  background: #2196F3;
+  color: #fff;
+  border-color: #2196F3;
+}
+.workflowbuilder-pagination-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

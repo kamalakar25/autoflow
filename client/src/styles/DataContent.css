@@ -1,0 +1,1144 @@
+.kContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.kWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 12px;
+}
+
+.kSidebar {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.kSidebar h5 {
+  color: #2c3e50;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.kList {
+  list-style: none;
+  padding: 0;
+}
+
+.kListItem {
+  margin-bottom: 10px;
+}
+
+.kListItem span {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.kPercentage {
+  float: right;
+  color: #7e00c5;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.kListItem p {
+  margin: 4px 0 0;
+  color: #7f8c8d;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.kMainContent {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.kTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.kTabText {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-right: auto;
+}
+
+.kTab {
+  background-color: transparent;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #7f8c8d;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  min-width: 80px;
+  text-align: center;
+}
+
+.kTab.active {
+  color: #7e00c5;
+  font-weight: 600;
+  border-bottom: 2px solid #7e00c5;
+}
+
+.kTab:hover {
+  background-color: #ecf0f1;
+}
+
+.kUploadArea {
+  padding: 12px;
+  border: 2px dashed #ecf0f1;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.kUploadSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kSupportText {
+  font-size: 0.75rem;
+  color: #95a5a6;
+  margin: 0;
+}
+
+.kFileInput {
+  display: none;
+}
+
+.kChooseFile, .kStartButton {
+  background-color: #7e00c5;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  max-width: 180px;
+  margin: 0 auto;
+  min-height: 44px;
+}
+
+.kChooseFile:hover, .kStartButton:hover {
+  background-color: #6b00a9;
+}
+
+.kStartButton:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.kFileName {
+  color: #27ae60;
+  font-size: 0.75rem;
+  margin: 6px 0;
+  word-break: break-all;
+}
+
+.kTextArea {
+  width: 100%;
+  min-height: 60px;
+  padding: 8px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  resize: vertical;
+}
+
+.kManualText {
+  text-align: left;
+  margin-left: 0;
+  width: 100%;
+}
+
+.kCustomerList {
+  padding: 10px;
+}
+
+.kTableControls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.kSearchInput {
+  padding: 8px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  width: 100%;
+  min-height: 40px;
+}
+
+.kFilterSelect {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.kFilterSelect select {
+  padding: 8px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  width: 100%;
+  min-height: 40px;
+}
+
+.kAddButton {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  width: 100%;
+  max-width: 180px;
+  min-height: 44px;
+}
+
+.kAddButton:hover {
+  background-color: #219653;
+}
+
+.kAddForm {
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  border: 1px solid #ecf0f1;
+}
+
+.kFormGroup {
+  margin-bottom: 10px;
+}
+
+.kFormGroup label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 4px;
+}
+
+.kFormGroup input, .kFormGroup select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  min-height: 40px;
+}
+
+.kFormActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.kSaveButton, .kCancelButton {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  flex: 1;
+  min-height: 44px;
+}
+
+.kSaveButton {
+  background-color: #7e00c5;
+  color: white;
+}
+
+.kSaveButton:hover {
+  background-color: #6b00a9;
+}
+
+.kCancelButton {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.kCancelButton:hover {
+  background-color: #7f8c8d;
+}
+
+.kTableWrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.kCustomerTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  table-layout: auto;
+}
+
+.kCustomerTable th, .kCustomerTable td {
+  padding: 8px;
+  border: 1px solid #ecf0f1;
+  text-align: left;
+  font-size: 0.75rem;
+  min-width: 60px;
+}
+
+.kCustomerTable th:nth-child(1), .kCustomerTable td:nth-child(1) {
+  text-align: center;
+  padding: 8px 4px;
+  min-width: 40px;
+}
+
+.kCustomerTable th {
+  background-color: #ecf0f8;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.kCustomerTable tr {
+  cursor: pointer;
+}
+
+.kCustomerTable tr:hover {
+  background-color: #f5f7fa;
+}
+
+.kIncompleteRow {
+  background-color: #fef9e7;
+}
+
+.kMissingField {
+  color: #e74c3c;
+  position: relative;
+}
+
+.kSuggestionTooltip {
+  display: none;
+  position: absolute;
+  background-color: #2c3e50;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 0.65rem;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.kMissingField:hover .kSuggestionTooltip {
+  display: block;
+}
+
+.kEnrichmentStatus {
+  font-weight: 600;
+}
+
+.kStatusEnriched {
+  color: #27ae60;
+}
+
+.kStatusIncomplete {
+  color: #e74c3c;
+}
+
+.kEnrichmentActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.kActionButton {
+  background-color: #7f8c8d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s;
+  min-height: 44px;
+  flex: 1;
+  min-width: 100px;
+}
+
+.kActionButton:hover {
+  background-color: #6c7a8c;
+}
+
+.kEnrichSelected {
+  background-color: #7e00c5;
+}
+
+.kEnrichSelected:hover {
+  background-color: #6b00a9;
+}
+
+.kDeleteSelected {
+  background-color: #e74c3c;
+}
+
+.kDeleteSelected:hover {
+  background-color: #c0392b;
+}
+
+.kActionIcon {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0 6px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.kActionIcon:hover {
+  color: #c0392b;
+}
+
+.kCheckbox {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  cursor: pointer;
+  accent-color: #7e00c5;
+}
+
+.kCheckbox:checked {
+  background-color: #7e00c5;
+  border-color: #7e00c5;
+}
+
+.kProfileModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 12px;
+}
+
+.kModalContent {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.kCloseModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #7f8c8d;
+  min-height: 40px;
+}
+
+.kCloseModal:hover {
+  color: #2c3e50;
+}
+
+.kProfileDetails {
+  margin-bottom: 12px;
+}
+
+.kProfileDetails p {
+  margin: 6px 0;
+  font-size: 0.8rem;
+  color: #34495e;
+}
+
+.kMissingFields {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.kTimeline {
+  margin: 12px 0;
+}
+
+.kTimeline ul {
+  list-style: none;
+  padding: 0;
+}
+
+.kTimeline li {
+  font-size: 0.75rem;
+  color: #7f8c8d;
+  margin-bottom: 5px;
+}
+
+.kEnrichNowButton, .kSaveButton, .kDeleteButton {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  min-height: 44px;
+}
+
+.kEnrichNowButton {
+  background-color: #7e00c5;
+  color: white;
+}
+
+.kEnrichNowButton:hover {
+  background-color: #6b00a9;
+}
+
+.kSaveButton {
+  background-color: #27ae60;
+  color: white;
+}
+
+.kSaveButton:hover {
+  background-color: #219653;
+}
+
+.kDeleteButton {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.kDeleteButton:hover {
+  background-color: #c0392b;
+}
+
+.kProfileActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kProgressBar {
+  width: 100%;
+  height: 6px;
+  background-color: #ecf0f1;
+  border-radius: 3px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.kProgressFill {
+  height: 100%;
+  background-color: #7e00c5;
+  transition: width 0.3s ease;
+}
+
+.kActivityLog {
+  margin-top: 12px;
+}
+
+.kActivityList {
+  list-style: none;
+  padding: 0;
+}
+
+.kActivityItem {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border-bottom: 1px solid #ecf0f1;
+  font-size: 0.75rem;
+  color: #34495e;
+}
+
+.kActivityTime {
+  color: #7f8c8d;
+  margin-top: 3px;
+}
+
+.kActivityStatus {
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+.kStatusSuccess {
+  color: #27ae60;
+}
+
+.kStatusIncomplete {
+  color: #e74c3c;
+}
+
+.kQuickLookupContainer {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 12px;
+  border-top: 1px solid #ecf0f1;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+  height: auto;
+  min-height: 300px;
+  margin-top: 12px;
+  margin-bottom: 100px !important;
+}
+
+.kQuickLookup {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #ecf0f1;
+  border-radius: 6px;
+}
+
+.kQuickLookup h5 {
+  color: #2c3e50;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.kLookupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kLookupForm label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.kInput {
+  padding: 8px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  width: 100%;
+  min-height: 40px;
+}
+
+.kFindButton {
+  background-color: #7e00c5;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  min-height: 44px;
+}
+
+.kFindButton:hover {
+  background-color: #6b00a9;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Ultra-small screens (320px and below) */
+@media (max-width: 320px) {
+  .kContainer {
+    padding: 6px;
+  }
+  .kWrapper {
+    gap: 6px;
+  }
+  .kSidebar, .kMainContent, .kQuickLookup {
+    padding: 6px;
+    border-radius: 4px;
+  }
+  .kSidebar h5, .kQuickLookup h5 {
+    font-size: 0.85rem;
+  }
+  .kListItem span {
+    font-size: 0.8rem;
+  }
+  .kPercentage {
+    font-size: 0.7rem;
+  }
+  .kListItem p {
+    font-size: 0.65rem;
+  }
+  .kTabText {
+    font-size: 0.85rem;
+  }
+  .kTab {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    min-width: 60px;
+  }
+  .kUploadSection {
+    gap: 6px;
+  }
+  .kSupportText, .kManualText {
+    font-size: 0.65rem;
+  }
+  .kFileName {
+    font-size: 0.65rem;
+  }
+  .kTextArea {
+    min-height: 40px;
+    font-size: 0.7rem;
+  }
+  .kChooseFile, .kStartButton, .kAddButton, .kActionButton {
+    font-size: 0.75rem;
+    padding: 6px;
+    max-width: 140px;
+    min-height: 36px;
+  }
+  .kCustomerTable th, .kCustomerTable td {
+    padding: 4px;
+    font-size: 0.65rem;
+    min-width: 50px;
+  }
+  .kCustomerTable th:nth-child(1), .kCustomerTable td:nth-child(1) {
+    padding: 4px 2px;
+    min-width: 30px;
+  }
+  .kCheckbox {
+    width: 18px;
+    height: 18px;
+  }
+  .kActionIcon {
+    font-size: 0.8rem;
+    padding: 0 4px;
+  }
+  .kSuggestionTooltip {
+    font-size: 0.55rem;
+    padding: 2px 5px;
+  }
+  .kSearchInput, .kFilterSelect select, .kFormGroup input, .kFormGroup select {
+    font-size: 0.7rem;
+    padding: 6px;
+    min-height: 34px;
+  }
+  .kFormGroup label {
+    font-size: 0.7rem;
+  }
+  .kSaveButton, .kCancelButton {
+    font-size: 0.75rem;
+    padding: 6px;
+    min-height: 36px;
+  }
+  .kModalContent {
+    max-width: 95%;
+    padding: 8px;
+  }
+  .kProfileDetails p, .kTimeline li {
+    font-size: 0.7rem;
+  }
+  .kEnrichNowButton, .kSaveButton, .kDeleteButton {
+    font-size: 0.75rem;
+    padding: 6px;
+    min-height: 36px;
+  }
+  .kCloseModal {
+    font-size: 0.95rem;
+  }
+  .kInput, .kFindButton {
+    font-size: 0.7rem;
+    padding: 6px;
+    min-height: 34px;
+  }
+  .kLookupForm label {
+    font-size: 0.7rem;
+  }
+  .kQuickLookupContainer {
+    padding: 6px;
+    margin-top: 8px;
+    min-height: 260px;
+  }
+}
+
+/* Small screens (321px to 479px) */
+@media (min-width: 321px) and (max-width: 479px) {
+  .kContainer {
+    padding: 8px;
+  }
+  .kWrapper {
+    gap: 8px;
+  }
+  .kSidebar, .kMainContent, .kQuickLookup {
+    padding: 8px;
+    border-radius: 4px;
+  }
+  .kSidebar h5, .kQuickLookup h5 {
+    font-size: 0.9rem;
+  }
+  .kListItem span {
+    font-size: 0.85rem;
+  }
+  .kPercentage {
+    font-size: 0.75rem;
+  }
+  .kListItem p {
+    font-size: 0.7rem;
+  }
+  .kTabText {
+    font-size: 0.9rem;
+  }
+  .kTab {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    min-width: 70px;
+  }
+  .kUploadSection {
+    gap: 8px;
+  }
+  .kSupportText, .kManualText {
+    font-size: 0.7rem;
+  }
+  .kFileName {
+    font-size: 0.7rem;
+  }
+  .kTextArea {
+    min-height: 50px;
+    font-size: 0.75rem;
+  }
+  .kChooseFile, .kStartButton, .kAddButton, .kActionButton {
+    font-size: 0.8rem;
+    padding: 8px;
+    max-width: 160px;
+    min-height: 40px;
+  }
+  .kCustomerTable th, .kCustomerTable td {
+    padding: 6px;
+    font-size: 0.7rem;
+    min-width: 50px;
+  }
+  .kCustomerTable th:nth-child(1), .kCustomerTable td:nth-child(1) {
+    padding: 6px 2px;
+    min-width: 36px;
+  }
+  .kCheckbox {
+    width: 20px;
+    height: 20px;
+  }
+  .kActionIcon {
+    font-size: 0.85rem;
+    padding: 0 5px;
+  }
+  .kSuggestionTooltip {
+    font-size: 0.6rem;
+    padding: 3px 6px;
+  }
+  .kSearchInput, .kFilterSelect select, .kFormGroup input, .kFormGroup select {
+    font-size: 0.75rem;
+    padding: 7px;
+    min-height: 36px;
+  }
+  .kFormGroup label {
+    font-size: 0.75rem;
+  }
+  .kSaveButton, .kCancelButton {
+    font-size: 0.8rem;
+    padding: 8px;
+    min-height: 40px;
+  }
+  .kModalContent {
+    max-width: 90%;
+    padding: 10px;
+  }
+  .kProfileDetails p, .kTimeline li {
+    font-size: 0.75rem;
+  }
+  .kEnrichNowButton, .kSaveButton, .kDeleteButton {
+    font-size: 0.8rem;
+    padding: 8px;
+    min-height: 40px;
+  }
+  .kCloseModal {
+    font-size: 1rem;
+  }
+  .kInput, .kFindButton {
+    font-size: 0.75rem;
+    padding: 7px;
+    min-height: 36px;
+  }
+  .kLookupForm label {
+    font-size: 0.75rem;
+  }
+  .kQuickLookupContainer {
+    padding: 8px;
+    margin-top: 8px;
+    min-height: 280px;
+  }
+}
+
+/* Medium mobile screens (480px to 639px) */
+@media (min-width: 480px) and (max-width: 639px) {
+  .kContainer {
+    padding: 10px;
+  }
+  .kSidebar, .kMainContent, .kQuickLookup {
+    padding: 10px;
+  }
+  .kCustomerTable th, .kCustomerTable td {
+    font-size: 0.75rem;
+    padding: 7px;
+    min-width: 55px;
+  }
+  .kCustomerTable th:nth-child(1), .kCustomerTable td:nth-child(1) {
+    padding: 7px 3px;
+    min-width: 40px;
+  }
+  .kCheckbox {
+    width: 22px;
+    height: 22px;
+  }
+  .kTab {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+  .kChooseFile, .kStartButton, .kAddButton, .kActionButton {
+    font-size: 0.85rem;
+    padding: 9px;
+  }
+  .kQuickLookupContainer {
+    padding: 10px;
+    margin-top: 10px;
+    min-height: 300px;
+  }
+}
+
+/* Larger mobile screens and small tablets (640px to 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+  .kWrapper {
+    flex-direction: column;
+  }
+  .kSidebar, .kMainContent {
+    width: 100%;
+  }
+  .kTableControls {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .kSearchInput, .kFilterSelect, .kAddButton {
+    width: auto;
+  }
+  .kFilterSelect select {
+    width: 130px;
+  }
+  .kAddButton {
+    max-width: 150px;
+  }
+  .kFormActions {
+    flex-direction: row;
+  }
+  .kSaveButton, .kCancelButton {
+    flex: 0 1 auto;
+    width: auto;
+  }
+  .kQuickLookupContainer {
+    padding: 12px;
+    margin-top: 12px;
+    min-height: 320px;
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .kContainer {
+    padding: 16px;
+  }
+  .kWrapper {
+    flex-direction: row;
+  }
+  .kSidebar {
+    width: 35%;
+  }
+  .kMainContent {
+    width: 65%;
+  }
+  .kCustomerTable th, .kCustomerTable td {
+    font-size: 0.85rem;
+    padding: 10px;
+    min-width: 70px;
+  }
+  .kCustomerTable th:nth-child(1), .kCustomerTable td:nth-child(1) {
+    padding: 10px 4px;
+    min-width: 44px;
+  }
+  .kCheckbox {
+    width: 24px;
+    height: 24px;
+  }
+  .kTabs {
+    gap: 10px;
+  }
+  .kTabText {
+    font-size: 1.1rem;
+  }
+  .kTab {
+    font-size: 0.9rem;
+  }
+  .kChooseFile, .kStartButton {
+    max-width: 200px;
+  }
+  .kQuickLookupContainer {
+    padding: 16px;
+    margin-top: 16px;
+    width: 100%;
+    min-height: 340px;
+  }
+  .kLookupForm {
+    gap: 16px;
+  }
+  .kInput {
+    padding: 10px 14px;
+  }
+  .kFindButton {
+    padding: 12px 20px;
+  }
+}
+
+/* Small desktops (1024px to 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .kContainer {
+    padding: 20px;
+  }
+  .kWrapper {
+    flex-direction: row;
+  }
+  .kSidebar {
+    width: 30%;
+  }
+  .kMainContent {
+    width: 70%;
+  }
+  .kCustomerTable th, .kCustomerTable td {
+    font-size: 0.9rem;
+    padding: 12px;
+    min-width: 80px;
+  }
+  .kCustomerTable th:nth-child(1), .kCustomerTable td:nth-child(1) {
+    padding: 12px 5px;
+    min-width: 48px;
+  }
+  .kEnrichmentActions {
+    gap: 10px;
+  }
+  .kActionButton {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+  .kQuickLookupContainer {
+    padding: 16px;
+    margin-top: 20px;
+    width: 100%;
+    min-height: 360px;
+  }
+}
+
+/* Larger desktops (1440px to 2559px) */
+@media (min-width: 1440px) and (max-width: 2559px) {
+  .kContainer {
+    padding: 24px;
+  }
+  .kWrapper {
+    flex-direction: row;
+  }
+  .kSidebar {
+    width: 25%;
+  }
+  .kMainContent {
+    width: 75%;
+  }
+  .kCustomerTable th, .kCustomerTable td {
+    font-size: 0.95rem;
+    padding: 14px;
+    min-width: 90px;
+  }
+  .kCustomerTable th:nth-child(1), .kCustomerTable td:nth-child(1) {
+    padding: 14px 6px;
+    min-width: 50px;
+  }
+  .kQuickLookupContainer {
+    padding: 20px;
+    margin-top: 24px;
+    width: 100%;
+    min-height: 380px;
+  }
+}
+
+/* Ultra-wide screens (2560px and above) */
+@media (min-width: 2560px) {
+  .kContainer {
+    padding: 28px;
+  }
+  .kWrapper {
+    max-width: 1600px;
+  }
+  .kSidebar {
+    width: 20%;
+  }
+  .kMainContent {
+    width: 80%;
+  }
+  .kCustomerTable th, .kCustomerTable td {
+    font-size: 1rem;
+    padding: 16px;
+    min-width: 100px;
+  }
+  .kCustomerTable th:nth-child(1), .kCustomerTable td:nth-child(1) {
+    padding: 16px 8px;
+    min-width: 60px;
+  }
+  .kQuickLookupContainer {
+    padding: 24px;
+    margin-top: 28px;
+    width: 100%;
+    min-height: 400px;
+  }
+}

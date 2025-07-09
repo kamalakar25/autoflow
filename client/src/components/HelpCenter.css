@@ -1,0 +1,289 @@
+/* Container for the entire help center */
+.hc-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(to bottom, #f9fafb, #e5e7eb);
+}
+
+/* Content container for FAQ and contact sections */
+.hc-content-container {
+  max-width: 64rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Main title styling */
+.hc-main-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #111827;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 640px) {
+  .hc-main-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hc-main-title {
+    font-size: 3rem;
+  }
+}
+
+/* Grid Layout */
+.hc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .hc-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* FAQ Section */
+.hc-faq-section {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.hc-faq-section:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hc-faq-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+@media (min-width: 640px) {
+  .hc-faq-title {
+    font-size: 1.875rem;
+  }
+}
+
+.hc-faq-border {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.hc-faq-border:hover {
+  background: #f3f4f6;
+}
+
+.hc-faq-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.hc-faq-button:hover {
+  color: #4f46e5;
+}
+
+.hc-faq-toggle {
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.hc-faq-button[aria-expanded="true"] .hc-faq-toggle {
+  transform: rotate(180deg);
+}
+
+.hc-faq-answer {
+  margin-top: 0.75rem;
+  color: #374151;
+  line-height: 1.6;
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Title */
+.hc-contact-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+@media (min-width: 640px) {
+  .hc-contact-title {
+    font-size: 1.875rem;
+  }
+}
+
+/* Contact Details Section */
+.hc-contact-details {
+  padding: 2rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .hc-contact-details {
+    flex-direction: row;
+  }
+}
+
+.hc-contact-info,
+.hc-contact-map {
+  flex: 1 1 0%;
+}
+
+.hc-contact-email,
+.hc-contact-phone,
+.hc-contact-address {
+  color: #374151;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.hc-contact-email a,
+.hc-contact-phone a {
+  color: #4f46e5;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 13px;
+}
+
+.hc-contact-email a:hover,
+.hc-contact-phone a:hover {
+  color: #4338ca;
+  text-decoration: underline;
+}
+
+/* Google Map Styling */
+.hc-contact-map iframe {
+  width: 100%;
+  height: 16rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Contact Form Card */
+.hc-contact-card {
+  padding: 2rem;
+  border-radius: 0.75rem;
+  transition: box-shadow 0.3s ease;
+  margin-top: 2rem;
+}
+
+.hc-contact-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hc-contact-info {
+  margin-bottom: 1.5rem;
+}
+
+/* ============================= */
+/*     Responsive for ≤ 320px    */
+/* ============================= */
+
+@media (max-width: 320px) {
+  .hc-container {
+    padding: 1.5rem 0.5rem;
+    flex-direction: column;
+  }
+
+  .hc-main-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hc-content-container {
+    padding: 0 0.5rem;
+  }
+
+  .hc-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hc-faq-section,
+  .hc-contact-details,
+  .hc-contact-card {
+    padding: 1rem;
+  }
+
+  .hc-faq-title,
+  .hc-contact-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .hc-faq-button {
+    font-size: 0.95rem;
+  }
+
+  .hc-faq-toggle {
+    font-size: 1.25rem;
+  }
+
+  .hc-faq-answer {
+    font-size: 0.9rem;
+  }
+
+  .hc-contact-email,
+  .hc-contact-phone,
+  .hc-contact-address {
+    font-size: 0.95rem;
+  }
+
+  .hc-contact-email a,
+  .hc-contact-phone a {
+    font-size: 12px;
+  }
+
+  .hc-contact-details {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hc-contact-map iframe {
+    height: 12rem;
+  }
+
+  .hc-contact-card {
+    margin-top: 1.5rem;
+  }
+}

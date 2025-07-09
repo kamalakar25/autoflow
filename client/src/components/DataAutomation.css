@@ -1,0 +1,1208 @@
+/* General Styles */
+.data-automation-container {
+  width: 100%;
+  background-color: #0f0b1e;
+}
+
+/* Section 1: Automate Your Data Workflows */
+.da-top-section {
+  padding: 60px 40px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.da-text-content {
+  max-width: 50%;
+  padding-right: 20px;
+}
+
+.da-main-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #a084e8;
+  margin-bottom: 20px;
+}
+
+.da-heading-span {
+  color: #ffffff;
+}
+
+.da-description {
+  font-size: 1.2rem;
+  color: #b0b0c0;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+.da-button-group {
+  display: flex;
+  gap: 20px;
+}
+
+.da-start-btn,
+.da-demo-btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.da-start-btn {
+  background-color: #a084e8;
+  color: #fff;
+}
+
+.da-demo-btn {
+  background-color: #ffffff;
+  color: #1c1c2e;
+}
+
+.da-image-content {
+  max-width: 50%;
+}
+
+.da-workflow-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Section 2: Everything You Need for Data Automation */
+.da-middle-section {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #000;
+}
+
+.da-bottom-section {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.da-text-center {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.da-bottom-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f3efef;
+}
+
+.da-bottom-desc {
+  font-size: 1.1rem;
+  color: #f3efef;
+  margin-bottom: 20px;
+}
+
+.da-feature-btn {
+  background-color: #6f42c1;
+  border: none;
+  color: #fff;
+  padding: 10px 20px 5px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.da-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.da-grid-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.da-item-title {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.da-item-desc {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.da-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+}
+
+/* Automation Suite Styles */
+.automation-suite-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.automation-title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.automation-subtitle {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.automation-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #2d2d2d;
+  padding: 5px;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.automation-tab {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 2px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.automation-tab.active {
+  background-color: #e9ecef;
+  color: #2d2d2d;
+  font-weight: bold;
+}
+
+.automation-tab:hover {
+  background-color: #3d3d3d;
+  color: #fff;
+}
+
+.automation-content {
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: left;
+}
+
+.automation-content-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+.automation-content-desc {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.automation-feature-list {
+  list-style: none;
+  padding-left: 0;
+  color: #6f42c1;
+}
+
+.automation-feature-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 15px;
+}
+
+.automation-feature-list li:before {
+  content: '•';
+  color: #6f42c1;
+  position: absolute;
+  left: 0;
+}
+
+.automation-progress {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.automation-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #6f42c1, #8e44ad);
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.automation-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #28a745;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Stats Section Styles */
+.stats-container {
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stats-subheading {
+  font-size: 1rem;
+  color: #cccccc;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center;
+}
+
+.stat-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  background-color: #8f67ff;
+  color: white;
+  font-size: 1.6rem;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4827ec;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 10px 0;
+  color: rgb(0, 0, 0);
+}
+
+.stat-description {
+  font-size: 0.85rem;
+  color: black;
+}
+
+/* Section 3: Ready to Transform Your Data Workflows */
+.data-cta-section {
+  width: 100%;
+  background: linear-gradient(90deg, #5f27cd, #8e44ad);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.data-cta-heading {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.data-cta-subheading {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  margin-bottom: 2rem;
+  color: #dddddd;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.data-cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.data-cta-btn-primary,
+.data-cta-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.data-cta-btn-primary {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.541);
+  border: none;
+}
+
+.data-cta-btn-primary:hover {
+  background-color: #eeeeee;
+}
+
+.data-cta-btn {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.data-cta-btn:hover {
+  background-color: white;
+  color: #5f27cd;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  position: fixed;
+  inset: 0;
+  pointer-events: auto;
+}
+
+.signup-glass-modal {
+  background: rgba(18, 18, 18, 0.85);
+  padding: 16px 12px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(155, 89, 255, 0.6);
+  width: 100%;
+  max-width: 700px;
+  color: white;
+  box-sizing: border-box;
+  position: relative;
+  pointer-events: auto;
+  backdrop-filter: blur(10px);
+  max-height: 98vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-modal-content {
+  flex: 1;
+  overflow: visible;
+}
+
+.signin-glass-modal {
+  background: rgba(18, 18, 18, 0.85);
+  padding: 24px 16px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(155, 89, 255, 0.6);
+  width: 100%;
+  max-width: 450px;
+  color: white;
+  box-sizing: border-box;
+  position: relative;
+  pointer-events: auto;
+  backdrop-filter: blur(10px);
+}
+
+.signup-brand {
+  color: #8a2be2;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.signup-brand::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image: url('/public/logo.png'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.signup-welcome {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.signup-subtext {
+  color: #aaa;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.6rem;
+}
+
+.signup-input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.field-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.field-row .signup-input-container {
+  flex: 1;
+  min-width: 200px;
+}
+
+.signup-label {
+  font-size: 11px;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 30px; /* Fixed height to ensure consistent icon centering */
+}
+
+.signup-input {
+  width: 100%;
+  padding: 6px 10px 6px 32px;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  background-color: #1f1f2e;
+  color: white;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 13px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  height: 100%; /* Match input-wrapper height */
+  line-height: normal; /* Prevent text vertical offset */
+}
+
+.signup-input:focus {
+  border-color: #8a2be2;
+  box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+}
+
+.signup-input.pr-10 {
+  padding-right: 2.5rem;
+}
+
+.signup-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1; /* Prevent icon height affecting alignment */
+}
+
+.signup-icon-eye {
+  color: #aaa;
+  cursor: pointer;
+  margin-left: -20px;
+}
+
+.error {
+  color: #ff4d4d;
+  font-size: 9px;
+  margin-top: 0.2rem;
+  padding-left: 5px;
+  display: block;
+}
+
+.signup-submit-btn {
+  background: #8a2be2;
+  color: white;
+  padding: 8px;
+  border-radius: 13px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 13px;
+  margin-top: 8px;
+  width: 40%;
+  margin-left: 30%;
+  display: block;
+  visibility: visible;
+}
+
+.signup-submit-btn:hover {
+  background-color: #6a1bbf;
+}
+
+.signup-demo-btn {
+  margin-top: 8px;
+  background: none;
+  color: white;
+  border: 1px solid #717172;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 60%;
+  font-size: 12px;
+  margin-left: 20%;
+  padding: 6px;
+}
+
+.signup-demo-btn:hover {
+  background-color: #8a2be2;
+  color: white;
+}
+
+.signup-bottom-text {
+  margin-top: 8px;
+  font-size: 11px;
+  text-align: center;
+  display: block;
+  visibility: visible;
+}
+
+.signup-bottom-text a {
+  color: #8a2be2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-bottom-text a:hover {
+  text-decoration: underline;
+}
+
+/* Close button styling */
+.signup-glass-modal button svg,
+.signin-glass-modal button svg {
+  font-size: 18px;
+}
+
+/* Initial signup button */
+.signup-blur-container > button.signup-submit-btn {
+  font-size: 20px;
+  padding: 15px;
+  width: 20%;
+}
+
+/* Responsive Design */
+
+/* Extra Small Screens (≤320px) */
+@media (max-width: 320px) {
+  .da-top-section {
+    flex-direction: column;
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .da-text-content,
+  .da-image-content {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .da-main-heading {
+    font-size: 1.5rem;
+  }
+
+  .da-description {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .da-button-group {
+    flex-direction: column;
+  }
+
+  .da-start-btn,
+  .da-demo-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .da-bottom-section {
+    padding: 20px 10px;
+  }
+
+  .da-grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-tabs {
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .automation-tab {
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .automation-content {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .automation-title {
+    font-size: 1.5rem;
+  }
+
+  .automation-content-title {
+    font-size: 1.3rem;
+  }
+
+  .automation-content-desc {
+    font-size: 1rem;
+  }
+
+  .automation-progress {
+    height: 8px;
+  }
+
+  .stats-heading {
+    font-size: 1.5rem;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.95rem;
+  }
+
+  .stat-description {
+    font-size: 0.8rem;
+  }
+
+  .signup-glass-modal {
+    padding: 10px 6px;
+    max-width: 100%;
+    margin: 0 4px;
+    max-height: 98vh;
+  }
+
+  .signup-brand {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .signup-welcome {
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+
+  .signup-subtext {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+
+  .signup-input {
+    font-size: 10px;
+    padding: 5px 8px 5px 20px;
+    height: 20px;
+  }
+
+  .input-wrapper {
+    height: 20px; /* Match input height for small screens */
+  }
+
+  .signup-submit-btn {
+    font-size: 11px;
+    padding: 6px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .signup-icon {
+    left: 6px;
+    font-size: 10px;
+  }
+
+  .signup-bottom-text {
+    font-size: 9px;
+    margin-top: 6px;
+  }
+
+  .error {
+    font-size: 8px;
+    margin-top: 0.1rem;
+  }
+
+  .field-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .field-row .signup-input-container {
+    min-width: 100%;
+  }
+}
+
+/* Small Screens (321px - 480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+  .da-top-section {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .da-text-content,
+  .da-image-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .da-main-heading {
+    font-size: 2rem;
+  }
+
+  .da-description {
+    font-size: 1rem;
+  }
+
+  .da-button-group {
+    flex-direction: column;
+  }
+
+  .da-start-btn,
+  .da-demo-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .da-grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-tabs {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .automation-tab {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .automation-content {
+    max-width: 100%;
+  }
+
+  .stats-heading {
+    font-size: 1.5rem;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.95rem;
+  }
+
+  .stat-description {
+    font-size: 0.8rem;
+  }
+
+  .signup-glass-modal {
+    padding: 12px 8px;
+    max-width: 100%;
+    max-height: 98vh;
+  }
+
+  .signup-brand {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .signup-welcome {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+
+  .signup-subtext {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .signup-input {
+    font-size: 11px;
+    padding: 5px 8px 5px 24px;
+    height: 24px;
+  }
+
+  .input-wrapper {
+    height: 24px; /* Match input height for small screens */
+  }
+
+  .signup-submit-btn {
+    font-size: 12px;
+    padding: 6px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .signup-icon {
+    left: 6px;
+    font-size: 11px;
+  }
+
+  .signup-bottom-text {
+    font-size: 10px;
+    margin-top: 6px;
+  }
+
+  .error {
+    font-size: 9px;
+    margin-top: 0.2rem;
+  }
+
+  .field-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .field-row .signup-input-container {
+    min-width: 100%;
+  }
+}
+
+/* Medium Screens (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .da-top-section {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .da-text-content,
+  .da-image-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .da-main-heading {
+    font-size: 2.5rem;
+  }
+
+  .da-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .automation-tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .automation-tab {
+    margin: 5px;
+    flex: 1 1 40%;
+  }
+
+  .automation-content {
+    max-width: 90%;
+  }
+
+  .signup-glass-modal {
+    max-width: 480px;
+    padding: 16px 12px;
+    max-height: 98vh;
+  }
+
+  .signup-brand {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .signup-welcome {
+    font-size: 16px;
+  }
+
+  .signup-subtext {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .signup-input {
+    font-size: 12px;
+    padding: 5px 8px 5px 28px;
+    height: 28px;
+  }
+
+  .input-wrapper {
+    height: 28px; /* Match input height for medium screens */
+  }
+
+  .signup-submit-btn {
+    font-size: 12px;
+    padding: 6px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .signup-icon {
+    left: 6px;
+    font-size: 12px;
+  }
+
+  .signup-bottom-text {
+    font-size: 10px;
+    margin-top: 6px;
+  }
+
+  .error {
+    font-size: 9px;
+  }
+
+  .field-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .field-row .signup-input-container {
+    min-width: 100%;
+  }
+}
+
+/* Large Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .da-top-section {
+    padding: 50px 30px;
+  }
+
+  .da-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .automation-tab {
+    margin: 5px;
+    padding: 10px 15px;
+  }
+
+  .automation-content {
+    max-width: 85%;
+  }
+
+  .da-bottom-section,
+  .da-top-section,
+  .automation-suite-section,
+  .stats-container {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  .signup-glass-modal {
+    max-width: 600px;
+    padding: 20px 16px;
+  }
+}
+
+/* Desktop (1025px and above) */
+@media (min-width: 1025px) {
+  .da-top-section {
+    padding: 60px 40px;
+  }
+
+  .da-grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .automation-tabs {
+    padding: 5px 10px;
+  }
+
+  .automation-tab {
+    margin: 0 2px;
+  }
+
+  .da-bottom-section,
+  .da-top-section,
+  .automation-suite-section,
+  .stats-container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  .automation-content {
+    max-width: 700px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+  }
+}
+
+/* Large Desktop (1441px - 1920px) */
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .da-top-section {
+    padding: 70px 50px;
+  }
+
+  .da-grid-container {
+    max-width: 1400px;
+  }
+
+  .automation-title {
+    font-size: 2.2rem;
+  }
+
+  .automation-content {
+    max-width: 750px;
+  }
+
+  .da-bottom-section,
+  .da-top-section,
+  .automation-suite-section,
+  .stats-container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+
+/* Extra Large Desktop (1921px - 2560px) */
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .da-top-section {
+    padding: 80px 60px;
+  }
+
+  .da-grid-container {
+    max-width: 1600px;
+  }
+
+  .da-main-heading {
+    font-size: 3.5rem;
+  }
+
+  .da-bottom-heading {
+    font-size: 3rem;
+  }
+
+  .automation-title {
+    font-size: 2.5rem;
+  }
+
+  .automation-content {
+    max-width: 800px;
+  }
+
+  .da-bottom-section,
+  .da-top-section,
+  .automation-suite-section,
+  .stats-container {
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+
+  .stats-grid {
+    max-width: 1400px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin: 0 auto;
+  }
+}
+
+/* Ultra Wide Screens (≥2560px) */
+@media (min-width: 2560px) {
+  .stats-grid {
+    max-width: 1400px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin: 0 auto;
+  }
+
+  .stat-card {
+    padding: 40px 30px;
+  }
+
+  .stat-value {
+    font-size: 2.2rem;
+  }
+
+  .stat-label {
+    font-size: 1.2rem;
+  }
+
+  .stat-description {
+    font-size: 1rem;
+  }
+
+  .data-cta-section {
+    max-width: 100%;
+  }
+}

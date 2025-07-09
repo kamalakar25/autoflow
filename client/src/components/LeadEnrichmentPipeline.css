@@ -1,0 +1,282 @@
+.vb-pipeline-container {
+  padding: clamp(10px, 2vw, 20px);
+  background-color: #f3f4f6;
+  border-radius: clamp(15px, 2vw, 30px);
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  max-width: clamp(600px, 90vw, 1600px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.vb-workflow {
+  margin-bottom: clamp(16px, 2vw, 24px);
+  background: #ffffff;
+  border-radius: clamp(8px, 1vw, 12px);
+  padding: clamp(10px, 1.5vw, 14px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.vb-workflow-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(10px, 1.5vw, 14px);
+}
+
+.vb-pipeline-title {
+  font-size: clamp(16px, 2vw, 18px);
+  color: #1a2e4d;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.vb-status {
+  color: #6b7280;
+  font-size: clamp(10px, 1.2vw, 12px);
+  margin-left: 5px;
+}
+
+.vb-workflow-actions {
+  display: flex;
+  gap: clamp(5px, 1vw, 10px);
+}
+
+.vb-edit-button {
+  padding: clamp(6px, 1vw, 8px) clamp(12px, 1.5vw, 16px);
+  background: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: clamp(12px, 1.2vw, 14px);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.vb-edit-button:hover {
+  background: #0056b3;
+}
+
+.vb-delete-button {
+  padding: clamp(6px, 1vw, 8px) clamp(12px, 1.5vw, 16px);
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: clamp(12px, 1.2vw, 14px);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.vb-delete-button:hover {
+  background: #991b1b;
+  color: white;
+}
+
+.vb-pipeline-steps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: nowrap;
+  padding: clamp(50px, 8vw, 60px) clamp(10px, 2vw, 20px) clamp(10px, 2vw, 20px);
+  overflow-x: auto;
+}
+
+.vb-step {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: clamp(8px, 1vw, 10px);
+  text-align: center;
+  width: clamp(180px, 20vw, 220px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.vb-step-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.vb-step-icon {
+  width: clamp(30px, 4vw, 40px);
+  height: clamp(30px, 4vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vb-ellipsis {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: clamp(60px, 8vw, 75px);
+  padding-top: 2px;
+}
+
+.vb-ellipsis span {
+  font-size: clamp(16px, 2vw, 20px);
+  color: #0f1011;
+  line-height: 6px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.vb-step-title {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #1a2e4d;
+  margin-bottom: 5px;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.vb-step-description {
+  font-size: clamp(10px, 1.2vw, 12px);
+  color: #6b7280;
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+
+.vb-step-status {
+  font-size: clamp(10px, 1.2vw, 12px);
+  color: #1a2e4d;
+}
+
+.vb-ready {
+  color: #10b981;
+}
+
+.vb-arrow {
+  font-size: clamp(18px, 2vw, 20px);
+  color: #6b7280;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.vb-no-steps {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #6b7280;
+  text-align: center;
+  margin: clamp(12px, 2vw, 16px) 0;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .vb-pipeline-container {
+    padding: clamp(8px, 1.5vw, 12px);
+    max-width: clamp(300px, 90vw, 500px);
+    border-radius: clamp(10px, 2vw, 20px);
+  }
+  .vb-workflow {
+    margin-bottom: clamp(12px, 2vw, 16px);
+    padding: clamp(8px, 1vw, 10px);
+    border-radius: clamp(6px, 1vw, 10px);
+  }
+  .vb-workflow-header {
+    margin-bottom: clamp(8px, 1vw, 10px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(5px, 1vw, 10px);
+  }
+  .vb-pipeline-title {
+    font-size: clamp(14px, 2vw, 16px);
+  }
+  .vb-status {
+    font-size: clamp(9px, 1.2vw, 10px);
+  }
+  .vb-workflow-actions {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .vb-edit-button, .vb-delete-button {
+    padding: clamp(5px, 1vw, 6px) clamp(10px, 1.5vw, 12px);
+    font-size: clamp(10px, 1.2vw, 12px);
+  }
+  .vb-pipeline-steps {
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: clamp(40px, 8vw, 50px) clamp(8px, 1.5vw, 12px) clamp(8px, 1.5vw, 12px);
+  }
+  .vb-step {
+    width: clamp(160px, 45vw, 200px);
+    padding: clamp(6px, 1vw, 8px);
+  }
+  .vb-step-icon {
+    width: clamp(25px, 4vw, 30px);
+    height: clamp(25px, 4vw, 30px);
+  }
+  .vb-ellipsis {
+    margin-left: clamp(50px, 8vw, 60px);
+  }
+  .vb-ellipsis span {
+    font-size: clamp(12px, 2vw, 16px);
+  }
+  .vb-step-title {
+    font-size: clamp(11px, 1.5vw, 12px);
+  }
+  .vb-step-description {
+    font-size: clamp(9px, 1.2vw, 10px);
+  }
+  .vb-step-status {
+    font-size: clamp(9px, 1.2vw, 10px);
+  }
+  .vb-arrow {
+    font-size: clamp(16px, 2vw, 18px);
+    margin: 0 3px;
+  }
+  .vb-no-steps {
+    font-size: clamp(11px, 1.5vw, 12px);
+    margin: clamp(10px, 2vw, 12px) 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .vb-pipeline-container {
+    max-width: clamp(500px, 80vw, 700px);
+  }
+  .vb-step {
+    width: clamp(160px, 20vw, 200px);
+  }
+  .vb-step-icon {
+    width: clamp(28px, 4vw, 35px);
+    height: clamp(28px, 4vw, 35px);
+  }
+  .vb-ellipsis {
+    margin-left: clamp(55px, 8vw, 65px);
+  }
+  .vb-arrow {
+    font-size: clamp(18px, 2vw, 22px);
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1920px) {
+  .vb-pipeline-container {
+    max-width: clamp(600px, 80vw, 900px);
+  }
+  .vb-step {
+    width: clamp(180px, 20vw, 220px);
+  }
+}
+
+@media (min-width: 1921px) {
+  .vb-pipeline-container {
+    max-width: clamp(700px, 80vw, 1000px);
+    padding: clamp(15px, 1vw, 25px);
+  }
+  .vb-step {
+    width: clamp(200px, 20vw, 240px);
+  }
+}

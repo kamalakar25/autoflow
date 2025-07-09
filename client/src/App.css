@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Layout */
+html, body, #root {
+  @apply h-full m-0 p-0;
+}
+
+/* Use dynamic viewport height to handle mobile browser UI */
+html, body, #root, .app-container {
+  min-height: 100dvh;
+}
+
+/* Public layout styles */
+.navbar {
+  @apply fixed top-0 left-0 w-full z-[1000] h-[60px];
+}
+
+/* Auth layout styles */
+.app-container {
+  @apply flex flex-col w-full bg-[#f1f1f3];
+}
+
+/* Content wrapper for sidebar and dashboard */
+.content-wrapper {
+  @apply flex flex-row flex-nowrap w-full;
+}
+
+/* No-sidebar class for admin */
+.content-wrapper.no-sidebar {
+  @apply flex flex-row w-full;
+}
+
+/* Dashboard wrapper */
+.dashboard-wrapper {
+  @apply flex-1 p-8 min-w-0 bg-[#e5e7eb];
+}
+
+/* Sidebar open state for mobile */
+.dashboard-wrapper.sidebar-open {
+  @apply pointer-events-none;
+}
+
+/* Public main for unauthenticated routes */
+.public-main {
+  @apply bg-[#e5e7eb];
+}
+
+/* Overlay for mobile sidebar */
+.overlay {
+  @apply hidden fixed top-[60px] left-0 right-0 bottom-0 bg-black/50 z-[1001] opacity-0 pointer-events-none transition-opacity duration-300;
+}
+
+.sidebar-open .overlay {
+  @apply block opacity-100 pointer-events-auto;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .content-wrapper {
+    @apply w-full min-h-[calc(100dvh-60px)];
+  }
+  .content-wrapper.no-sidebar {
+    @apply w-full min-h-[calc(100dvh-60px)];
+  }
+  .dashboard-wrapper {
+    @apply p-4 w-full min-h-[calc(100dvh-60px)];
+  }
+  .public-main {
+    @apply min-h-[calc(100dvh-60px)];
+  }
+  .overlay {
+    @apply block;
+  }
+  
+}
+
+/* Tablet/Desktop View */
+@media (min-width: 769px) {
+  .dashboard-wrapper.sidebar-open {
+    @apply pointer-events-auto;
+  }
+}

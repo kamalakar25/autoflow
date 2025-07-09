@@ -1,0 +1,231 @@
+.stats-container {
+  /* background-color: #0e0e10; */
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px; /* Optional: limits the total grid width */
+  width: 100%;
+  justify-content: center;
+}
+
+.stats-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.stats-subheading {
+  font-size: 1rem;
+  color: #cccccc;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+.stat-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  background-color: #8f67ff;
+  color: white;
+  font-size: 1.6rem;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4827EC;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 10px 0;
+  color: rgb(0, 0, 0);
+}
+
+.stat-description {
+  font-size: 0.85rem;
+  color: black;
+}
+
+/* Mobile - Small Screens */
+@media (max-width: 480px) {
+  .stats-heading {
+    font-size: 1.5rem;
+  }
+  .stat-value {
+    font-size: 1.4rem;
+  }
+  .stat-label {
+    font-size: 0.95rem;
+  }
+  .stat-description {
+    font-size: 0.8rem;
+  }
+}
+
+/* Ultra Wide Screens */
+@media (min-width: 1800px) {
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+  }
+
+  .stat-card {
+    padding: 40px 30px;
+  }
+
+  .stat-value {
+    font-size: 2.2rem;
+  }
+
+  .stat-label {
+    font-size: 1.2rem;
+  }
+
+  .stat-description {
+    font-size: 1rem;
+  }
+}
+.data-cta__section {
+  width: 100%;
+  /* Ensures full-page height */
+  background: linear-gradient(90deg, #5f27cd, #8e44ad);
+  color: white;
+  text-align: center;
+  padding: 3vw 1vw;
+  border-radius: 0; /* Remove rounding to span full width */
+  margin: 0;
+  margin-top: 100px;
+   /* Remove if used as page background */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+
+
+.data-cta__heading {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.data-cta__subheading {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  margin-bottom: 2rem;
+  color: #dddddd;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.data-cta__buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.data-cta__btn-primary,
+.data-cta__btn-outline {
+  padding: 0.75rem 1.5rem;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.data-cta__btn-primary {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.541);
+  border: none;
+}
+
+.data-cta__btn-primary:hover {
+  background-color: #eeeeee;
+}
+
+.data-cta__btn-outline {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.data-cta__btn-outline:hover {
+  background-color: white;
+  color: #5f27cd;
+}
+
+/* Optional: ensure layout doesn't stretch weirdly on ultra-wide screens */
+@media (min-width: 2000px) {
+  .data-cta__section {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 2560px) {
+  .stats-grid {
+    max-width: 1400px; /* Adjust width to fit 4 cards with spacing */
+    grid-template-columns: repeat(4, 1fr); /* Force 4 cards in 1 row */
+    gap: 40px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 2560px) {
+  .stats-container {
+    margin-bottom: 120px; /* Create vertical space below stats */
+  }
+
+  .data-cta__section {
+    margin-top: 120px; /* Or use this if needed */
+  }
+}
+@media (min-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 cards in one row */
+    max-width: 1200px; /* Make sure there's room for 4 cards */
+    margin: 0 auto;     /* Center grid */
+    gap: 30px;
+  }
+}

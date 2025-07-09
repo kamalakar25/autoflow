@@ -1,0 +1,85 @@
+.planCard {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+}
+
+
+.planCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.planPopular {
+  background-color: #6f42c1;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 15px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.planContent {
+  padding-top: 20px;
+}
+
+.planTitle {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.planPrice {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #28a745;
+  margin-bottom: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.planCredits {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.planFeatures {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.planFeature {
+  font-size: 1rem;
+  color: #6c757d;
+  text-align: left;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+  font-family: 'Arial', sans-serif;
+}
+
+.planFeature:before {
+  content: '✓';
+  color: #28a745;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .planCard {
+    margin-bottom: 20px;
+  }
+}

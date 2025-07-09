@@ -1,0 +1,119 @@
+[
+  {
+    "jobId": "job_1751097551629_3jtzgi3c2",
+    "timestamp": "2025-06-28T07:59:18.148Z",
+    "results": [
+      {
+        "values": [
+          "N/A",
+          "N/A",
+          "N/A"
+        ]
+      }
+    ]
+  },
+  {
+    "jobId": "job_1751102026672_aemh21u9v",
+    "timestamp": "2025-06-28T09:14:09.754Z",
+    "results": [
+      {
+        "values": [
+          "N/A",
+          "Error during scraping",
+          "Login fields not found: email=true, password=true, submit=false"
+        ]
+      }
+    ]
+  },
+  {
+    "jobId": "job_1751102026672_aemh21u9v",
+    "timestamp": "2025-06-28T09:15:09.744Z",
+    "results": [
+      {
+        "values": [
+          "N/A",
+          "Error during scraping",
+          "Login fields not found: email=true, password=true, submit=false"
+        ]
+      }
+    ]
+  },
+  {
+    "jobId": "job_1751102110373_bs34vqm46",
+    "timestamp": "2025-06-28T09:16:00.675Z",
+    "results": [
+      {
+        "values": [
+          "N/A",
+          "Error during scraping",
+          "Failed to launch the browser process! undefined\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n"
+        ]
+      }
+    ]
+  },
+  {
+    "jobId": "job_1751102026672_aemh21u9v",
+    "timestamp": "2025-06-28T09:16:09.777Z",
+    "results": [
+      {
+        "values": [
+          "N/A",
+          "Error during scraping",
+          "Login fields not found: email=true, password=true, submit=false"
+        ]
+      }
+    ]
+  },
+  {
+    "jobId": "job_1751102026672_aemh21u9v",
+    "timestamp": "2025-06-28T09:17:00.533Z",
+    "results": [
+      {
+        "values": [
+          "N/A",
+          "Error during scraping",
+          "Failed to launch the browser process! undefined\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n"
+        ]
+      }
+    ]
+  },
+  {
+    "jobId": "job_1751102110373_bs34vqm46",
+    "timestamp": "2025-06-28T09:17:06.323Z",
+    "results": [
+      {
+        "values": [
+          "N/A",
+          "N/A",
+          "N/A"
+        ]
+      }
+    ]
+  },
+  {
+    "jobId": "job_1751102026672_aemh21u9v",
+    "timestamp": "2025-06-28T09:18:00.897Z",
+    "results": [
+      {
+        "values": [
+          "N/A",
+          "Error during scraping",
+          "Failed to launch the browser process! undefined\n\n\nTROUBLESHOOTING: https://pptr.dev/troubleshooting\n"
+        ]
+      }
+    ]
+  },
+  {
+    "jobId": "job_1751102110373_bs34vqm46",
+    "timestamp": "2025-06-28T09:18:06.653Z",
+    "results": [
+      {
+        "values": [
+          "N/A",
+          "N/A",
+          "N/A"
+        ]
+      }
+    ]
+  }
+]

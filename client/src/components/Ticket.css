@@ -1,0 +1,66 @@
+
+/* Ticket.css */
+
+/* Container for the Help button */
+.ticket-container {
+  z-index: 1000; /* Ensure button appears above other elements */
+}
+
+/* Modal styling to prevent overlap with global styles */
+.ticket-modal .modal-dialog {
+  max-width: 500px; /* Match Bootstrap's default medium modal width */
+}
+
+/* Ensure modal content scrolls if needed */
+.ticket-modal .modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Style for the Help button */
+.ticket-help-btn {
+  font-weight: bold;
+}
+
+/* Style for view toggle buttons */
+.ticket-view-btn {
+  /* Add any specific overrides if needed */
+}
+
+/* Style for action buttons (Cancel, Submit, Refresh) */
+.ticket-action-btn {
+  /* Add any specific overrides if needed */
+}
+
+/* Form styling */
+.ticket-form {
+  /* Add any specific overrides if needed */
+}
+
+/* Inbox container */
+.ticket-inbox {
+  /* Ensure proper layout */
+}
+
+/* Scrollable inbox area */
+.ticket-inbox-scroll {
+  max-height: 300px; /* Limit height to prevent modal overflow */
+}
+
+/* Card styling for inbox tickets */
+.ticket-card {
+  /* Add any specific overrides if needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .ticket-modal .modal-dialog {
+    max-width: 90vw; /* Responsive width for small screens */
+    margin: 1rem auto;
+  }
+
+  .ticket-help-btn {
+    font-size: 1rem; /* Slightly smaller font on mobile */
+    padding: 0.5rem 1rem; /* Adjust padding for mobile */
+  }
+}

@@ -1,0 +1,145 @@
+/* Ensure modal is centered in viewport */
+.enrichment-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1060; /* Above other content */
+}
+
+/* Base styles for the modal dialog */
+.enrichment-modal .modal-dialog {
+  max-width: min(90vw, 600px); /* Max 600px or 90% of viewport */
+  margin: 0; /* Remove default margins */
+}
+
+/* Optimize modal content to reduce scrollbar */
+.enrichment-modal .modal-content {
+  max-height: 90vh; /* Increased to 90vh to reduce scrollbar appearance */
+  overflow-y: auto; /* Scroll if content overflows */
+  border-radius: 8px; /* Smooth edges */
+  /* Hide scrollbar aesthetically */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.enrichment-modal .modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive padding and spacing */
+.enrichment-modal .modal-body {
+  padding: 1rem; /* Reduced for compact content */
+}
+
+/* Adjust padding for larger screens */
+@media (min-width: 576px) {
+  .enrichment-modal .modal-body {
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .enrichment-modal .modal-body {
+    padding: 1.5rem;
+  }
+}
+
+/* Compact form group spacing */
+.enrichment-modal .form-group {
+  margin-bottom: 0.75rem; /* Reduced spacing */
+}
+
+/* Responsive form controls */
+.enrichment-modal .form-control,
+.enrichment-modal .form-select {
+  font-size: 0.875rem; /* Smaller font for mobile */
+  padding: 0.4rem; /* Reduced padding */
+}
+
+@media (min-width: 768px) {
+  .enrichment-modal .form-control,
+  .enrichment-modal .form-select {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Handle small screens */
+@media (max-width: 575px) {
+  .enrichment-modal .modal-dialog {
+    max-width: 95vw; /* Use more viewport width */
+  }
+
+  .enrichment-modal .modal-content {
+    max-height: 92vh; /* Slightly more height */
+  }
+
+  .enrichment-modal .modal-title {
+    font-size: 1.1rem; /* Smaller title */
+  }
+
+  .enrichment-modal .btn {
+    padding: 0.3rem 0.6rem; /* Smaller buttons */
+    font-size: 0.8rem;
+  }
+}
+
+/* Handle very small heights (e.g., mobile landscape) */
+@media (max-height: 500px) {
+  .enrichment-modal {
+    top: 0;
+    transform: translate(-50%, 0); /* Align to top */
+    margin: 0.5rem 0; /* Small margin */
+  }
+
+  .enrichment-modal .modal-content {
+    max-height: 95vh; /* Maximize height */
+  }
+}
+
+/* Ensure container supports modal positioning */
+.enrichment-list-container {
+  position: relative;
+  min-height: 100vh; /* Full viewport height */
+  padding: 1rem;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Prevent overflow issues */
+.enrichment-list-container * {
+  box-sizing: border-box;
+}
+
+/* Responsive table and form styling */
+.enrichment-list-container .table {
+  font-size: 0.9rem;
+}
+
+.enrichment-list-container .form-control {
+  font-size: 0.9rem;
+  padding: 0.4rem;
+}
+
+.enrichment-list-container .btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .enrichment-list-container .table {
+    font-size: 0.8rem;
+  }
+
+  .enrichment-list-container .form-control {
+    font-size: 0.8rem;
+    padding: 0.3rem;
+  }
+
+  .enrichment-list-container .btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}

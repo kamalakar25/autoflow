@@ -1,0 +1,106 @@
+.historyContainer {
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-family: 'Arial', sans-serif;
+}
+
+.historyTitle {
+  font-size: 1.2rem;
+  color: #6f42c1;
+  margin-bottom: 15px;
+  font-weight: 500;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.historyTitle::before {
+  content: '📅';
+  margin-right: 5px;
+}
+
+.historyItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+  background-color: #f9f9f9;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.historyItem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.historyDateContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.historyDate {
+  display: flex;
+  flex-direction: row;
+}
+
+.historyMonth {
+  color: #333;
+  font-weight: 500;
+  min-width: 80px;
+}
+
+.historyYear {
+  color: #666;
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+.historyCreditsWorkflows {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+.historyCost {
+  color: #666;
+  min-width: 80px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .historyContainer {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .historyItem {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .historyMonth {
+    font-size: 1rem;
+  }
+
+  .historyYear {
+    font-size: 0.9rem;
+  }
+
+  .historyCreditsWorkflows {
+    font-size: 0.95rem;
+  }
+
+  .historyCost {
+    font-size: 0.95rem;
+  }
+}

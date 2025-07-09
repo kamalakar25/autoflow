@@ -1,0 +1,136 @@
+/* Existing styles (ensure these are included) */
+.k-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.k-flex-align {
+  display: flex;
+  align-items: center;
+}
+
+.k-flex-justify {
+  display: flex;
+  justify-content: space-between;
+}
+
+.k-margin-bottom-sm {
+  margin-bottom: 10px;
+}
+
+.k-title-bold {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.k-text-muted {
+  color: #6c757d;
+}
+
+.k-text-uppercase {
+  text-transform: uppercase;
+}
+
+.k-icon-spacing {
+  margin-right: 5px;
+}
+
+.k-icon-primary {
+  color: #007bff;
+}
+
+.k-icon-purple {
+  color: #6f42c1;
+}
+
+.k-card-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.k-card-border {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+}
+
+.k-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* New styles for enhanced UI */
+.k-card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+}
+
+.k-card-body {
+  padding: 15px;
+}
+
+.k-icon-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e6f0fa, #d0e6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.k-text-container {
+  flex: 1;
+  min-width: 0; /* Prevent overflow */
+}
+
+.k-text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px; /* Adjust based on card width */
+}
+
+.k-text-sm {
+  font-size: 0.85rem;
+}
+
+.k-badge {
+  font-size: 0.75rem;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+.k-icon-muted {
+  color: #adb5bd;
+  font-size: 1.2rem;
+}
+
+.k-icon-hover:hover {
+  color: #007bff;
+  transition: color 0.2s ease;
+}
+
+.k-meta-info {
+  border-top: 1px solid #e9ecef;
+  padding-top: 8px;
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .k-text-truncate {
+    max-width: 150px;
+  }
+  .k-card-body {
+    padding: 10px;
+  }
+  .k-icon-container {
+    width: 32px;
+    height: 32px;
+  }
+}

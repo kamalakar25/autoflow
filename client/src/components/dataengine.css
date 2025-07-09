@@ -1,0 +1,163 @@
+.dataengine-card {
+  border: none;
+  padding: 20px;
+  width: calc(100% - 40px); /* Accounts for padding on small screens */
+  max-width: 800px;
+  margin: 20px auto; /* Adds vertical spacing and centers horizontally */
+  background: #fff;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
+  border-radius: 30px
+}
+
+.dataengine-card-header {
+  margin-bottom: 20px;
+}
+
+.dataengine-title-container {
+  text-align: left;
+}
+
+.dataengine-card h4 {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.dataengine-card h6.text-muted {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.dataengine-form-container {
+  width: 100%;
+}
+
+.dataengine-form-group {
+  margin-bottom: 1rem;
+}
+
+.dataengine-form-label {
+  color: #1a1a1a;
+  width: 150px;
+  text-align: left;
+}
+
+.dataengine-form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding: 8px 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dataengine-form-control:focus {
+  border-color: #1a1a1a;
+  box-shadow: none;
+  outline: none;
+}
+
+.dataengine-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.dataengine-column {
+  flex: 1;
+  min-width: 0;
+}
+
+.dataengine-form-check {
+  display: flex;
+  align-items: center;
+}
+
+.dataengine-form-check-input {
+  margin-right: 8px;
+}
+
+.dataengine-form-check-input:checked {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.dataengine-form-check-label {
+  margin-left: 0.5rem;
+  color: #1a1a1a;
+}
+
+.dataengine-mt-2 {
+  margin-top: 0.5rem;
+}
+
+.dataengine-btn {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dataengine-btn-dark {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.dataengine-btn-dark:hover {
+  background-color: #333;
+}
+
+.dataengine-btn-right {
+  margin-left: auto;
+  display: block;
+  width: auto;
+}
+
+.dataengine-icon {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .dataengine-card {
+    padding: 15px;
+    width: calc(100% - 30px); /* Adjusted for smaller padding on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .dataengine-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .dataengine-column {
+    width: 100%;
+  }
+  .dataengine-card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dataengine-card h4 {
+    font-size: 1.2rem;
+  }
+  .dataengine-card h6 {
+    font-size: 0.8rem;
+  }
+  .dataengine-form-label {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .dataengine-form-control {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+  .dataengine-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
