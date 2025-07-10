@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const { router, wss } = require('./routes/scrape'); // Destructure router and wss
+const { router, wss, attachWebSocket } = require('./routes/scrape'); // Destructure router and wss
 const http = require('http');
 const { Server } = require("socket.io");
 
@@ -44,7 +44,9 @@ app.use('/api/enrichment-configs', require('./routes/enrichmentConfig.js'));
 
 app.use("/api/billing", billingRoutes);
 
+
 const server = http.createServer(app);
+attachWebSocket(server);
 const io = new Server(server, {
   cors: {
     origin: "*", // Allow all origins for simplicity, adjust as needed
