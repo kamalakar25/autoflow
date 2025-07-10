@@ -703,21 +703,7 @@ const DataEnrichment = () => {
             <option value="webkit">WebKit</option>
           </select>
         </div> */}
-        {/* <div className="flex gap-2 mb-4">
-          <button
-            onClick={startRecording}
-            disabled={isRecording || loading}
-            className="btn bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 disabled:bg-blue-300 mt-3"
-          >
-            Start Recording
-          </button>
-          <button
-            onClick={stopRecording}
-            disabled={!isRecording || loading}
-            className="btn bg-red-500 text-white p-2 rounded-md hover:bg-red-600 disabled:bg-red-300 mt-3"
-          >
-            Stop Recording
-          </button>
+        <div className="flex gap-2 mb-4">
           <button
             onClick={handleSubmit}
             disabled={loading}
@@ -750,7 +736,7 @@ const DataEnrichment = () => {
           >
             {showEnrichment ? "Hide Enrichment" : "Add Enrichment"}
           </button>
-        </div> */}
+        </div>
         {recordedActions.length > 0 && (
           <div className="mb-4">
             <h2 className="text-lg font-semibold text-gray-800 mb-2">
