@@ -15,7 +15,7 @@ const SignIn = ({ onSignIn }) => {
   const token = localStorage.getItem('token');
 
   if (token) {
-    console.log('Token found, redirecting to /dashboard:', token);
+    // console.log('Token found, redirecting to /dashboard:', token);
     return <Navigate to="/dashboard" replace />;
   }
 
@@ -23,13 +23,13 @@ const SignIn = ({ onSignIn }) => {
     e.preventDefault();
     setError('');
     try {
-      console.log('Sending login request:', { email, password });
+      // console.log('Sending login request:', { email, password });
       const response = await axios.post(`${BASE_URL}/auth/login`, { email, password });
-      console.log('Login response:', response.data);
+      // console.log('Login response:', response.data);
       localStorage.setItem('token', response.data.token);
       localStorage.setItem("userId", response.data.user._id)
       onSignIn();
-      console.log('Navigating to /dashboard');
+      // console.log('Navigating to /dashboard');
       navigate('/dashboard', { replace: true });
     } catch (err) {
       const errorMessage = err.response?.data?.message || err.response?.data?.error || 'Failed to sign in. Please try again.';

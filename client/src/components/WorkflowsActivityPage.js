@@ -13,8 +13,8 @@ const WorkflowsActivityPage = () => {
         const token = localStorage.getItem('token');
         const userId = localStorage.getItem('userId');
 
-        console.log('Token:', token ? 'Present' : 'Missing');
-        console.log('User ID:', userId || 'Missing');
+        // console.log('Token:', token ? 'Present' : 'Missing');
+        // console.log('User ID:', userId || 'Missing');
 
         if (!token || !userId) {
           throw new Error('Authentication token or user ID missing');
@@ -32,7 +32,7 @@ const WorkflowsActivityPage = () => {
         }
 
         const fetchedWorkflows = await response.json();
-        console.log('Fetched workflows:', JSON.stringify(fetchedWorkflows, null, 2));
+        // console.log('Fetched workflows:', JSON.stringify(fetchedWorkflows, null, 2));
 
         const sortedWorkflows = fetchedWorkflows
           .sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt))

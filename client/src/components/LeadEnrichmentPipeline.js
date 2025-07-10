@@ -28,7 +28,7 @@ const refreshToken = async () => {
     if (!token) throw new Error('No token found');
     const response = await axios.post(`${BASE_URL}/users/refresh-token`, { token });
     localStorage.setItem('token', response.data.token);
-    console.log('Token refreshed');
+    // console.log('Token refreshed');
     return response.data.token;
   } catch (error) {
     console.error('Token refresh error:', error.response?.data?.message || error.message);
@@ -59,7 +59,7 @@ const LeadEnrichmentPipeline = ({ workflows = [], onUpdateWorkflows }) => {
         const response = await axios.delete(`${BASE_URL}/workflows/${workflowId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
-        console.log('Workflow deleted:', workflowId);
+        // console.log('Workflow deleted:', workflowId);
         const updatedWorkflows = workflows.filter((w) => w.id !== workflowId);
         onUpdateWorkflows(updatedWorkflows);
         setError(null);
@@ -72,7 +72,7 @@ const LeadEnrichmentPipeline = ({ workflows = [], onUpdateWorkflows }) => {
               const response = await axios.delete(`${BASE_URL}/workflows/${workflowId}`, {
                 headers: { Authorization: `Bearer ${newToken}` },
               });
-              console.log('Workflow deleted after refresh:', workflowId);
+              // console.log('Workflow deleted after refresh:', workflowId);
               const updatedWorkflows = workflows.filter((w) => w.id !== workflowId);
               onUpdateWorkflows(updatedWorkflows);
               setError(null);

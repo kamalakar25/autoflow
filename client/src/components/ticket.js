@@ -38,7 +38,7 @@ const Ticket = () => {
     } else if (formData.ticketQuery.length > 1000) {
       errors.ticketQuery = 'Query cannot exceed 1000 characters';
     }
-    console.log('Frontend validation errors:', errors);
+    // console.log('Frontend validation errors:', errors);
     return errors;
   };
 
@@ -60,11 +60,11 @@ const Ticket = () => {
         ticketQuery: formData.ticketQuery,
         createdAt: new Date().toISOString(),
       };
-      console.log('Sending to backend:', ticketData);
+      // console.log('Sending to backend:', ticketData);
       const response = await axios.post(`${BASE_URL}/api/tickets`, ticketData, {
         headers: { 'Content-Type': 'application/json' },
       });
-      console.log('Backend response:', response.data);
+      // console.log('Backend response:', response.data);
       setSuccess(response.data.message || 'Ticket created successfully');
       setFormData({ category: '', ticketQuery: '' });
       setFieldErrors({});

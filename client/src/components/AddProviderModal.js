@@ -52,7 +52,7 @@ const AddProviderModal = ({ show, handleClose, onAdded }) => {
 
   // Handle modal close
   const handleCloseModal = () => {
-    console.log('AddProviderModal: Close button or Cancel clicked');
+    // console.log('AddProviderModal: Close button or Cancel clicked');
     resetForm();
     handleClose();
   };
@@ -61,7 +61,7 @@ const AddProviderModal = ({ show, handleClose, onAdded }) => {
     <Modal
       show={show}
       onHide={() => {
-        console.log('AddProviderModal: onHide triggered');
+        // console.log('AddProviderModal: onHide triggered');
         handleCloseModal();
       }}
       size="lg"
@@ -73,7 +73,7 @@ const AddProviderModal = ({ show, handleClose, onAdded }) => {
     >
       <Modal.Header
         closeButton
-        onClick={() => console.log('AddProviderModal: Header close button clicked')}
+        // onClick={() => console.log('AddProviderModal: Header close button clicked')}
       >
         <Modal.Title className="k-title-bold">Add New Provider</Modal.Title>
       </Modal.Header>

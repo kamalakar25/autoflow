@@ -389,7 +389,7 @@ function MemberModal({ member, defaultProjectId, onClose }) {
 
     if (member) {
       updateMember(defaultProjectId, member._id, formData);
-      console.log(formData);
+      // console.log(formData);
       window.location.reload();
 
     } else {

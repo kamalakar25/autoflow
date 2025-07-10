@@ -69,7 +69,7 @@ const OverviewPage = () => {
         timeout: 5000,
       });
       const { status } = response.data;
-      console.log('Server status response:', status);
+      // console.log('Server status response:', status);
       setServerStatus({
         status: status === 'healthy' ? 'Healthy' : 'Unhealthy',
         tag: status === 'healthy' ? 'success' : 'danger',
@@ -90,7 +90,7 @@ const OverviewPage = () => {
         timeout: 5000,
       });
       const { status } = response.data;
-      console.log('Backend network status:', status);
+      // console.log('Backend network status:', status);
       setNetworkStatus({
         status: navigator.onLine ? (status === 'stable' ? 'Stable' : 'Unstable') : 'Offline',
         tag: navigator.onLine ? (status === 'stable' ? 'success' : 'danger') : 'danger',
@@ -104,7 +104,7 @@ const OverviewPage = () => {
   // Client-side network check
   const checkClientNetwork = () => {
     const isOnline = navigator.onLine;
-    console.log('Client network status:', isOnline ? 'Online' : 'Offline');
+    // console.log('Client network status:', isOnline ? 'Online' : 'Offline');
     if (!isOnline) {
       setNetworkStatus({ status: 'Offline', tag: 'danger' });
     } else {

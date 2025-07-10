@@ -108,8 +108,8 @@ function ProjectProvider({ children }) {
           fetchWorkflows(),
         ]);
 
-        console.log('Fetched projects:', projectsData);
-        console.log('Fetched workflows:', workflowsData);
+        // console.log('Fetched projects:', projectsData);
+        // console.log('Fetched workflows:', workflowsData);
         setProjects(projectsData);
         setWorkflows(workflowsData);
         setAuthError(null); // Clear auth error on success
@@ -127,7 +127,7 @@ function ProjectProvider({ children }) {
       if (!token) {
         throw new Error('User not authenticated. Please sign in.');
       }
-      console.log('Sending project data to backend:', projectData);
+      // console.log('Sending project data to backend:', projectData);
       const res = await fetch(`${BASE_URL}/projects/add`, {
         method: 'POST',
         headers: {
@@ -141,7 +141,7 @@ function ProjectProvider({ children }) {
         throw new Error(errorData.error || 'Failed to add project');
       }
       const newProject = await res.json();
-      console.log('Backend response for addProject:', newProject);
+      // console.log('Backend response for addProject:', newProject);
       setProjects((prev) => [...prev, newProject]);
     } catch (err) {
       console.error('Error adding project:', err);
@@ -155,7 +155,7 @@ function ProjectProvider({ children }) {
       if (!token) {
         throw new Error('User not authenticated. Please sign in.');
       }
-      console.log('Sending update project data to backend:', projectData);
+      // console.log('Sending update project data to backend:', projectData);
       const res = await fetch(`${BASE_URL}/projects/${id}`, {
         method: 'PUT',
         headers: {
@@ -169,7 +169,7 @@ function ProjectProvider({ children }) {
         throw new Error(errorData.error || 'Failed to update project');
       }
       const updatedProject = await res.json();
-      console.log('Backend response for updateProject:', updatedProject);
+      // console.log('Backend response for updateProject:', updatedProject);
       setProjects((prev) =>
         prev.map((project) => (project._id === id ? updatedProject : project))
       );
@@ -344,7 +344,7 @@ function ProjectProvider({ children }) {
     const filteredWorkflows = workflows.filter((workflow) =>
       project.workflowIds.some((id) => id.toString() === workflow._id.toString())
     );
-    console.log(`Filtered workflows for project ${projectId}:`, filteredWorkflows);
+    // console.log(`Filtered workflows for project ${projectId}:`, filteredWorkflows);
     return filteredWorkflows;
   };
 
@@ -452,12 +452,12 @@ const ProjectModal = ({ project, onClose }) => {
   }, [project, workflows]);
 
   const handleInputChange = (field, value) => {
-    console.log(`Updating ${field}:`, value);
+    // console.log(`Updating ${field}:`, value);
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   const handleSubmit = () => {
-    console.log('Form data before submission:', formData);
+    // console.log('Form data before submission:', formData);
     if (!formData.title || !formData.description || !formData.workflowIds) {
       alert("Please fill in all required fields, including a workflow.");
       return;
@@ -475,7 +475,7 @@ const ProjectModal = ({ project, onClose }) => {
       hasBookmark: formData.hasBookmark,
       hasLock: formData.hasLock,
     };
-    console.log('Project data being sent:', projectData);
+    // console.log('Project data being sent:', projectData);
     if (project) {
       updateProject(project._id, projectData);
     } else {
@@ -826,7 +826,7 @@ function Dashboard({ onNavigate }) {
 
   useEffect(() => {
     // Debug: Log projects to verify data
-    console.log('Dashboard projects:', projects);
+    // console.log('Dashboard projects:', projects);
   }, [projects]);
 
   // Sort projects by createdAt (descending) for LIFO; fallback to _id descending

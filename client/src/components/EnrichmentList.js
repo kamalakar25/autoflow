@@ -29,8 +29,8 @@ const EnrichmentList = () => {
         setConfigs(configsRes.data || []);
         setProviders(providersRes.data || []);
         setLoadingProviders(false);
-        console.log('Fetched configs:', JSON.stringify(configsRes.data, null, 2));
-        console.log('Fetched providers:', JSON.stringify(providersRes.data, null, 2));
+        // console.log('Fetched configs:', JSON.stringify(configsRes.data, null, 2));
+        // console.log('Fetched providers:', JSON.stringify(providersRes.data, null, 2));
       })
       .catch(err => {
         console.error('Error fetching data:', {
@@ -51,7 +51,7 @@ const EnrichmentList = () => {
   const handleProviderAdded = () => {
     axios.get(`${BASE_URL}/api/providers/active`)
       .then(res => {
-        console.log('Updated providers:', JSON.stringify(res.data, null, 2));
+        // console.log('Updated providers:', JSON.stringify(res.data, null, 2));
         setProviders(res.data || []);
       })
       .catch(err => {
@@ -87,9 +87,9 @@ const EnrichmentList = () => {
         [config.inputField]: inputValue
       };
 
-      console.log('Running enrichment for:', config.title);
-      console.log('Config details:', JSON.stringify(config, null, 2));
-      console.log('Request body:', JSON.stringify(requestBody, null, 2));
+      // console.log('Running enrichment for:', config.title);
+      // console.log('Config details:', JSON.stringify(config, null, 2));
+      // console.log('Request body:', JSON.stringify(requestBody, null, 2));
 
       const response = await axios.post(
         `${BASE_URL}/api/enrichment-configs/run/${configId}`,
@@ -99,7 +99,7 @@ const EnrichmentList = () => {
 
       setResult(response.data);
       setSelectedConfigId(configId);
-      console.log('Enrichment result:', JSON.stringify(response.data, null, 2));
+      // console.log('Enrichment result:', JSON.stringify(response.data, null, 2));
     } catch (err) {
       console.error('Enrichment error:', {
         message: err.message,
@@ -162,7 +162,7 @@ const EnrichmentList = () => {
       saveAs(blob, fileName);
     }
 
-    console.log(`Exported enrichment result as ${format}:`, row);
+    // console.log(`Exported enrichment result as ${format}:`, row);
   };
 
   const getNestedValue = (obj, path) => {

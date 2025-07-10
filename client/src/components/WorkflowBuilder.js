@@ -100,7 +100,7 @@ const Workflowbuilder = () => {
 
   // Handle workflowId changes for Drag & Drop
   useEffect(() => {
-    console.log('Workflowbuilder state:', { activeTab, workflows, workflowId });
+    // console.log('Workflowbuilder state:', { activeTab, workflows, workflowId });
     if (workflowId) {
       setActiveTab('Drag & Drop');
       setComponentsVisible(true);

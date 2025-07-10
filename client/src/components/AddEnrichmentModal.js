@@ -48,7 +48,7 @@ const AddEnrichmentModal = ({ show, handleClose, onSaved, providers = [] }) => {
         },
         { headers: { Authorization: `Bearer ${token}` } }
       );
-      console.log('Saved config:', response.data);
+      // console.log('Saved config:', response.data);
       onSaved(response.data);
       handleCloseModal();
     } catch (err) {
@@ -83,7 +83,7 @@ const AddEnrichmentModal = ({ show, handleClose, onSaved, providers = [] }) => {
 
   // Handle modal close
   const handleCloseModal = () => {
-    console.log('AddEnrichmentModal: Close button or Cancel clicked');
+    // console.log('AddEnrichmentModal: Close button or Cancel clicked');
     resetForm();
     handleClose();
   };
@@ -93,7 +93,7 @@ const AddEnrichmentModal = ({ show, handleClose, onSaved, providers = [] }) => {
       <Modal
         show={show}
         onHide={() => {
-          console.log('AddEnrichmentModal: onHide triggered');
+          // console.log('AddEnrichmentModal: onHide triggered');
           handleCloseModal();
         }}
         size="lg"
@@ -105,7 +105,7 @@ const AddEnrichmentModal = ({ show, handleClose, onSaved, providers = [] }) => {
       >
         <Modal.Header
           closeButton
-          onClick={() => console.log('AddEnrichmentModal: Header close button clicked')}
+          // onClick={() => console.log('AddEnrichmentModal: Header close button clicked')}
         >
           <Modal.Title className="k-title-bold">
             {view === 'selection' ? 'Add New Enrichment' : 'Configure Enrichment'}
@@ -118,7 +118,7 @@ const AddEnrichmentModal = ({ show, handleClose, onSaved, providers = [] }) => {
                 variant="light"
                 className="k-flex-align k-card-shadow"
                 onClick={() => {
-                  console.log('AddEnrichmentModal: Add Provider button clicked');
+                  // console.log('AddEnrichmentModal: Add Provider button clicked');
                   setShowProviderModal(true);
                 }}
               >
@@ -242,7 +242,7 @@ const AddEnrichmentModal = ({ show, handleClose, onSaved, providers = [] }) => {
       <AddProviderModal
         show={showProviderModal}
         handleClose={() => {
-          console.log('AddEnrichmentModal: Closing AddProviderModal');
+          // console.log('AddEnrichmentModal: Closing AddProviderModal');
           setShowProviderModal(false);
         }}
         onAdded={handleProviderAdded}

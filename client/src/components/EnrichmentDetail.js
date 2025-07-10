@@ -46,7 +46,7 @@ const EnrichmentDetail = () => {
       if (!configData) {
         throw new Error('Configuration not found');
       }
-      console.log('Fetched config:', JSON.stringify(configData, null, 2));
+      // console.log('Fetched config:', JSON.stringify(configData, null, 2));
       if (!configData.inputField || !configData.type || !configData.provider) {
         throw new Error('Configuration is missing required fields (inputField, type, or provider)');
       }
@@ -54,7 +54,7 @@ const EnrichmentDetail = () => {
       if (!providerData?._id) {
         throw new Error(`No active provider found for ${configData.provider}. Please configure a provider.`);
       }
-      console.log('Fetched provider:', JSON.stringify(providerData, null, 2));
+      // console.log('Fetched provider:', JSON.stringify(providerData, null, 2));
       setConfig(configData);
       setProvider(providerData);
       setEnrichments(enrichResponse.data.filter((e) => e.configId?.toString() === configId));
@@ -167,17 +167,17 @@ const EnrichmentDetail = () => {
     setResults(null);
     try {
       const requestBody = { [config.inputField]: inputValue.trim() };
-      console.log('Sending run request:', {
-        configId,
-        inputField: config.inputField,
-        requestBody,
-        provider: provider.type,
-        config: JSON.stringify(config, null, 2),
-      });
+      // console.log('Sending run request:', {
+      //   configId,
+      //   inputField: config.inputField,
+      //   requestBody,
+      //   provider: provider.type,
+      //   config: JSON.stringify(config, null, 2),
+      // });
       const response = await axios.post(`${BASE_URL}/api/enrichment-configs/run/${configId}`, requestBody, {
         headers: { 'Content-Type': 'application/json' },
       });
-      console.log('Enrichment result:', JSON.stringify(response.data, null, 2));
+      // console.log('Enrichment result:', JSON.stringify(response.data, null, 2));
       setResults({
         input: inputValue.trim(),
         output: response.data.output,
@@ -204,7 +204,7 @@ const EnrichmentDetail = () => {
   const toggleInput = useCallback((event) => {
     event.stopPropagation();
     setShowInput((prev) => {
-      console.log('Toggling showInput:', !prev);
+      // console.log('Toggling showInput:', !prev);
       return !prev;
     });
   }, []);

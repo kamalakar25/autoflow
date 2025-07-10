@@ -32,7 +32,7 @@ const MetricsPage = () => {
         }
 
         const data = await response.json();
-        console.log('Fetched user data:', data); // Log the response for debugging
+        // console.log('Fetched user data:', data); // Log the response for debugging
 
         // Check if user and userCredits data exist in the response
         if (!data.user) {
