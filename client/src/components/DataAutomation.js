@@ -1,20 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { GearFill, DatabaseFill, Diagram2, CloudUploadFill, PeopleFill, BarChartFill, CreditCardFill, GearWideConnected } from 'react-bootstrap-icons';
 import './DataAutomation.css';
 import './StatsSection.css';
 import image1 from '../assets/data-workflow-image.png';
-import { useNavigate } from 'react-router-dom';
 import AuthModal from './AuthModal';
 import Footer from './Footer';
 
-// import AuthModal from './AuthModal';
-
 // Automation Suite Component
 const AutomationSuite = () => {
-  const [activeSection, setActiveSection] = React.useState('data');
-  
+  const location = useLocation();
+  const [activeSection, setActiveSection] = useState('data');
 
+  // Sync activeSection with URL hash
+  useEffect(() => {
+    const hash = location.hash.replace('#', '');
+    if (hash && ['data', 'enrichment', 'workflows', 'sync'].includes(hash)) {
+      setActiveSection(hash);
+    } else {
+      setActiveSection('data'); // Default to 'data' if no valid hash
+    }
+  }, [location.hash]);
 
   const sections = {
     data: {
@@ -40,34 +47,38 @@ const AutomationSuite = () => {
   };
 
   return (
-    <div className="automation-suite-section">
+    <div className="automation-suite-section" id="automation-suite">
       <h1 className="automation-title text-center mb-4">Complete Automation Suite</h1>
       <p className="automation-subtitle text-center mb-4">Seven powerful modules working together to automate your entire data workflow</p>
       <div className="automation-tabs">
-        <button
+        <Link
+          to="/#data"
           className={`automation-tab ${activeSection === 'data' ? 'active' : ''}`}
           onClick={() => setActiveSection('data')}
         >
           <GearFill /> Data Engine
-        </button>
-        <button
+        </Link>
+        <Link
+          to="/#enrichment"
           className={`automation-tab ${activeSection === 'enrichment' ? 'active' : ''}`}
           onClick={() => setActiveSection('enrichment')}
         >
           <DatabaseFill /> Enrichment
-        </button>
-        <button
+        </Link>
+        <Link
+          to="/#workflows"
           className={`automation-tab ${activeSection === 'workflows' ? 'active' : ''}`}
           onClick={() => setActiveSection('workflows')}
         >
           <Diagram2 /> Workflows
-        </button>
-        <button
+        </Link>
+        <Link
+          to="/#sync"
           className={`automation-tab ${activeSection === 'sync' ? 'active' : ''}`}
           onClick={() => setActiveSection('sync')}
         >
           <CloudUploadFill /> Sync & Export
-        </button>
+        </Link>
       </div>
       <div className="automation-content">
         <h2 className="automation-content-title">{sections[activeSection].title}</h2>
@@ -117,7 +128,7 @@ const StatsSection = () => {
 
   return (
     <div className="stats-container">
-      <h2 className="stats-heading">Trusted by Growing Teams</h2>
+      <h2 className="stats-heading text-white">Trusted by Growing Teams</h2>
       <p className="stats-subheading">
         Our platform processes millions of data points and helps teams across industries
         build more efficient automation workflows.
@@ -138,9 +149,19 @@ const StatsSection = () => {
 
 // Main Data Automation Component
 const DataAutomation = () => {
+  const location = useLocation();
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [authMode, setAuthMode] = useState('signin'); // 'signin' or 'signup'
+  const [authMode, setAuthMode] = useState('signin');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById('automation-suite');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location.hash]);
 
   const openAuthModal = (mode) => {
     setAuthMode(mode);
@@ -155,24 +176,13 @@ const DataAutomation = () => {
     <div className="data-automation-container">
       <section className="da-top-section" style={{ width: '100%' }}>
         <div className="da-text-content">
-          <h1 className="da-main-heading">
+          <h1 className="da-main-heading text-left">
             Automate Your <span className="da-heading-span">Data Workflows</span>
           </h1>
           <p className="da-description">
             Build intelligent automation flows that collect, enrich, and sync your data across platforms. Perfect for marketing, recruiting, and operations teams who need scalable, no-code solutions.
           </p>
           <div className="da-button-group">
-            <div>
-              <button onClick={() => openAuthModal('signin')} className="da-start-btn">
-                Start Building Workflows →
-              </button>
-              <AuthModal
-                isOpen={isAuthModalOpen}
-                onClose={closeAuthModal}
-                initialMode={authMode}
-                navigate={navigate}
-              />
-            </div>
             <button className="da-demo-btn">⦿ Watch Demo</button>
           </div>
         </div>
@@ -249,16 +259,19 @@ const DataAutomation = () => {
           Join thousands of teams already automating their data workflows with our platform.
         </p>
         <div className="data-cta-buttons">
-          <button className="data-cta-btn-primary"  onClick={() => openAuthModal('signin')}
-              >Start Free Trial →</button> 
-        
-         
-         
-           <button className="data-cta-btn">Schedule Demo</button>
+          <button className="data-cta-btn">Schedule Demo</button>
         </div>
       </section>
       <Footer />
+      <AuthModal
+        isOpen={isAuthModalOpen}
+        onClose={closeAuthModal}
+        initialMode={authMode}
+        onLogin={() => navigate('/dashboard')}
+        navigate={navigate}
+      />
     </div>
   );
 };
+
 export default React.memo(DataAutomation);

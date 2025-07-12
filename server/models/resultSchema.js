@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const resultSchema = new mongoose.Schema({
   jobId: {
@@ -8,12 +8,12 @@ const resultSchema = new mongoose.Schema({
   },
   workflowId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Workflow',
+    ref: "Workflow",
     required: true,
   },
   userId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    ref: "User",
     required: true,
   },
   fileName: {
@@ -34,4 +34,5 @@ const resultSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.models.Result || mongoose.model('Result', resultSchema);
+module.exports =
+  mongoose.models.Result || mongoose.model("Result", resultSchema);

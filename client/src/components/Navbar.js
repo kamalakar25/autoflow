@@ -23,19 +23,22 @@ const Navbar = ({ onLogin, userRole, onLogout, isSidebarOpen, setIsSidebarOpen }
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Toggle body class to prevent scrolling
+  // Toggle body class to prevent scrolling for mobile menu
   useEffect(() => {
-    if (isMobileMenuOpen || (isMobileView && isSidebarOpen)) {
+    if (isMobileMenuOpen && isMobileView) {
       document.body.classList.add('menu-open');
     } else {
       document.body.classList.remove('menu-open');
     }
     return () => document.body.classList.remove('menu-open');
-  }, [isMobileMenuOpen, isSidebarOpen, isMobileView]);
+  }, [isMobileMenuOpen, isMobileView]);
 
+  // Handle click outside to close mobile menu
   useEffect(() => {
-    const handleClickOutside = () => {
-      if (isMobileMenuOpen) setIsMobileMenuOpen(false);
+    const handleClickOutside = (e) => {
+      if (isMobileMenuOpen && !e.target.closest('.nav-links') && !e.target.closest('.mobile-menu-toggle')) {
+        setIsMobileMenuOpen(false);
+      }
     };
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
@@ -71,21 +74,21 @@ const Navbar = ({ onLogin, userRole, onLogout, isSidebarOpen, setIsSidebarOpen }
   return (
     <>
       <nav className="navbar" data-user={userRole ? "authenticated" : ""} data-user-role={userRole || ""}>
-        {/* Left side - for logo and admin menu toggle */}
+        {/* Left side - Logo */}
         <div className="nav-left">
           <Link to="/" className="logoo" onClick={() => setIsMobileMenuOpen(false)}>
             AutoFlow
           </Link>
-          
         </div>
-        
-        {/* Right side - for unauthenticated menu toggle and links */}
+
+        {/* Right side - Toggle and navigation links */}
         <div className="nav-right">
+          {/* Toggle buttons for mobile view */}
           {isMobileView && userRole === 'Admin' && (
             <button
-              className="mobile-menu-toggle"
+              className="mobile-menu-toggle mr-4 text-2xl focus:outline-none"
               onClick={toggleMobileMenu}
-              aria-label="Toggle admin menu"
+              aria-label={isMobileMenuOpen ? "Close admin menu" : "Open admin menu"}
               aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? '×' : '☰'}
@@ -93,9 +96,9 @@ const Navbar = ({ onLogin, userRole, onLogout, isSidebarOpen, setIsSidebarOpen }
           )}
           {isMobileView && userRole && userRole !== 'Admin' && (
             <button
-              className="sidebar-toggle"
+              className="sidebar-toggle mr-4 text-2xl focus:outline-none"
               onClick={toggleSidebar}
-              aria-label="Toggle sidebar"
+              aria-label={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
               aria-expanded={isSidebarOpen}
             >
               {isSidebarOpen ? '×' : '☰'}
@@ -103,75 +106,68 @@ const Navbar = ({ onLogin, userRole, onLogout, isSidebarOpen, setIsSidebarOpen }
           )}
           {isMobileView && !userRole && (
             <button
-              className="mobile-menu-toggle"
+              className="mobile-menu-toggle mr-4 text-2xl focus:outline-none"
               onClick={toggleMobileMenu}
-              aria-label="Toggle menu"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? '×' : '☰'}
             </button>
           )}
 
-          {/* Navigation links */}
-          <div className={`nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
-            {userRole ? (
+          {/* Navigation links - Mobile menu for unauthenticated users */}
+          <div className={`nav-links ${isMobileView && isMobileMenuOpen ? 'open' : ''}`}>
+            {!userRole ? (
               <>
-                {!isMobileView && (
-                  <>
-                    {/* <Link
-                      to={userRole === 'Admin' ? '/admin-overview' : '/dashboard'}
-                      className={`nav-link ${location.pathname.includes('dashboard') ? 'active' : ''}`}
-                      onClick={handleLinkClick}
-                    >
-                      Dashboard
-                    </Link> */}
-                    <button className="nav-button sign-out-button" onClick={handleLogout}>
-                      Logout
-                    </button>
-                  </>
-                )}
-                {isMobileView && (
-                  <>
-                    <Link
-                      to={userRole === 'Admin' ? '/admindashboard' : '/dashboard'}
-                      className={`nav-link ${location.pathname.includes('dashboard') ? 'active' : ''}`}
-                      onClick={handleLinkClick}
-                    >
-                      Dashboard
-                    </Link>
-                    <button className="nav-button sign-out-button" onClick={handleLogout}>
-                      Logout
-                    </button>
-                  </>
-                )}
-              </>
-            ) : (
-              <>
-                {/* <Link to="/features" className="nav-link" onClick={handleLinkClick}>
-                  Features
+                <Link
+                  to="/#data"
+                  className={`nav-link ${location.hash === '#data' ? 'active' : ''}`}
+                  onClick={handleLinkClick}
+                >
+                  Data Engine
                 </Link>
-                <Link to="/pricing" className="nav-link" onClick={handleLinkClick}>
-                  Pricing
+                <Link
+                  to="/#enrichment"
+                  className={`nav-link ${location.hash === '#enrichment' ? 'active' : ''}`}
+                  onClick={handleLinkClick}
+                >
+                  Enrichment
                 </Link>
-                <Link to="/docs" className="nav-link" onClick={handleLinkClick}>
-                  Docs
-                </Link> */}
+                <Link
+                  to="/#workflows"
+                  className={`nav-link ${location.hash === '#workflows' ? 'active' : ''}`}
+                  onClick={handleLinkClick}
+                >
+                  Workflows
+                </Link>
+                <Link
+                  to="/#sync"
+                  className={`nav-link ${location.hash === '#sync' ? 'active' : ''}`}
+                  onClick={handleLinkClick}
+                >
+                  Sync & Export
+                </Link>
                 <button
-                  className="nav-link nav-button sign-in-button"
+                  className="nav-button sign-in-button bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-full text-sm transition-colors duration-300"
                   onClick={() => openAuthModal('signin')}
+                  aria-label="Sign in"
                 >
                   Sign In
                 </button>
-                {/* <Link
-                  to="/dashboard"
-                  className="nav-button get-started-button"
-                  onClick={handleLinkClick}
-                >
-                  Start Building
-                </Link> */}
               </>
-            )}
+            ) : null}
           </div>
+
+          {/* Logout button - Visible only for admins */}
+          {userRole === 'Admin' && (
+            <button
+              className="nav-button sign-out-button bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-full text-sm transition-colors duration-300"
+              onClick={handleLogout}
+              aria-label="Log out"
+            >
+              Logout
+            </button>
+          )}
         </div>
       </nav>
 

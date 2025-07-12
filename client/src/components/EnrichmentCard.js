@@ -1,12 +1,11 @@
 import React from 'react';
 import { Card, Badge, Button } from 'react-bootstrap';
-import { FaCog, FaTrash } from 'react-icons/fa';
+import { FaCog, FaTrash, FaDatabase } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 const BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 
-
-const EnrichmentCard = ({ title, subtitle, status, icon, configId, type }) => {
+const EnrichmentCard = ({ title, subtitle, status, icon = <FaDatabase />, configId, type }) => {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
@@ -23,7 +22,6 @@ const EnrichmentCard = ({ title, subtitle, status, icon, configId, type }) => {
       await axios.delete(`${BASE_URL}/api/enrichment-configs/${configId}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
-      // Trigger a refresh or update parent component state
       window.location.reload(); // Simple refresh, ideally update state in parent
     } catch (err) {
       console.error('Error deleting enrichment config:', err);
@@ -41,38 +39,33 @@ const EnrichmentCard = ({ title, subtitle, status, icon, configId, type }) => {
     <Card
       className="k-card-shadow k-card-border k-card-hover"
       onClick={handleCardClick}
-      style={{ cursor: 'pointer' }}
+      style={{ cursor: 'pointer', width: '100%', maxWidth: '350px', margin: '0 auto' }}
     >
-      <Card.Body className="k-card-body">
-        <div className="k-flex-align k-flex-justify k-margin-bottom-sm">
-          <div className="k-flex-align">
-            <div className="k-icon-container">{icon}</div>
-            <div className="k-text-container">
-              <h6 className="k-title-bold k-text-truncate">{title}</h6>
-              <small className="k-text-muted k-text-truncate">{subtitle}</small>
-            </div>
+      <Card.Body className="k-card-body p-3 d-flex flex-row align-items-center">
+        <div className="k-icon-container mr-3">{icon}</div>
+        <div className="k-content-container flex-grow-1">
+          <div className="k-text-container">
+            <h6 className="k-title-bold k-text-truncate mb-1">{title}</h6>
+            <small className="k-text-muted k-text-truncate">{subtitle}</small>
           </div>
-          <div className="k-flex-align">
-            {/* <FaCog className="k-icon-muted k-icon-hover" /> */}
-            <Button
-              variant="link"
-              className="k-icon-muted k-icon-hover p-0"
-              onClick={handleDeleteClick}
-              title="Delete configuration"
-            >
-              <FaTrash />
-            </Button>
+          <div className="k-status-container mt-2">
+            <Badge bg={statusColor} className="k-badge k-text-uppercase mr-2">
+              {statusLabel}
+            </Badge>
+            <small className="k-text-muted k-text-sm">{type}</small>
+          </div>
+          <div className="k-meta-info mt-1">
+            <small className="k-text-muted">{lastRun}</small>
           </div>
         </div>
-        <div className="k-flex-align k-margin-bottom-sm">
-          <Badge bg={statusColor} className="k-badge k-text-uppercase">
-            {statusLabel}
-          </Badge>
-          <small className="k-text-muted k-text-sm ml-2">{type}</small>
-        </div>
-        <div className="k-meta-info">
-          <small className="k-text-muted">{lastRun}</small>
-        </div>
+        <Button
+          variant="link"
+          className="k-icon-muted k-icon-hover p-0 ml-2"
+          onClick={handleDeleteClick}
+          title="Delete configuration"
+        >
+          <FaTrash />
+        </Button>
       </Card.Body>
     </Card>
   );

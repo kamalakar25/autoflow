@@ -114,7 +114,7 @@ function App() {
                     </ProtectedAdminRoute>
                   }
                 />
-                <Route path="/admin-overview" element={<OverviewPage />} />
+                <Route path="/admin/overview" element={<OverviewPage />} />
                 <Route
                   path="/admin/credits"
                   element={<TeamCreditManagement />}
@@ -165,7 +165,7 @@ function App() {
                   path="*"
                   element={
                     userRole === "Admin" ? (
-                      <Navigate to="/admin-overview" replace />
+                      <Navigate to="/admin/overview" replace />
                     ) : (
                       <Navigate to="/dashboard" replace />
                     )

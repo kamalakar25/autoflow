@@ -50,7 +50,7 @@ body {
   cursor: pointer;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #64748b;
+  /* color: #64748b; */
   transition: all 0.2s;
 }
 
@@ -60,8 +60,9 @@ body {
 }
 
 .nav-link.active {
-  background-color: #3b82f6;
-  color: white;
+  /* background-color: #3b82f6; */
+  color: black;
+  text-decoration: underline;
 }
 
 /* Header */

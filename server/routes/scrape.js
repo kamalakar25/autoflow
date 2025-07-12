@@ -6,6 +6,7 @@ const playwright = require("playwright");
 const UserAgent = require("user-agents");
 const WebSocket = require("ws");
 const { MongoClient, ObjectId } = require("mongodb");
+const cron = require("node-cron");
 const router = express.Router();
 const xlsx = require("xlsx");
 const Result = require("../models/resultSchema");
@@ -49,10 +50,9 @@ const authenticateToken = (req, res, next) => {
 };
 
 const solveCaptcha = async (page) => {
-  console.log(
-    "CAPTCHA detected. Implement 2Captcha solver: https://2captcha.com/"
-  );
-  return new Promise((resolve) => setTimeout(resolve, 5000));
+  console.log("CAPTCHA detected. Simulating 2Captcha solver integration.");
+  await page.waitForTimeout(3000);
+  return true;
 };
 
 const retry = async (fn, retries = 3, delayMs = 2000) => {
@@ -62,10 +62,122 @@ const retry = async (fn, retries = 3, delayMs = 2000) => {
     } catch (error) {
       if (i === retries - 1) throw error;
       console.log(`Retry ${i + 1}/${retries} failed: ${error.message}`);
-      await new Promise((resolve) => setTimeout(resolve, delayMs));
+      await new Promise((resolve) => setTimeout(resolve, delayMs * (i + 1)));
     }
   }
 };
+
+// Helper function to format results to CSV
+const formatResultsToCsv = (results) => {
+  const headers = [
+    "Name",
+    "Email",
+    "Phone",
+    "Company",
+    "JobTitle",
+    "LinkedIn",
+    "EmailStatus",
+    "Domain",
+  ];
+  const rows = results.map((result) => {
+    const values = [
+      result.name || result.values?.[0] || "",
+      result.email || result.values?.[1] || "",
+      result.phone || result.values?.[2] || "",
+      result.company || result.enriched?.company || "",
+      result.jobTitle || result.enriched?.jobTitle || "",
+      result.linkedin || result.enriched?.linkedin || "",
+      result.emailStatus || result.enriched?.emailStatus || "unknown",
+      result.domain || result.enriched?.domain || "",
+    ];
+    return values
+      .map((val) => `"${val.toString().replace(/"/g, '""')}"`)
+      .join(",");
+  });
+  return [headers.join(","), ...rows].join("\n");
+};
+
+// Scheduler for running scheduled jobs
+const startScheduler = () => {
+  cron.schedule("* * * * *", async () => {
+    try {
+      const now = new Date();
+      const jobs = await db
+        .collection("jobs")
+        .find({
+          status: "pending",
+          "schedule.datetime": { $lte: now },
+        })
+        .toArray();
+
+      for (const job of jobs) {
+        console.log(`Processing scheduled job ${job.jobId} for URL ${job.url}`);
+        await db
+          .collection("jobs")
+          .updateOne(
+            { jobId: job.jobId },
+            { $set: { status: "running", startedAt: new Date() } }
+          );
+
+        try {
+          const data = await scrapePage({
+            url: job.url,
+            username: job.config?.username || "",
+            password: job.config?.password || "",
+            dynamic: job.config?.dynamic || "yes",
+            workflow: job.config?.workflow || [],
+            jobId: job.jobId,
+            workflowId: job.workflowId,
+            browser: job.config?.browser || "chromium",
+            enrich: job.config?.enrich || false,
+          });
+
+          await db
+            .collection("results")
+            .updateOne(
+              {
+                jobId: job.jobId,
+                userId: job.userId,
+                workflowId: job.workflowId,
+              },
+              {
+                $set: {
+                  csv: formatResultsToCsv(data.results),
+                  createdAt: new Date(),
+                },
+              },
+              { upsert: true }
+            );
+
+          await db
+            .collection("jobs")
+            .updateOne(
+              { jobId: job.jobId },
+              { $set: { status: "completed", completedAt: new Date() } }
+            );
+        } catch (error) {
+          console.error(`Job ${job.jobId} failed: ${error.message}`);
+          await db
+            .collection("jobs")
+            .updateOne(
+              { jobId: job.jobId },
+              {
+                $set: {
+                  status: "failed",
+                  error: error.message,
+                  completedAt: new Date(),
+                },
+              }
+            );
+        }
+      }
+    } catch (error) {
+      console.error("Scheduler error:", error.message);
+    }
+  });
+  console.log("Scheduler started, checking for jobs every minute");
+};
+startScheduler();
 
 wss.on("connection", (ws, request) => {
   ws.on("message", async (message) => {
@@ -158,7 +270,7 @@ const startRecordingSession = async (url, ws, browserType = "chromium") => {
 
   await setupEventMonitoring(page);
   await retry(() =>
-    page.goto(url, { waitUntil: "networkidle", timeout: 60000 })
+    page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 })
   );
   return { browser, page };
 };
@@ -172,6 +284,7 @@ const scrapePage = async ({
   jobId,
   workflowId,
   browser = "chromium",
+  enrich = false,
 }) => {
   let results = [];
 
@@ -182,83 +295,178 @@ const scrapePage = async ({
   }
 
   const validateName = (name) => {
-    if (!name) return "";
-    const invalidPatterns = [
-      "linkedin",
-      "profile",
-      "home",
-      "login",
-      "sign in",
-      "sign up",
-      "about",
-      "contact",
-      "welcome",
-      "dashboard",
-      "careers",
-      "jobs",
-      "company",
-      "network",
-      "messaging",
-      "notifications",
-      "search",
-      "menu",
-      "nav",
-      "navbar",
-      "header",
-    ];
+    if (!name || typeof name !== "string") return "";
     const cleanedName = name
       .trim()
       .replace(/\|.*$/, "")
-      .replace(/\s*\-\s*.*$/, "")
+      .replace(/\s*-\s*.*$/, "")
       .trim();
-    if (cleanedName.length < 5 || cleanedName.split(/\s+/).length < 2)
-      return "";
-    if (
-      invalidPatterns.some((pattern) =>
-        cleanedName.toLowerCase().includes(pattern)
-      )
-    )
-      return "";
-    if (!/\s/.test(cleanedName)) return "";
+    if (cleanedName.length < 2) return "";
     return cleanedName;
   };
 
-  const extractData = ($, selectors, textContent) => {
+  const validateEmail = (email) => {
+    if (!email || typeof email !== "string") return "";
+    const emailRegex =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    return emailRegex.test(email.trim()) ? email.trim() : "";
+  };
+
+  const validatePhone = (phone) => {
+    if (!phone || typeof phone !== "string") return "";
+    const phoneRegex = /^\+?[\d\s()-]{7,}(?:\s*(?:ext\.?|x)\s*\d+)?$/;
+    return phoneRegex.test(phone.trim()) ? phone.trim() : "";
+  };
+
+  const extractDomain = (email) => {
+    if (!validateEmail(email)) return "";
+    return email.split("@")[1]?.trim() || "";
+  };
+
+  const enrichData = async (contactData) => {
+    try {
+      const enriched = {
+        company: "",
+        jobTitle: "",
+        linkedin: "",
+        emailStatus: "unknown",
+        domain: extractDomain(contactData.email),
+      };
+
+      if (validateEmail(contactData.email)) {
+        // Mock enrichment - in production, integrate with real APIs
+        enriched.company = "Example Corp";
+        enriched.jobTitle = "Software Engineer";
+        enriched.emailStatus = "deliverable";
+        enriched.linkedin = "example-profile";
+      }
+
+      return {
+        ...contactData,
+        enriched,
+      };
+    } catch (error) {
+      console.error("Enrichment error:", error.message);
+      return {
+        ...contactData,
+        enriched: {
+          company: "",
+          jobTitle: "",
+          linkedin: "",
+          emailStatus: "unknown",
+          domain: extractDomain(contactData.email),
+        },
+      };
+    }
+  };
+
+  const extractData = async (source, isDynamic, page) => {
+    const nameSelectors = [
+      "h1",
+      "h2",
+      'meta[property="og:title"]',
+      'meta[name="title"]',
+      "title",
+      '[itemprop="name"]',
+      ".profile-name, .user-name, .name",
+      ".pv-text-details__left-panel h1",
+      ".text-heading-xlarge",
+    ];
+
+    let $ = null;
+    if (!isDynamic) {
+      $ = cheerio.load(source);
+    }
+
     const emails = [];
     const phones = [];
     let name = "";
 
-    for (const selector of selectors) {
-      const element = $(selector).first();
-      if (element.length) {
-        const candidateName =
-          element.text()?.trim() || element.attr("content")?.trim() || "";
-        const validatedName = validateName(candidateName);
-        if (validatedName) {
-          name = validatedName;
-          console.log(
-            `Static name extracted from selector: ${selector}, value: ${name}`
-          );
-          break;
+    // Enhanced name extraction
+    for (const selector of nameSelectors) {
+      let candidateName = "";
+      if (isDynamic) {
+        try {
+          const element = await page.$(selector);
+          candidateName = (await element?.textContent())?.trim() || "";
+        } catch (e) {
+          continue;
         }
+      } else {
+        const element = $(selector).first();
+        candidateName =
+          element.text()?.trim() || element.attr("content")?.trim() || "";
+      }
+      const validatedName = validateName(candidateName);
+      if (validatedName) {
+        name = validatedName;
+        console.log(
+          `Name extracted from selector: ${selector}, value: ${name}`
+        );
+        break;
       }
     }
 
-    $(textContent)
-      .find("*")
-      .each((i, el) => {
-        const text = $(el).text();
-        const emailMatch = text.match(
-          /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g
-        );
-        const phoneMatch = text.match(
-          /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/g
-        );
-        if (emailMatch) emails.push(...emailMatch);
-        if (phoneMatch) phones.push(...phoneMatch);
-      });
+    // Enhanced email and phone extraction
+    const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
+    const phoneRegex =
+      /(?:\+?1[-.\s]?)?\(?(\d{3})\)?[-.\s]?(\d{3})[-.\s]?(\d{4})|(\d{5})[-.\s]?(\d{5})|(\d{10})/g;
 
-    return { name, emails, phones };
+    if (isDynamic) {
+      try {
+        const text = await page.evaluate(() => document.body.textContent);
+        const emailMatches = text.match(emailRegex) || [];
+        const phoneMatches = text.match(phoneRegex) || [];
+
+        emailMatches.forEach((email) => {
+          const validEmail = validateEmail(email);
+          if (validEmail && !emails.includes(validEmail)) {
+            emails.push(validEmail);
+          }
+        });
+
+        phoneMatches.forEach((phone) => {
+          const validPhone = validatePhone(phone);
+          if (validPhone && !phones.includes(validPhone)) {
+            phones.push(validPhone);
+          }
+        });
+      } catch (e) {
+        console.error("Error extracting contact info:", e.message);
+      }
+    } else {
+      $("body")
+        .find("*")
+        .each((i, el) => {
+          const text = $(el).text();
+          const emailMatch = text.match(emailRegex);
+          const phoneMatch = text.match(phoneRegex);
+
+          if (emailMatch) {
+            emailMatch.forEach((email) => {
+              const validEmail = validateEmail(email);
+              if (validEmail && !emails.includes(validEmail)) {
+                emails.push(validEmail);
+              }
+            });
+          }
+
+          if (phoneMatch) {
+            phoneMatch.forEach((phone) => {
+              const validPhone = validatePhone(phone);
+              if (validPhone && !phones.includes(validPhone)) {
+                phones.push(validPhone);
+              }
+            });
+          }
+        });
+    }
+
+    return {
+      name: name || "",
+      emails: emails.slice(0, 5), // Limit to 5 emails
+      phones: phones.slice(0, 5), // Limit to 5 phones
+    };
   };
 
   if (dynamic === "yes") {
@@ -278,8 +486,8 @@ const scrapePage = async ({
     try {
       await retry(async () => {
         console.log(`Navigating to ${url}`);
-        await page.goto(url, { waitUntil: "networkidle", timeout: 60000 });
-        await page.waitForTimeout(5000);
+        await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
+        await page.waitForSelector("body", { timeout: 10000 });
       });
 
       if (username && password) {
@@ -288,47 +496,52 @@ const scrapePage = async ({
             ? "https://www.linkedin.com/login"
             : url;
           await page.goto(loginUrl, {
-            waitUntil: "networkidle",
+            waitUntil: "domcontentloaded",
             timeout: 60000,
           });
           const emailInput = await page.$(
-            'input[name="session_key"], input[type="email"], input[placeholder*="email"]'
+            'input[name="session_key"], input[type="email"], input[placeholder*="email" i], input[id*="email" i]'
           );
           const passwordInput = await page.$(
-            'input[name="session_password"], input[type="password"], input[placeholder*="password"]'
+            'input[name="session_password"], input[type="password"], input[placeholder*="password" i], input[id*="password" i]'
           );
-          const submitButton = await page.$(
-            'button[type="submit"], button[data-id="sign-in-form__submit-btn"]'
-          );
+          const submitButton = await page
+            .locator(
+              'button[type="submit"], button[id*="sign-in" i], button:has-text("Sign in")'
+            )
+            .first();
 
-          if (!emailInput || !passwordInput || !submitButton) {
-            throw new Error("Login fields not found");
-          }
-
-          await emailInput.type(username, { delay: 100 });
-          await passwordInput.type(password, { delay: 100 });
-          await submitButton.click();
-          await page
-            .waitForNavigation({ waitUntil: "networkidle", timeout: 15000 })
-            .catch(() => {});
-
-          if (await page.$('iframe[src*="captcha"]')) {
-            await solveCaptcha(page);
+          if (emailInput && passwordInput && (await submitButton.isVisible())) {
+            await emailInput.type(username, { delay: 100 });
+            await passwordInput.type(password, { delay: 100 });
             await submitButton.click();
-            await page.waitForNavigation({
-              waitUntil: "networkidle",
-              timeout: 60000,
-            });
-          }
+            await page
+              .waitForNavigation({
+                waitUntil: "domcontentloaded",
+                timeout: 15000,
+              })
+              .catch(() => {});
 
-          if (page.url().includes("login")) {
-            throw new Error("Login failed");
+            if (await page.$('iframe[src*="captcha"], div[id*="captcha"]')) {
+              const solved = await solveCaptcha(page);
+              if (!solved) throw new Error("CAPTCHA solving failed");
+              await submitButton.click();
+              await page.waitForNavigation({
+                waitUntil: "domcontentloaded",
+                timeout: 60000,
+              });
+            }
+
+            if (page.url().includes("login")) {
+              throw new Error("Login failed");
+            }
           }
         });
 
-        await page.goto(url, { waitUntil: "networkidle", timeout: 60000 });
+        await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
       }
 
+      // Scroll to load dynamic content
       await page.evaluate(async () => {
         await new Promise((resolve) => {
           let totalHeight = 0;
@@ -344,168 +557,190 @@ const scrapePage = async ({
         });
       });
 
-      const contactButton = await page.$(
-        'a[href*="contact-info"], button[aria-label*="Contact info"]'
-      );
-      if (contactButton) {
-        await contactButton.click();
-        await page
-          .waitForSelector(
-            ".pv-profile-section__section-info, .pv-contact-info__ci-container",
-            { timeout: 10000 }
+      // Check for contact info section
+      try {
+        const contactButton = await page
+          .locator(
+            'a[href*="contact" i], button[aria-label*="contact" i], a:has-text("Contact")'
           )
-          .catch(() => {});
+          .first();
+        if (contactButton && (await contactButton.isVisible())) {
+          await contactButton.click();
+          await page
+            .waitForSelector(
+              ".pv-profile-section__section-info, .pv-contact-info__ci-container, [data-section='contact-info'], .contact-form",
+              { timeout: 10000 }
+            )
+            .catch(() => {
+              console.log(
+                "Contact info section not found; proceeding with extraction"
+              );
+            });
+        }
+      } catch (e) {
+        console.log(
+          "Contact button interaction failed; proceeding with extraction"
+        );
       }
 
-      const contactData = await page.evaluate(() => {
-        const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
-        const phoneRegex =
-          /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/g;
-        const emails = [];
-        const phones = [];
-        let name = "";
+      const contactData = await extractData(null, true, page);
 
-        const selectors = [
-          "h1.text-heading-xlarge",
-          ".pv-top-card--list li:first-child",
-          '[class*="pv-top-card"] h1',
-          '[itemprop="name"]',
-          'h1:not([class*="nav"]):not([class*="header"])',
-          'h2:not([class*="nav"]):not([class*="header"])',
-          'meta[property="og:title"]',
-          "title",
-        ];
-        for (const selector of selectors) {
-          const element = document.querySelector(selector);
-          if (element) {
-            const candidateName =
-              element.textContent?.trim() || element.content?.trim() || "";
-            const validatedName =
-              candidateName &&
-              ![
-                "linkedin",
-                "profile",
-                "home",
-                "login",
-                "sign in",
-                "sign up",
-                "about",
-                "contact",
-                "nav",
-                "navbar",
-                "header",
-                "menu",
-                "dashboard",
-                "careers",
-                "jobs",
-                "company",
-                "network",
-                "messaging",
-                "notifications",
-                "search",
-              ].some((invalid) => candidateName.toLowerCase().includes(invalid))
-                ? candidateName
-                    .replace(/\|.*$/, "")
-                    .replace(/\s*\-\s*.*$/, "")
-                    .trim()
-                : "";
-            if (
-              validatedName &&
-              validatedName.length >= 5 &&
-              /\s/.test(validatedName)
-            ) {
-              name = validatedName;
-              break;
-            }
+      // Execute workflow actions
+      for (const action of workflow) {
+        try {
+          await page.waitForTimeout(1000);
+          if (action.action === "click") {
+            await page.mouse.click(action.x, action.y);
+          } else if (action.action === "type") {
+            await page.type(action.selector, action.value);
           }
+        } catch (e) {
+          console.error("Workflow action failed:", e.message);
         }
+      }
 
-        document
-          .querySelectorAll(
-            ".pv-contact-info__ci-container, .pv-profile-section__section-info, body"
-          )
-          .forEach((el) => {
-            const text = el.textContent.trim();
-            const emailMatches = text.match(emailRegex);
-            const phoneMatches = text.match(phoneRegex);
-            if (emailMatches) emails.push(...emailMatches);
-            if (phoneMatches) phones.push(...phoneMatches);
-          });
-
-        return {
-          emails: [...new Set(emails)],
-          phones: [...new Set(phones)],
-          name,
-        };
-      });
-
+      // Create structured results
       const maxLength = Math.max(
         contactData.emails.length,
         contactData.phones.length,
-        contactData.name ? 1 : 0
+        1
       );
+
       results = [];
       for (let i = 0; i < maxLength; i++) {
-        results.push({
-          values: [
-            contactData.name || "N/A",
-            contactData.emails[i] || "N/A",
-            contactData.phones[i] || "N/A",
-          ],
-        });
+        const email = contactData.emails[i] || "";
+        const phone = contactData.phones[i] || "";
+
+        let resultData = {
+          name: contactData.name || "",
+          email: email,
+          phone: phone,
+          values: [contactData.name || "", email, phone],
+        };
+
+        if (enrich) {
+          resultData = await enrichData(resultData);
+        } else {
+          resultData.enriched = {
+            company: "",
+            jobTitle: "",
+            linkedin: "",
+            emailStatus: email ? "unknown" : "",
+            domain: extractDomain(email),
+          };
+        }
+
+        results.push(resultData);
       }
 
       if (results.length === 0) {
-        results.push({ values: ["N/A", "N/A", "N/A"] });
-      }
-
-      for (const action of workflow) {
-        await page.waitForTimeout(1000);
-        if (action.action === "click") {
-          await page.mouse.click(action.x, action.y);
-        } else if (action.action === "type") {
-          await page.type(action.selector, action.value);
-        }
+        results.push({
+          name: "",
+          email: "",
+          phone: "",
+          values: ["", "", ""],
+          enriched: {
+            company: "",
+            jobTitle: "",
+            linkedin: "",
+            emailStatus: "",
+            domain: "",
+          },
+        });
       }
 
       await browserInstance.close();
     } catch (error) {
       console.error("Dynamic scraping error:", error.message);
       await browserInstance.close();
-      results = [{ values: ["N/A", "Error during scraping", error.message] }];
+      results = [
+        {
+          name: "",
+          email: "",
+          phone: "",
+          values: ["", "", ""],
+          enriched: {
+            company: "",
+            jobTitle: "",
+            linkedin: "",
+            emailStatus: "",
+            domain: "",
+          },
+          error: error.message,
+        },
+      ];
     }
   } else {
     try {
       console.log(`Starting static scraping for ${url}`);
       const response = await axios.get(url, { timeout: 30000 });
-      const $ = cheerio.load(response.data);
-      const selectors = [
-        "h1.text-heading-xlarge",
-        ".pv-top-card--list li:first-child",
-        '[class*="pv-top-card"] h1',
-        '[itemprop="name"]',
-        'h1:not([class*="nav"]):not([class*="header"])',
-        'h2:not([class*="nav"]):not([class*="header"])',
-        'meta[property="og:title"]',
-        "title",
-      ];
-      const { name, emails, phones } = extractData($, selectors, "body");
+      const contactData = await extractData(response.data, false);
 
-      const maxLength = Math.max(emails.length, phones.length, name ? 1 : 0);
+      const maxLength = Math.max(
+        contactData.emails.length,
+        contactData.phones.length,
+        1
+      );
+
       results = [];
       for (let i = 0; i < maxLength; i++) {
-        results.push({
-          values: [name || "N/A", emails[i] || "N/A", phones[i] || "N/A"],
-        });
+        const email = contactData.emails[i] || "";
+        const phone = contactData.phones[i] || "";
+
+        let resultData = {
+          name: contactData.name || "",
+          email: email,
+          phone: phone,
+          values: [contactData.name || "", email, phone],
+        };
+
+        if (enrich) {
+          resultData = await enrichData(resultData);
+        } else {
+          resultData.enriched = {
+            company: "",
+            jobTitle: "",
+            linkedin: "",
+            emailStatus: email ? "unknown" : "",
+            domain: extractDomain(email),
+          };
+        }
+
+        results.push(resultData);
       }
 
       if (results.length === 0) {
-        results.push({ values: ["N/A", "N/A", "N/A"] });
+        results.push({
+          name: "",
+          email: "",
+          phone: "",
+          values: ["", "", ""],
+          enriched: {
+            company: "",
+            jobTitle: "",
+            linkedin: "",
+            emailStatus: "",
+            domain: "",
+          },
+        });
       }
     } catch (error) {
       console.error("Static scraping error:", error.message);
       results = [
-        { values: ["N/A", "Error during static scraping", error.message] },
+        {
+          name: "",
+          email: "",
+          phone: "",
+          values: ["", "", ""],
+          enriched: {
+            company: "",
+            jobTitle: "",
+            linkedin: "",
+            emailStatus: "",
+            domain: "",
+          },
+          error: error.message,
+        },
       ];
     }
   }
@@ -529,7 +764,10 @@ router.post("/schedule-job", authenticateToken, async (req, res) => {
     await db.collection("jobs").insertOne({
       jobId,
       url,
-      schedule,
+      schedule: {
+        datetime: schedule.datetime ? new Date(schedule.datetime) : null,
+        cron: schedule.cron || null,
+      },
       config,
       workflowId,
       userId: req.user.userId,
@@ -556,19 +794,18 @@ router.post("/scrape", authenticateToken, async (req, res) => {
     jobId,
     workflowId,
     browser = "chromium",
+    enrich = false,
   } = req.body;
   if (!url) return res.status(400).json({ message: "URL is required" });
 
   const validBrowsers = ["chromium", "firefox", "webkit"];
   if (!validBrowsers.includes(browser)) {
     console.error(`Invalid browser type received: ${browser}`);
-    return res
-      .status(400)
-      .json({
-        message: `Invalid browser type: ${browser}. Must be one of ${validBrowsers.join(
-          ", "
-        )}`,
-      });
+    return res.status(400).json({
+      message: `Invalid browser type: ${browser}. Must be one of ${validBrowsers.join(
+        ", "
+      )}`,
+    });
   }
 
   try {
@@ -580,11 +817,9 @@ router.post("/scrape", authenticateToken, async (req, res) => {
       robotsResponse.data.includes("Disallow: /in/") &&
       url.includes("linkedin.com/in/")
     ) {
-      return res
-        .status(403)
-        .json({
-          message: "Scraping LinkedIn profiles disallowed by robots.txt",
-        });
+      return res.status(403).json({
+        message: "Scraping LinkedIn profiles disallowed by robots.txt",
+      });
     }
 
     const data = await scrapePage({
@@ -596,7 +831,9 @@ router.post("/scrape", authenticateToken, async (req, res) => {
       jobId,
       workflowId,
       browser,
+      enrich,
     });
+
     if (jobId) {
       await db
         .collection("jobs")
@@ -605,33 +842,79 @@ router.post("/scrape", authenticateToken, async (req, res) => {
           { $set: { status: "completed", completedAt: new Date() } }
         );
     }
+
     res.json(data);
   } catch (error) {
     if (jobId) {
-      await db
-        .collection("jobs")
-        .updateOne(
-          { jobId, userId: req.user.userId, workflowId },
-          {
-            $set: {
-              status: "failed",
-              error: error.message,
-              completedAt: new Date(),
-            },
-          }
-        );
+      await db.collection("jobs").updateOne(
+        { jobId, userId: req.user.userId, workflowId },
+        {
+          $set: {
+            status: "failed",
+            error: error.message,
+            completedAt: new Date(),
+          },
+        }
+      );
     }
     console.error("Scrape error:", error.message);
-    res
-      .status(500)
-      .json({
-        message: "Server error during scraping",
-        details: error.message,
-      });
+    res.status(500).json({
+      message: "Server error during scraping",
+      details: error.message,
+    });
   }
 });
 
+router.post("/trigger-enrichment", authenticateToken, async (req, res) => {
+  const { jobId, url, workflowId } = req.body;
+  if (!jobId && !url) {
+    return res.status(400).json({ message: "jobId or URL is required" });
+  }
 
+  try {
+    let targetUrl = url;
+    if (jobId) {
+      const job = await db
+        .collection("jobs")
+        .findOne({ jobId, userId: req.user.userId });
+      if (!job) {
+        return res.status(404).json({ message: "Job not found" });
+      }
+      targetUrl = job.url;
+    }
+
+    const data = await scrapePage({
+      url: targetUrl,
+      dynamic: "yes",
+      workflow: [],
+      jobId: jobId || `enrich_${Date.now()}`,
+      workflowId,
+      browser: "chromium",
+      enrich: true,
+    });
+
+    await db
+      .collection("results")
+      .updateOne(
+        { jobId: data.jobId, userId: req.user.userId, workflowId },
+        {
+          $set: {
+            csv: formatResultsToCsv(data.results),
+            createdAt: new Date(),
+          },
+        },
+        { upsert: true }
+      );
+
+    res.json({ message: "Enrichment triggered successfully", data });
+  } catch (error) {
+    console.error("Enrichment error:", error.message);
+    res.status(500).json({
+      message: "Server error during enrichment",
+      details: error.message,
+    });
+  }
+});
 
 router.post("/save-results", authenticateToken, async (req, res) => {
   const { jobId, csv, workflowId } = req.body;
@@ -701,13 +984,30 @@ router.get("/jobs", authenticateToken, async (req, res) => {
           id: job.jobId,
           url: job.url,
           datetime: job.schedule.datetime,
-          recurrence: job.schedule.recurrence,
+          recurrence: job.schedule.cron,
           status: job.status,
           results: result
             ? result.csv
                 .split("\n")
                 .slice(1)
-                .map((row) => ({ values: row.split(",") }))
+                .filter((line) => line.trim())
+                .map((row) => {
+                  const values = row
+                    .split(",")
+                    .map((val) =>
+                      val.replace(/^"|"$/g, "").replace(/""/g, '"')
+                    );
+                  return {
+                    values: [values[0] || "", values[1] || "", values[2] || ""],
+                    enriched: {
+                      company: values[3] || "",
+                      jobTitle: values[4] || "",
+                      linkedin: values[5] || "",
+                      emailStatus: values[6] || "unknown",
+                      domain: values[7] || "",
+                    },
+                  };
+                })
             : [],
           workflowId: job.workflowId,
         };
@@ -751,25 +1051,6 @@ router.post("/save-excel", authenticateToken, async (req, res) => {
     const sheet = workbook.Sheets[sheetName];
     const data = xlsx.utils.sheet_to_json(sheet);
 
-    const headers = [
-      "Name",
-      "Email",
-      "Phone",
-      "Company",
-      "JobTitle",
-      "LinkedIn",
-      "EmailStatus",
-      "Domain",
-    ];
-    const csvRows = data.map((row) =>
-      headers
-        .map(
-          (header) => `"${(row[header] || "").toString().replace(/"/g, '""')}"`
-        )
-        .join(",")
-    );
-    const csv = [headers.join(","), ...csvRows].join("\n");
-
     const result = new Result({
       jobId,
       workflowId: validWorkflowId,
@@ -777,7 +1058,6 @@ router.post("/save-excel", authenticateToken, async (req, res) => {
       fileName: `job_${jobId}.xlsx`,
       fileData: buffer,
       data,
-      csv,
     });
 
     await result.save();
@@ -803,7 +1083,7 @@ router.post("/save-excel", authenticateToken, async (req, res) => {
 router.get("/results", authenticateToken, async (req, res) => {
   try {
     const results = await Result.find({ userId: req.user.userId })
-      .select("jobId fileName createdAt")
+      .select("jobId fileName createdAt data")
       .lean();
     res.status(200).json(results);
   } catch (error) {
@@ -843,5 +1123,43 @@ router.get(
     }
   }
 );
+
+router.delete("/cancel-job/:jobId", async (req, res) => {
+  const { jobId } = req.params;
+
+  try {
+    // Step 1: Find job from DB
+    const job = await db.collection("jobs").findOne({ jobId });
+
+    if (!job) {
+      return res.status(404).json({ message: "Job not found" });
+    }
+
+    // Step 2: Only allow canceling 'pending' jobs
+    if (job.status !== "pending") {
+      return res.status(400).json({
+        message: "Only pending jobs can be canceled",
+      });
+    }
+
+    // Step 3: Update job status to 'canceled'
+    await db
+      .collection("jobs")
+      .updateOne(
+        { jobId },
+        { $set: { status: "canceled", canceledAt: new Date() } }
+      );
+
+    res.json({
+      success: true,
+      message: "Job canceled successfully",
+    });
+  } catch (error) {
+    console.error("Cancel job error:", error);
+    res.status(500).json({ message: "Failed to cancel job" });
+  }
+});
+
+
 
 module.exports = { router, wss, attachWebSocket };

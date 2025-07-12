@@ -220,25 +220,25 @@ const BillingDashboard = () => {
           sixMonthTransactionsData.transactions
         )
           ? sixMonthTransactionsData.transactions.map((t) => ({
-              ...t,
-              credits:
-                creditPackagesData.find((pkg) => pkg.id === t.creditPackageId)
-                  ?.credits ||
-                t.amount ||
-                0,
-            }))
+            ...t,
+            credits:
+              creditPackagesData.find((pkg) => pkg.id === t.creditPackageId)
+                ?.credits ||
+              t.amount ||
+              0,
+          }))
           : [];
         const enrichedOneYearTransactions = Array.isArray(
           oneYearTransactionsData.transactions
         )
           ? oneYearTransactionsData.transactions.map((t) => ({
-              ...t,
-              credits:
-                creditPackagesData.find((pkg) => pkg.id === t.creditPackageId)
-                  ?.credits ||
-                t.amount ||
-                0,
-            }))
+            ...t,
+            credits:
+              creditPackagesData.find((pkg) => pkg.id === t.creditPackageId)
+                ?.credits ||
+              t.amount ||
+              0,
+          }))
           : [];
 
         const nextBillingDate = new Date();
@@ -416,8 +416,7 @@ const BillingDashboard = () => {
     setLoadingMoreInvoices(true);
     try {
       const response = await fetch(
-        `${BASE_URL}/api/billing/invoices?userId=${userId}&page=${
-          invoicesPage + 1
+        `${BASE_URL}/api/billing/invoices?userId=${userId}&page=${invoicesPage + 1
         }&limit=10`
       );
       if (!response.ok) throw new Error('Failed to load invoices');
@@ -505,15 +504,14 @@ const BillingDashboard = () => {
 
   const getStatusBadge = (status) => (
     <span
-      className={`inline-block px-2 py-1 text-white rounded ${
-        status === 'Paid'
-          ? 'bg-green-500'
-          : status === 'Pending'
+      className={`inline-block px-2 py-1 text-white rounded ${status === 'Paid'
+        ? 'bg-green-500'
+        : status === 'Pending'
           ? 'bg-yellow-500'
           : status === 'Failed'
-          ? 'bg-red-500'
-          : 'bg-gray-500'
-      }`}
+            ? 'bg-red-500'
+            : 'bg-gray-500'
+        }`}
     >
       {status || 'Unknown'}
     </span>
@@ -715,19 +713,16 @@ const BillingDashboard = () => {
           const errorData = await response.json();
           let errorMessage =
             errorData.error ||
-            `Failed to ${
-              editingPaymentMethodId ? 'update' : 'add'
+            `Failed to ${editingPaymentMethodId ? 'update' : 'add'
             } payment method`;
           if (response.status === 401) {
             errorMessage = 'Unauthorized: Please check your login credentials.';
           } else if (response.status === 400) {
-            errorMessage = `Invalid data: ${
-              errorData.error || 'Please check your input.'
-            }`;
+            errorMessage = `Invalid data: ${errorData.error || 'Please check your input.'
+              }`;
           } else if (response.status === 404) {
-            errorMessage = `Not found: ${
-              errorData.error || 'Payment method or user not found.'
-            }`;
+            errorMessage = `Not found: ${errorData.error || 'Payment method or user not found.'
+              }`;
           } else if (response.status === 500) {
             errorMessage = 'Server error: Please try again later.';
           }
@@ -749,8 +744,7 @@ const BillingDashboard = () => {
         setCardNumberError(null);
         setCvvError(null);
         setSuccessMessage(
-          `Payment method ${
-            editingPaymentMethodId ? 'updated' : 'added'
+          `Payment method ${editingPaymentMethodId ? 'updated' : 'added'
           } successfully.`
         );
         setTimeout(() => setSuccessMessage(null), 3000);
@@ -770,8 +764,7 @@ const BillingDashboard = () => {
     }
 
     setErrorMessage(
-      `Failed to ${
-        editingPaymentMethodId ? 'update' : 'add'
+      `Failed to ${editingPaymentMethodId ? 'update' : 'add'
       } payment method after ${maxRetries} attempts: ${lastError.message}`
     );
   };
@@ -797,7 +790,7 @@ const BillingDashboard = () => {
         const errorData = await response.json();
         throw new Error(
           errorData.error ||
-            `Failed to remove payment method: ${response.status}`
+          `Failed to remove payment method: ${response.status}`
         );
       }
 
@@ -864,7 +857,7 @@ const BillingDashboard = () => {
         const errorData = await response.json();
         throw new Error(
           errorData.error ||
-            `Failed to set default payment method: ${response.status}`
+          `Failed to set default payment method: ${response.status}`
         );
       }
 
@@ -1090,72 +1083,72 @@ const BillingDashboard = () => {
             <h1 className='text-xl sm:text-2xl font-bold'>
               💳 Billing & Credits
             </h1>
-            <div className='flex flex-wrap gap-2 justify-center sm:justify-end'>
+            <div className='flex flex-col sm:flex-row justify-center sm:justify-end gap-2'>
               <button
-                className='bg-blue-500 text-white px-3 py-2 rounded text-sm sm:text-base w-full sm:w-auto'
+                className='bg-purple-500 text-white px-4 py-2 rounded-lg flex items-center gap-2 text-sm sm:text-base w-full sm:w-auto'
                 onClick={() => setShowPurchaseModal(true)}
               >
-                💰 Buy Credits
+                <span>💰</span> Buy Credits
               </button>
               <button
-                className='border border-blue-500 text-blue-500 px-3 py-2 rounded text-sm sm:text-base w-full sm:w-auto'
+                className='bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center gap-2 text-sm sm:text-base w-full sm:w-auto'
                 onClick={() => setShowExportModal(true)}
               >
-                📥 Export Transactions
+                <span>📥</span> Export Transactions
               </button>
               <button
-                className='border border-blue-500 text-blue-500 px-3 py-2 rounded text-sm sm:text-base w-full sm:w-auto'
+                className='bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center gap-2 text-sm sm:text-base w-full sm:w-auto'
                 onClick={() => setShowAllInvoicesModal(true)}
               >
-                📄 Invoices
+                <span>📄</span> Invoices
               </button>
             </div>
           </div>
-<div className='grid grid-cols-1 lg:grid-cols- md:grid-cols-2 gap-4 mb-4'>
-  <div className='bg-white shadow rounded p-4'>
-    <h5 className='text-lg lg:text-base font-bold'>💎 Credit Balance</h5>
-    <div className='grid grid-cols-1 md:grid-cols-2'>
-      <div className='text-center mb-3'>
-        <div className='text-4xl lg:text-2xl font-bold text-green-500'>
-          {creditData.currentCredits.toLocaleString()}
-        </div>
-        <div className='text-gray-500 text-sm lg:text-xs'>Available Credits</div>
-      </div>
-      <div className='text-center mb-3'>
-        <div className='text-3xl lg:text-xl font-bold text-blue-500'>
-          {creditData.totalCreditsUsed.toLocaleString()}
-        </div>
-        <div className='text-gray-500 text-sm lg:text-xs'>Total Used</div>
-      </div>
-    </div>
-    <div className='mb-3'>
-      <div className='flex justify-between text-sm lg:text-xs mb-1'>
-        <span>Usage Percentage</span>
-        <span>{creditData.creditUsagePercentage.toFixed(2)}%</span>
-      </div>
-      <div className='w-full bg-gray-200 rounded-full h-2.5'>
-        <div
-          className='bg-blue-500 h-2.5 rounded-full'
-          style={{
-            width: `${Math.min(creditData.creditUsagePercentage, 100)}%`,
-          }}
-        ></div>
-      </div>
-    </div>
-  </div>
+          <div className='grid grid-cols-1 lg:grid-cols- md:grid-cols-2 gap-4 mb-4'>
+            <div className='bg-white shadow rounded p-4'>
+              <h5 className='text-lg lg:text-base font-bold'>💎 Credit Balance</h5>
+              <div className='grid grid-cols-1 md:grid-cols-2'>
+                <div className='text-center mb-3'>
+                  <div className='text-4xl lg:text-2xl font-bold text-green-500'>
+                    {creditData.currentCredits.toLocaleString()}
+                  </div>
+                  <div className='text-gray-500 text-sm lg:text-xs'>Available Credits</div>
+                </div>
+                <div className='text-center mb-3'>
+                  <div className='text-3xl lg:text-xl font-bold text-blue-500'>
+                    {creditData.totalCreditsUsed.toLocaleString()}
+                  </div>
+                  <div className='text-gray-500 text-sm lg:text-xs'>Total Used</div>
+                </div>
+              </div>
+              <div className='mb-3'>
+                <div className='flex justify-between text-sm lg:text-xs mb-1'>
+                  <span>Usage Percentage</span>
+                  <span>{creditData.creditUsagePercentage.toFixed(2)}%</span>
+                </div>
+                <div className='w-full bg-gray-200 rounded-full h-2.5'>
+                  <div
+                    className='bg-blue-500 h-2.5 rounded-full'
+                    style={{
+                      width: `${Math.min(creditData.creditUsagePercentage, 100)}%`,
+                    }}
+                  ></div>
+                </div>
+              </div>
+            </div>
 
- 
 
-  <div className='bg-white shadow rounded p-4 text-center'>
-    <div className='text-4xl lg:text-2xl text-yellow-500 mb-2'>📅</div>
-    <h5 className='mb-1 text-base lg:text-sm'>Next Billing</h5>
-    <h3 className='text-yellow-500 text-xl lg:text-lg'>
-      {creditData.nextBillingDate
-        ? new Date(creditData.nextBillingDate).toLocaleDateString()
-        : 'N/A'}
-    </h3>
-  </div>
-</div>
+
+            <div className='bg-white shadow rounded p-4 text-center'>
+              <div className='text-4xl lg:text-2xl text-yellow-500 mb-2'>📅</div>
+              <h5 className='mb-1 text-base lg:text-sm'>Next Billing</h5>
+              <h3 className='text-yellow-500 text-xl lg:text-lg'>
+                {creditData.nextBillingDate
+                  ? new Date(creditData.nextBillingDate).toLocaleDateString()
+                  : 'N/A'}
+              </h3>
+            </div>
+          </div>
 
 
           <div className='bg-blue-100 text-blue-800 p-3 rounded mb-2'>
@@ -1163,39 +1156,39 @@ const BillingDashboard = () => {
             credits during important automation jobs.
           </div>
 
-         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4'>
-  <div className='bg-white shadow rounded p-4 text-center'>
-    <div className='text-3xl lg:text-2xl text-green-500 mb-2'>💰</div>
-    <h5 className='mb-1 text-base lg:text-sm'>This Month</h5>
-    <h3 className='text-green-500 text-xl lg:text-lg'>
-      ₹{creditData.monthlySpend?.toLocaleString() || 0}
-    </h3>
-  </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4'>
+            <div className='bg-white shadow rounded p-4 text-center'>
+              <div className='text-3xl lg:text-2xl text-green-500 mb-2'>💰</div>
+              <h5 className='mb-1 text-base lg:text-sm'>This Month</h5>
+              <h3 className='text-green-500 text-xl lg:text-lg'>
+                ₹{creditData.monthlySpend?.toLocaleString() || 0}
+              </h3>
+            </div>
 
-  <div className='bg-white shadow rounded p-4 text-center'>
-    <div className='text-3xl lg:text-2xl text-blue-500 mb-2'>📊</div>
-    <h5 className='mb-1 text-base lg:text-sm'>Credits/Day</h5>
-    <h3 className='text-blue-500 text-xl lg:text-lg'>
-      {creditData.creditsPerDay || 0}
-    </h3>
-  </div>
+            <div className='bg-white shadow rounded p-4 text-center'>
+              <div className='text-3xl lg:text-2xl text-blue-500 mb-2'>📊</div>
+              <h5 className='mb-1 text-base lg:text-sm'>Credits/Day</h5>
+              <h3 className='text-blue-500 text-xl lg:text-lg'>
+                {creditData.creditsPerDay || 0}
+              </h3>
+            </div>
 
-  <div className='bg-white shadow rounded p-4 text-center'>
-    <div className='text-3xl lg:text-2xl text-blue-500 mb-2'>🔄</div>
-    <h5 className='mb-1 text-base lg:text-sm'>Auto Top-up</h5>
-    <h3 className='text-blue-500 text-xl lg:text-lg'>
-      {creditData.autoTopup.count || 0}
-    </h3>
-  </div>
+            <div className='bg-white shadow rounded p-4 text-center'>
+              <div className='text-3xl lg:text-2xl text-blue-500 mb-2'>🔄</div>
+              <h5 className='mb-1 text-base lg:text-sm'>Auto Top-up</h5>
+              <h3 className='text-blue-500 text-xl lg:text-lg'>
+                {creditData.autoTopup.count || 0}
+              </h3>
+            </div>
 
-  <div className='bg-white shadow rounded p-4 text-center'>
-    <div className='text-3xl lg:text-2xl text-yellow-500 mb-2'>📄</div>
-    <h5 className='mb-1 text-base lg:text-sm'>Invoices</h5>
-    <h3 className='text-yellow-500 text-xl lg:text-lg'>
-      {invoices.length || 0}
-    </h3>
-  </div>
-</div>
+            <div className='bg-white shadow rounded p-4 text-center'>
+              <div className='text-3xl lg:text-2xl text-yellow-500 mb-2'>📄</div>
+              <h5 className='mb-1 text-base lg:text-sm'>Invoices</h5>
+              <h3 className='text-yellow-500 text-xl lg:text-lg'>
+                {invoices.length || 0}
+              </h3>
+            </div>
+          </div>
 
 
           <div className='mb-6'>
@@ -1205,21 +1198,19 @@ const BillingDashboard = () => {
                 <div className='flex bg-gray-100 rounded-lg p-1'>
                   <button
                     onClick={() => handleTimeframeChange('6months')}
-                    className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
-                      selectedTimeframe === '6months'
-                        ? 'bg-white text-gray-900 shadow-sm'
-                        : 'text-gray-500 hover:text-gray-700'
-                    }`}
+                    className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${selectedTimeframe === '6months'
+                      ? 'bg-white text-gray-900 shadow-sm'
+                      : 'text-gray-500 hover:text-gray-700'
+                      }`}
                   >
                     6 Months
                   </button>
                   <button
                     onClick={() => handleTimeframeChange('1year')}
-                    className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${
-                      selectedTimeframe === '1year'
-                        ? 'bg-white text-gray-900 shadow-sm'
-                        : 'text-gray-500 hover:text-gray-700'
-                    }`}
+                    className={`px-3 py-1 text-sm font-medium rounded-md transition-colors ${selectedTimeframe === '1year'
+                      ? 'bg-white text-gray-900 shadow-sm'
+                      : 'text-gray-500 hover:text-gray-700'
+                      }`}
                   >
                     1 Year
                   </button>
@@ -1235,11 +1226,10 @@ const BillingDashboard = () => {
                 <div className='flex justify-between items-center mb-3'>
                   <span>Status:</span>
                   <span
-                    className={`text-white px-2 py-1 rounded ${
-                      creditData.autoTopup.enabled
-                        ? 'bg-green-500'
-                        : 'bg-red-500'
-                    }`}
+                    className={`text-white px-2 py-1 rounded ${creditData.autoTopup.enabled
+                      ? 'bg-green-500'
+                      : 'bg-red-500'
+                      }`}
                   >
                     {creditData.autoTopup.enabled ? 'Enabled' : 'Disabled'}
                   </span>
@@ -1261,8 +1251,8 @@ const BillingDashboard = () => {
                   <span className='text-gray-500'>
                     {creditData.autoTopup.lastTopUpTimestamp
                       ? new Date(
-                          creditData.autoTopup.lastTopUpTimestamp
-                        ).toLocaleDateString()
+                        creditData.autoTopup.lastTopUpTimestamp
+                      ).toLocaleDateString()
                       : 'N/A'}
                   </span>
                 </div>
@@ -1393,109 +1383,109 @@ const BillingDashboard = () => {
             time.
           </div>
 
-       <div className='mb-6'>
-  <div className='bg-white shadow rounded p-4 mb-4 border border-blue-200 flex flex-col'>
-    <div className='flex justify-between items-center mb-4'>
-      <h5 className='text-lg font-bold'>Payment Methods</h5>
+          <div className='mb-6'>
+            <div className='bg-white shadow rounded p-4 mb-4 border border-blue-200 flex flex-col'>
+              <div className='flex justify-between items-center mb-4'>
+                <h5 className='text-lg font-bold'>Payment Methods</h5>
 
-      {/* Desktop Button */}
-      <button
-        className='bg-blue-600 text-white px-4 py-2 rounded hidden md:block'
-        onClick={() => {
-          setNewPaymentMethod({
-            type: 'Visa',
-            cardNumber: '',
-            expiry: '',
-            cvv: '',
-            isDefault: false,
-          });
-          setEditingPaymentMethodId(null);
-          setShowAddPaymentModal(true);
-          setExpiryError(null);
-          setCardNumberError(null);
-          setCvvError(null);
-        }}
-      >
-        + Add Payment Method
-      </button>
-    </div>
+                {/* Desktop Button */}
+                <button
+                  className='bg-blue-600 text-white px-4 py-2 rounded hidden md:block'
+                  onClick={() => {
+                    setNewPaymentMethod({
+                      type: 'Visa',
+                      cardNumber: '',
+                      expiry: '',
+                      cvv: '',
+                      isDefault: false,
+                    });
+                    setEditingPaymentMethodId(null);
+                    setShowAddPaymentModal(true);
+                    setExpiryError(null);
+                    setCardNumberError(null);
+                    setCvvError(null);
+                  }}
+                >
+                  + Add Payment Method
+                </button>
+              </div>
 
-    <p className='text-gray-500 text-sm mb-4'>
-      Manage your payment methods
-    </p>
+              <p className='text-gray-500 text-sm mb-4'>
+                Manage your payment methods
+              </p>
 
-    {paymentMethods.length === 0 && (
-      <div className='text-center p-4 text-gray-500'>
-        No payment methods added.
-      </div>
-    )}
+              {paymentMethods.length === 0 && (
+                <div className='text-center p-4 text-gray-500'>
+                  No payment methods added.
+                </div>
+              )}
 
-    {paymentMethods.map((method) => (
-      <div
-        key={method.id}
-        className='flex items-center justify-between p-2 border-b border-gray-200'
-      >
-        <div className='flex items-center'>
-          <span className='mr-2'>📌</span>
-          <div>
-            <div className={`${method.isDefault ? 'text-green-500' : ''}`}>
-              {method.type} {method.displayCardNumber}{' '}
-              {method.isDefault && '(Default)'}
-            </div>
-            <div className='text-gray-500 text-sm'>
-              Expires {method.expiry}
+              {paymentMethods.map((method) => (
+                <div
+                  key={method.id}
+                  className='flex items-center justify-between p-2 border-b border-gray-200'
+                >
+                  <div className='flex items-center'>
+                    <span className='mr-2'>📌</span>
+                    <div>
+                      <div className={`${method.isDefault ? 'text-green-500' : ''}`}>
+                        {method.type} {method.displayCardNumber}{' '}
+                        {method.isDefault && '(Default)'}
+                      </div>
+                      <div className='text-gray-500 text-sm'>
+                        Expires {method.expiry}
+                      </div>
+                    </div>
+                  </div>
+                  <div className='flex gap-2'>
+                    <button
+                      className='text-blue-500 hover:text-blue-700'
+                      onClick={() => handleEditPaymentMethod(method.id)}
+                    >
+                      ✎ Edit
+                    </button>
+                    <button
+                      className='text-blue-500 hover:text-blue-700'
+                      onClick={() => handleSetDefaultPaymentMethod(method.id)}
+                      disabled={method.isDefault}
+                    >
+                      Set Default
+                    </button>
+                    <button
+                      className='text-red-500 hover:text-red-700'
+                      onClick={() => handleRemovePaymentMethod(method.id)}
+                      disabled={method.isDefault}
+                    >
+                      🗑️ Remove
+                    </button>
+                  </div>
+                </div>
+              ))}
+
+              {/* Mobile Button inside the container */}
+              <div className='mt-4 md:hidden'>
+                <button
+                  className='bg-blue-600 text-white px-4 py-2 rounded w-full'
+                  onClick={() => {
+                    setNewPaymentMethod({
+                      type: 'Visa',
+                      cardNumber: '',
+                      expiry: '',
+                      cvv: '',
+                      isDefault: false,
+                    });
+                    setEditingPaymentMethodId(null);
+                    setShowAddPaymentModal(true);
+                    setExpiryError(null);
+                    setCardNumberError(null);
+                    setCvvError(null);
+                  }}
+                >
+                  + Add Payment Method
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div className='flex gap-2'>
-          <button
-            className='text-blue-500 hover:text-blue-700'
-            onClick={() => handleEditPaymentMethod(method.id)}
-          >
-            ✎ Edit
-          </button>
-          <button
-            className='text-blue-500 hover:text-blue-700'
-            onClick={() => handleSetDefaultPaymentMethod(method.id)}
-            disabled={method.isDefault}
-          >
-            Set Default
-          </button>
-          <button
-            className='text-red-500 hover:text-red-700'
-            onClick={() => handleRemovePaymentMethod(method.id)}
-            disabled={method.isDefault}
-          >
-            🗑️ Remove
-          </button>
-        </div>
-      </div>
-    ))}
-
-    {/* Mobile Button inside the container */}
-    <div className='mt-4 md:hidden'>
-      <button
-        className='bg-blue-600 text-white px-4 py-2 rounded w-full'
-        onClick={() => {
-          setNewPaymentMethod({
-            type: 'Visa',
-            cardNumber: '',
-            expiry: '',
-            cvv: '',
-            isDefault: false,
-          });
-          setEditingPaymentMethodId(null);
-          setShowAddPaymentModal(true);
-          setExpiryError(null);
-          setCardNumberError(null);
-          setCvvError(null);
-        }}
-      >
-        + Add Payment Method
-      </button>
-    </div>
-  </div>
-</div>
 
 
           {showAddPaymentModal && (
@@ -1553,9 +1543,8 @@ const BillingDashboard = () => {
                       }}
                       placeholder='Enter 16-digit card number'
                       maxLength='16'
-                      className={`w-full border rounded p-2 ${
-                        cardNumberError ? 'border-red-500' : ''
-                      }`}
+                      className={`w-full border rounded p-2 ${cardNumberError ? 'border-red-500' : ''
+                        }`}
                       required
                       disabled={isSavingPayment}
                     />
@@ -1586,9 +1575,8 @@ const BillingDashboard = () => {
                       }}
                       placeholder='MM/YY'
                       maxLength='5'
-                      className={`w-full border rounded p-2 ${
-                        expiryError ? 'border-red-500' : ''
-                      }`}
+                      className={`w-full border rounded p-2 ${expiryError ? 'border-red-500' : ''
+                        }`}
                       required
                       disabled={isSavingPayment}
                     />
@@ -1615,9 +1603,8 @@ const BillingDashboard = () => {
                       }}
                       placeholder='Enter 3-4 digit CVV'
                       maxLength='4'
-                      className={`w-full border rounded p-2 ${
-                        cvvError ? 'border-red-500' : ''
-                      }`}
+                      className={`w-full border rounded p-2 ${cvvError ? 'border-red-500' : ''
+                        }`}
                       required
                       disabled={isSavingPayment}
                     />
@@ -1653,14 +1640,13 @@ const BillingDashboard = () => {
                     </button>
                     <button
                       type='submit'
-                      className={`bg-blue-500 text-white px-4 py-2 rounded flex items-center ${
-                        cardNumberError ||
+                      className={`bg-blue-500 text-white px-4 py-2 rounded flex items-center ${cardNumberError ||
                         expiryError ||
                         cvvError ||
                         isSavingPayment
-                          ? 'opacity-50 cursor-not-allowed'
-                          : ''
-                      }`}
+                        ? 'opacity-50 cursor-not-allowed'
+                        : ''
+                        }`}
                       disabled={
                         !!cardNumberError ||
                         !!expiryError ||
@@ -1702,69 +1688,70 @@ const BillingDashboard = () => {
             </div>
           )}
 
-  {showPurchaseModal && (
-  <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>
-    <div className='bg-white rounded-lg p-4 sm:p-6 w-full max-w-[95vw] sm:max-w-[90vw] md:max-w-3xl max-h-[90vh] overflow-y-auto mx-2 sm:mx-4 lg:mr-64'>
-      <div className='flex justify-between items-center mb-4'>
-        <h4 className='text-lg sm:text-xl font-bold'>💰 Purchase Credits</h4>
-        <button
-          onClick={() => {
-            setShowPurchaseModal(false);
-            setSelectedPackage(null);
-          }}
-          className='text-gray-500 text-xl sm:text-2xl'
-        >
-          ✕
-        </button>
-      </div>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
-        {creditPackages.map((pkg) => (
-          <div
-            key={pkg.id}
-            className={`border rounded p-4 text-center ${
-              pkg.popular ? 'border-blue-500 bg-blue-50' : ''
-            }`}
-          >
-            {pkg.popular && (
-              <div className='bg-blue-500 text-white text-sm font-bold py-1 mb-2 rounded'>
-                Most Popular
+          {showPurchaseModal && (
+            <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[2000]'>
+              <div className='bg-white rounded-lg p-4 sm:p-6 w-full max-w-7xl max-h-[90vh] overflow-y-auto mx-4'>
+                <div className='flex justify-between items-center mb-4'>
+                  <h4 className='text-lg sm:text-xl font-bold'>💰 Purchase Credits</h4>
+                  <button
+                    onClick={() => {
+                      setShowPurchaseModal(false);
+                      setSelectedPackage(null);
+                    }}
+                    className='text-gray-500 text-xl sm:text-2xl'
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                <div className='grid gap-4 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]'>
+                  {creditPackages.map((pkg) => (
+                    <div
+                      key={pkg.id}
+                      className={`border rounded p-4 text-center min-w-[200px] ${pkg.popular ? 'border-blue-500 bg-blue-50' : ''}`}
+                    >
+                      {pkg.popular && (
+                        <div className='bg-blue-500 text-white text-sm font-bold py-1 mb-2 rounded'>
+                          Most Popular
+                        </div>
+                      )}
+                      <h5 className='text-base sm:text-lg font-bold'>{pkg.name}</h5>
+                      <div className='text-xl sm:text-2xl font-bold mb-2'>
+                        ₹{pkg.price.toLocaleString()}
+                      </div>
+                      <div className='text-gray-500 mb-2 text-sm sm:text-base'>
+                        {pkg.credits.toLocaleString()} Credits
+                      </div>
+                      <ul className='text-xs sm:text-sm text-gray-600 mb-4'>
+                        {pkg.features.map((feature, index) => (
+                          <li key={index}>{feature}</li>
+                        ))}
+                      </ul>
+                      <button
+                        className='bg-blue-500 text-white px-3 sm:px-4 py-2 rounded w-full text-sm sm:text-base'
+                        onClick={() => handlePurchase(pkg)}
+                      >
+                        Buy Now
+                      </button>
+                    </div>
+                  ))}
+                </div>
+
+                <div className='mt-4 flex justify-end gap-2'>
+                  <button
+                    className='bg-gray-500 text-white px-3 sm:px-4 py-2 rounded text-sm sm:text-base'
+                    onClick={() => {
+                      setShowPurchaseModal(false);
+                      setSelectedPackage(null);
+                    }}
+                  >
+                    Cancel
+                  </button>
+                </div>
               </div>
-            )}
-            <h5 className='text-base sm:text-lg font-bold'>{pkg.name}</h5>
-            <div className='text-xl sm:text-2xl font-bold mb-2'>
-              ₹{pkg.price.toLocaleString()}
             </div>
-            <div className='text-gray-500 mb-2 text-sm sm:text-base'>
-              {pkg.credits.toLocaleString()} Credits
-            </div>
-            <ul className='text-xs sm:text-sm text-gray-600 mb-4'>
-              {pkg.features.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul>
-            <button
-              className='bg-blue-500 text-white px-3 sm:px-4 py-2 rounded w-full text-sm sm:text-base'
-              onClick={() => handlePurchase(pkg)}
-            >
-              Buy Now
-            </button>
-          </div>
-        ))}
-      </div>
-      <div className='mt-4 flex justify-end gap-2'>
-        <button
-          className='bg-gray-500 text-white px-3 sm:px-4 py-2 rounded text-sm sm:text-base'
-          onClick={() => {
-            setShowPurchaseModal(false);
-            setSelectedPackage(null);
-          }}
-        >
-          Cancel
-        </button>
-      </div>
-    </div>
-  </div>
-)}
+          )}
+
           {showInvoiceModal && currentInvoice && (
             <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>
               <div className='bg-white rounded-lg p-6 w-full max-w-6xl h-5/6 flex flex-col'>
@@ -1796,75 +1783,75 @@ const BillingDashboard = () => {
             </div>
           )}
 
-       {showAllInvoicesModal && (
-  <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1000]'>
-    <div className='bg-white rounded-lg p-4 sm:p-6 w-full max-w-[95vw] sm:max-w-[90vw] md:max-w-4xl max-h-[90vh] overflow-y-auto mx-2 sm:mx-4 lg:mr-64'>
-      <div className='flex justify-between items-center mb-4'>
-        <h4 className='text-lg sm:text-xl font-bold'>
-          📄 All Invoices
-        </h4>
-        <button
-          onClick={() => setShowAllInvoicesModal(false)}
-          className='text-gray-500 text-xl sm:text-2xl'
-        >
-          ✕
-        </button>
-      </div>
-      <div className='p-2 sm:p-4'>
-        {invoices.length === 0 && (
-          <div className='text-center p-4 text-gray-500 text-sm sm:text-base'>
-            No invoices found.
-          </div>
-        )}
-        {invoices.map((invoice) => (
-          <div
-            key={invoice._id}
-            className='flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3 pb-3 border-b gap-2'
-          >
-            <div>
-              <div className='font-bold text-sm sm:text-base'>
-                {invoice.invoiceNumber || 'N/A'}
-              </div>
-              <div className='text-gray-500 text-xs sm:text-sm'>
-                {invoice.date
-                  ? new Date(invoice.date).toLocaleDateString()
-                  : 'N/A'}
+          {showAllInvoicesModal && (
+            <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1000]'>
+              <div className='bg-white rounded-lg p-4 sm:p-6 w-full max-w-[95vw] sm:max-w-[90vw] md:max-w-4xl max-h-[90vh] overflow-y-auto mx-2 sm:mx-4 lg:mr-64'>
+                <div className='flex justify-between items-center mb-4'>
+                  <h4 className='text-lg sm:text-xl font-bold'>
+                    📄 All Invoices
+                  </h4>
+                  <button
+                    onClick={() => setShowAllInvoicesModal(false)}
+                    className='text-gray-500 text-xl sm:text-2xl'
+                  >
+                    ✕
+                  </button>
+                </div>
+                <div className='p-2 sm:p-4'>
+                  {invoices.length === 0 && (
+                    <div className='text-center p-4 text-gray-500 text-sm sm:text-base'>
+                      No invoices found.
+                    </div>
+                  )}
+                  {invoices.map((invoice) => (
+                    <div
+                      key={invoice._id}
+                      className='flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3 pb-3 border-b gap-2'
+                    >
+                      <div>
+                        <div className='font-bold text-sm sm:text-base'>
+                          {invoice.invoiceNumber || 'N/A'}
+                        </div>
+                        <div className='text-gray-500 text-xs sm:text-sm'>
+                          {invoice.date
+                            ? new Date(invoice.date).toLocaleDateString()
+                            : 'N/A'}
+                        </div>
+                      </div>
+                      <div className='text-left sm:text-right w-full sm:w-auto'>
+                        <div className='font-bold text-sm sm:text-base'>
+                          ₹{invoice.amount?.toLocaleString() || 0}
+                        </div>
+                        <div className='flex items-center justify-start sm:justify-end gap-2 mt-2 sm:mt-0'>
+                          {getStatusBadge(invoice.status)}
+                          <button
+                            onClick={() => downloadInvoice(invoice)}
+                            className='text-blue-500 hover:text-blue-700 text-sm sm:text-base'
+                            title='Download Invoice as PDF'
+                          >
+                            📥 Download
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                  {invoicesPage < invoicesTotalPages && (
+                    <div className='text-center mt-4'>
+                      <button
+                        className='w-full sm:w-auto border border-blue-500 text-blue-500 px-3 sm:px-4 py-2 rounded text-sm sm:text-base'
+                        onClick={loadMoreInvoices}
+                        disabled={loadingMoreInvoices}
+                      >
+                        {loadingMoreInvoices
+                          ? 'Loading...'
+                          : 'Load More Invoices'}
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
-            <div className='text-left sm:text-right w-full sm:w-auto'>
-              <div className='font-bold text-sm sm:text-base'>
-                ₹{invoice.amount?.toLocaleString() || 0}
-              </div>
-              <div className='flex items-center justify-start sm:justify-end gap-2 mt-2 sm:mt-0'>
-                {getStatusBadge(invoice.status)}
-                <button
-                  onClick={() => downloadInvoice(invoice)}
-                  className='text-blue-500 hover:text-blue-700 text-sm sm:text-base'
-                  title='Download Invoice as PDF'
-                >
-                  📥 Download
-                </button>
-              </div>
-            </div>
-          </div>
-        ))}
-        {invoicesPage < invoicesTotalPages && (
-          <div className='text-center mt-4'>
-            <button
-              className='w-full sm:w-auto border border-blue-500 text-blue-500 px-3 sm:px-4 py-2 rounded text-sm sm:text-base'
-              onClick={loadMoreInvoices}
-              disabled={loadingMoreInvoices}
-            >
-              {loadingMoreInvoices
-                ? 'Loading...'
-                : 'Load More Invoices'}
-            </button>
-          </div>
-        )}
-      </div>
-    </div>
-  </div>
-)}
+          )}
 
           {showExportModal && (
             <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>

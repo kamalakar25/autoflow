@@ -198,7 +198,7 @@ const AuthModal = ({ isOpen, onClose, initialMode, onLogin }) => {
           }
           onClose();
           if (response.data.user.role === "Admin") {
-            navigate("/admin-overview");
+            navigate("/admin/overview");
           } else {
             navigate("/dashboard");
           }
@@ -357,11 +357,11 @@ const AuthModal = ({ isOpen, onClose, initialMode, onLogin }) => {
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-[1000] p-4"
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60 z-[3000] p-4"
       onClick={handleOverlayClick}
     >
       <div
-        className="w-full max-w-md bg-white bg-opacity-10 backdrop-blur-xl rounded-2xl border border-white border-opacity-30 p-6 sm:p-8 shadow-2xl"
+        className="w-full max-w-md max-h-[100vh] overflow-y-auto bg-white bg-opacity-10 backdrop-blur-xl rounded-2xl border border-white border-opacity-30 p-6 sm:p-8 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {mode === "signin" && (

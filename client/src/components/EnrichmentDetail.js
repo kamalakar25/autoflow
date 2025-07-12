@@ -46,7 +46,7 @@ const EnrichmentDetail = () => {
       if (!configData) {
         throw new Error('Configuration not found');
       }
-      // console.log('Fetched config:', JSON.stringify(configData, null, 2));
+      console.log('Fetched config:', JSON.stringify(configData, null, 2));
       if (!configData.inputField || !configData.type || !configData.provider) {
         throw new Error('Configuration is missing required fields (inputField, type, or provider)');
       }
@@ -54,7 +54,7 @@ const EnrichmentDetail = () => {
       if (!providerData?._id) {
         throw new Error(`No active provider found for ${configData.provider}. Please configure a provider.`);
       }
-      // console.log('Fetched provider:', JSON.stringify(providerData, null, 2));
+      console.log('Fetched provider:', JSON.stringify(providerData, null, 2));
       setConfig(configData);
       setProvider(providerData);
       setEnrichments(enrichResponse.data.filter((e) => e.configId?.toString() === configId));
@@ -167,17 +167,17 @@ const EnrichmentDetail = () => {
     setResults(null);
     try {
       const requestBody = { [config.inputField]: inputValue.trim() };
-      // console.log('Sending run request:', {
-      //   configId,
-      //   inputField: config.inputField,
-      //   requestBody,
-      //   provider: provider.type,
-      //   config: JSON.stringify(config, null, 2),
-      // });
+      console.log('Sending run request:', {
+        configId,
+        inputField: config.inputField,
+        requestBody,
+        provider: provider.type,
+        config: JSON.stringify(config, null, 2),
+      });
       const response = await axios.post(`${BASE_URL}/api/enrichment-configs/run/${configId}`, requestBody, {
         headers: { 'Content-Type': 'application/json' },
       });
-      // console.log('Enrichment result:', JSON.stringify(response.data, null, 2));
+      console.log('Enrichment result:', JSON.stringify(response.data, null, 2));
       setResults({
         input: inputValue.trim(),
         output: response.data.output,
@@ -204,7 +204,7 @@ const EnrichmentDetail = () => {
   const toggleInput = useCallback((event) => {
     event.stopPropagation();
     setShowInput((prev) => {
-      // console.log('Toggling showInput:', !prev);
+      console.log('Toggling showInput:', !prev);
       return !prev;
     });
   }, []);
@@ -221,19 +221,19 @@ const EnrichmentDetail = () => {
   }, [results, config]);
 
   const exportToExcel = useCallback(() => {
-    if (!results) return;
-    const data = [{ input: results.input, ...results.output }];
-    const ws = XLSX.utils.json_to_sheet(data);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, 'Results');
-    XLSX.write(wb, `${config.title}_results.xlsx`);
-  }, [results, config]);
+  if (!results) return;
+  const data = [{ input: results.input, ...results.output }];
+  const ws = XLSX.utils.json_to_sheet(data);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Results');
+  XLSX.writeFile(wb, `${config.title}_results.xlsx`);
+}, [results, config]);
 
   if (error && !config) {
     return (
       <div className="k-container k-background">
         <Alert variant="danger">{error}</Alert>
-        <Button variant="light" onClick={() => navigate('/enrichments')}>
+        <Button variant="light" onClick={() => navigate('/Dataenrichment')}>
           Back to Enrichments
         </Button>
       </div>
@@ -249,14 +249,14 @@ const EnrichmentDetail = () => {
 
   return (
     <div className="k-container k-background">
-      <Button variant="light" className="mb-3" onClick={() => navigate('/enrichments')}>
+      <Button variant="light" className="mb-3" onClick={() => navigate('/Dataenrichment')}>
         Back to Enrichments
       </Button>
       <Card className="k-card-shadow k-card-border">
         <Card.Body>
           <div className="k-flex-align k-flex-justify k-margin-bottom">
             <div className="k-flex-align">
-              <div className="k-circle-icon">{getIcon(config.type)}</div>
+              {/* <div className="k-circle-icon">{getIcon(config.type)}</div> */}
               <div>
                 <h6 className="k-title-bold">{config.title}</h6>
                 <small className="k-text-muted">{config.provider}</small>
@@ -270,20 +270,21 @@ const EnrichmentDetail = () => {
           </p>
 
           <div className="k-margin-bottom">
-            <small className="k-text-muted">Credits Used</small>
+            {/* <small className="k-text-muted">Credits Used</small> */}
             <div className="k-flex-justify">
-              <ProgressBar now={progress} variant="dark" className="k-progress-width" />
-              <small>{used} / {total}</small>
+             <Button variant="light" size="sm" onClick={toggleInput}>
+              <FaPlay className="k-icon-spacing" /> Run
+            </Button>
             </div>
           </div>
 
-          <div className="k-flex-align k-margin-bottom">
+          {/* <div className="k-flex-align k-margin-bottom">
             <Badge bg={statusColor} className="k-badge k-text-uppercase">{statusLabel}</Badge>
             <small className="k-text-muted">{accuracy}% accuracy</small>
-          </div>
+          </div> */}
 
           <div className="k-flex-gap">
-            <Button variant="light" size="sm" onClick={handlePauseResume} disabled={!provider?._id}>
+            {/* <Button variant="light" size="sm" onClick={handlePauseResume} disabled={!provider?._id}>
               {isPaused ? (
                 <>
                   <FaPlay className="k-icon-spacing" /> Resume
@@ -296,10 +297,8 @@ const EnrichmentDetail = () => {
             </Button>
             <Button variant="light" size="sm" onClick={handleConfigure}>
               <FaCog className="k-icon-spacing" /> Configure
-            </Button>
-            <Button variant="light" size="sm" onClick={toggleInput}>
-              <FaPlay className="k-icon-spacing" /> Run
-            </Button>
+            </Button> */}
+            
           </div>
 
           {/* Input Form for Running Enrichment */}
